@@ -1,0 +1,20 @@
+@mixin d-flex($jc: center, $alit: center, $flexdir: column, $gap: 0, $rgap: 0, $cgap: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $alit;
+  flex-direction: $flexdir;
+  gap: $gap;
+  row-gap: $rgap;
+  column-gap: $cgap;
+}
+
+@mixin button-like($color: white, $pad: 1.2rem 2rem 1.2rem 2rem, $shadow: 0.5rem 0.5rem){
+    border: 0.1rem solid $color;
+    border-radius: 2.5rem;
+    box-shadow: $shadow;
+    color: $color;
+    font-family: 'Bricolage Grotesque';
+    font-size: 2rem;
+    padding: $pad;
+
+}

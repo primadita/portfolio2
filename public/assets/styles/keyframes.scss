@@ -1,0 +1,16 @@
+@keyframes blue-bg{
+    100%{background: blue;}
+}
+
+@keyframes wave{
+    0%{rotate:0; translate: 0};
+    25%{rotate: 90deg; translate: 1.5rem};
+    50%{rotate: 180deg; translate: 3rem};
+    75%{rotate: 270deg; translate: 4.5rem};
+    100%{rotate: 360deg; translate: 6rem};
+}
+
+@keyframes change-to-lowercase{
+    0%{text-transform: none}
+    100%{text-transform: lowercase; color: #24dd80};
+}

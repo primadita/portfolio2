@@ -1,0 +1,145 @@
+@use './../../../../public/assets/styles/all-styles.scss' as all;
+
+section{
+    background: url(./../../../../public/assets/design/00_header/01_Hero.png);
+    background-size: cover;
+    background-position: center;
+    height: 100dvh;
+    width: 100%;
+    @include all.d-flex($alit: center);
+    >div{
+        width: 100%;
+        max-width: 1300px;
+        >.align-left{
+            width: 100%;
+            padding-left: 24rem;
+            padding-right: 24rem;
+            @include all.d-flex($alit: flex-start, $jc: center, $gap: 2rem);
+            .wavehand{
+                left: 12rem;
+                top: -9rem;
+                opacity: 0;
+                transition: 500ms;
+                
+            }
+            .button-like-white{
+                @include all.button-like($color: white, $shadow:0);
+                transition: 0.5s;
+                .after{
+                    display: none;
+                }
+                &:hover{
+                    background: #1aa8b5;
+                    .before{
+                        display: none;
+                    }
+                    .after{
+                        display: flex;
+                    }
+                }
+                &:hover ~.wavehand{
+                    opacity: 1;
+                    animation: wave;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .frontend{
+                @include all.d-flex($flexdir: row);
+                span{
+                    transition: 400ms;
+                    .after{
+                        display: none;
+                    }
+                    &:hover{
+                        .before{
+                            display: none;
+                        }
+                        .after{
+                            display: flex;
+                            color: #24dd80;
+                        }
+                    }
+                }
+            }
+        }
+        >.align-right{
+            width: 100%;
+            padding-left: 24rem;
+            padding-right: 24rem;
+            @include all.d-flex($alit: flex-end, $jc: center, $gap: 2rem);
+            .developer{
+                @include all.d-flex($flexdir:row);
+                h1{
+                    &:hover{
+                        animation: change-to-lowercase;
+                        animation-duration: 400ms;
+                    }
+                }
+            }
+            .button-like-white{
+                @include all.button-like($color: white);
+                a{
+                    color: white;
+                }
+                &:hover{
+                    background: #1073ea;
+                    box-shadow: 0 0;
+                    top: 0.5rem;
+                    left: 0.5rem;
+                }
+            }
+        }
+        >.extern-profiles{
+            position: absolute;
+            top: 40rem;
+            left: 5rem;
+            @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 1rem);
+            a{
+                @include all.d-flex($alit: center, $jc: center);
+                @include all.button-like($color: white, $pad: 0.2rem, $shadow: 0);
+                cursor: pointer;
+
+                img{
+                    width: 4rem;
+                    height: 4rem;
+                }
+                &:hover{
+                    background: #1aa8b5;
+                }
+            }    
+        }
+        #image-and-name{
+            width: 22rem;
+            position: absolute;
+            top: -15%;
+            right: 20%;
+            transform: rotate(10deg);
+            img{
+                width: 100%;
+                filter: grayscale(100%);
+            }
+            h5{
+                top: -5rem;
+                left: 7rem;
+                z-index: 5;
+            }
+            h5.after{
+                display: none;
+            }
+            &:hover{
+                img{
+                    filter: grayscale(0);
+                }
+                h5.before{
+                    display: none;
+                }
+                h5.after{
+                    display: flex;
+                }
+                
+            }
+        }
+    }
+}
