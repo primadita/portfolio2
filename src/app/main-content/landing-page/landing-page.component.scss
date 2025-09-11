@@ -29,7 +29,7 @@ section{
                     display: none;
                 }
                 &:hover{
-                    background: #1aa8b5;
+                    background: all.$highlight2;
                     .before{
                         display: none;
                     }
@@ -39,11 +39,18 @@ section{
                 }
                 &:hover ~.wavehand{
                     opacity: 1;
-                    animation: wave;
+                    animation: wave-in;
                     animation-duration: 0.5s;
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;
                 }
+                &:not(:hover) ~.wavehand{
+                    animation: wave-out;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+                
             }
             .frontend{
                 @include all.d-flex($flexdir: row);

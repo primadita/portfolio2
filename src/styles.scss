@@ -1,3 +1,4 @@
+@use './../public/assets/styles/all-styles.scss' as all;
 // #region GENERAL
 *{
     padding: 0;
@@ -25,19 +26,6 @@ section{
 }
 // #endregion
 
-// #region GLOBAL VARIABLES
-$font1: 'Bricolage Grotesque';
-$font2: 'Kalam';
-$bold: 700;
-$medium: 500;
-$regular: 400;
-$color1: black;
-$color2: white;
-$highlight1: #24dd80;
-$highlight2: #1aa8b5;
-$highlight3: #1073ea;
-// #endregion
-
 // #region FONTS
 @font-face {
     font-family: 'Bricolage Grotesque';
@@ -48,44 +36,44 @@ $highlight3: #1073ea;
     src: url('./../public/assets/fonts/Kalam-Regular.ttf');
 }
 h1{
-    color: white;
-    font-family: $font1;
+    color: all.$color2;
+    font-family: all.$font1;
     font-size: 12.8rem;
-    font-weight: $bold;
+    font-weight: all.$bold;
 }
 h2{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 6.4rem;
-    font-weight: $bold;
+    font-weight: all.$bold;
 }
 h3, label{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 2rem;
-    font-weight: $medium;
+    font-weight: all.$medium;
 }
 h4{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 2.4rem;
-    font-weight: $bold;
+    font-weight: all.$bold;
 }
 h5{
-    font-family: $font2;
+    font-family: all.$font2;
     font-size: 2.4rem;
-    font-weight: $bold;
+    font-weight: all.$bold;
 }
 h6{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 1.8rem;
-    font-weight: $bold;
+    font-weight: all.$bold;
 }
 span, p{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 2rem;
-    font-weight: $regular;
+    font-weight: all.$regular;
 }
 footer{
-    font-family: $font1;
+    font-family: all.$font1;
     font-size: 1.8rem;
-    font-weight: $medium;
+    font-weight: all.$medium;
 }
 // #endregion
