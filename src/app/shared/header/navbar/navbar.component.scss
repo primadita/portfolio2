@@ -2,6 +2,10 @@
 
 div{
     width: 100%;
-    max-width: 1920px;
-    @include all.d-flex($jc: space-between, $alit: center, $flexdir: row);
+    @include all.d-flex($jc: space-around, $alit: center, $flexdir: row);
+    a{
+        h6{
+            color: all.$color2;
+        }
+    }
 }
