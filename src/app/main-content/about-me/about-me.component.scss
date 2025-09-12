@@ -17,7 +17,10 @@ section{
             @include all.d-flex($flexdir: column, $jc: center, $alit: center);
             div{
                 width: 90%;
-                position: absolute;
+                width: 56rem;
+                height: 15rem;
+                // position: absolute;
+                @include all.d-flex($alit: center, $jc: center);
                 .label{
                     width: 56rem;
                     height: 15rem;
@@ -25,8 +28,10 @@ section{
                 p{
                     z-index: 4;
                     font-size: 2.4rem;
-                    top: -11rem;
-                    height: 100%;
+                    position: absolute;
+                    // top: -11rem;
+                    width: 56rem;
+                    height: 15rem;
                     @include all.d-flex($flexdir: row, $alit: center, $jc: center, $cgap: 2rem);
                     color: all.$color2;
                     .innertext-logo{
@@ -36,11 +41,11 @@ section{
             }
             #upper{
                 transform: rotate(-4deg);
-                top: 32rem;
+                top: -25rem;
             }
             #lower{
                 transform: rotate(4deg);
-                top: 53rem;
+                top: 27rem;
             }
             
             
