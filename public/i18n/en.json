@@ -1,0 +1,11 @@
+{
+    "navbar.aboutme": "About me",
+    "navbar.skills": "Skills",
+    "navbar.projects": "Projects",
+    "navbar.contact": "Contact",
+
+    "landingpage": {
+        "hello": "I'M FELICIA TRETTER",
+        "contact":"Get in touch"
+    }
+}
