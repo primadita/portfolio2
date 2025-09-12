@@ -22,3 +22,9 @@
     0%{text-transform: none}
     100%{text-transform: lowercase; color: #24dd80};
 }
+
+@keyframes updown{
+    0%{top:0;transform: scaleY(0)};
+    50%{top: 100%; transform: scaleY(1)};
+//     100% {top: 0; transform: scaleY(-1)};
+}
