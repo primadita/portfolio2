@@ -15,5 +15,10 @@
         "text2": "My passion for usability eventually led me to frontend development, where I combine my technical expertise with creating user-friendly applications. Through my training at Developer Akademie, I am now able to build modern, user-centered frontend solutions – with a focus on clean code, intuitive UI, and sustainable user experience.",
         "text3": "I'd love to turn ideas into user-friendly experiences - let's make it happen!",
         "letstalk": "Let's talk"
+    },
+    "skills":{
+        "stack": "MY STACK",
+        "intro": "These are skills I've been gained during my training at Developer Akademie:",
+        "pull": "Pull to peel"
     }
 }

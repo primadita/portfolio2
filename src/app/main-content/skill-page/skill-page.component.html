@@ -1,14 +1,31 @@
-<section>
+.<section>
     <div class="content">
         <div class="left-col">
-            <h3>MY STACK</h3>
+            <h3>{{'skills.stack' | translate}}</h3>
             <h2>Skill set</h2>
+            <div>
+                <img src="./assets/design/02_skills/Color-option-3.png" alt="">
+            </div>
         </div>
         <div class="mid-col">
-
+            <div class="short-intro">
+                <p>{{ 'skills.intro' | translate }}</p>
+            </div>
+            <div class="programming-language">
+                @for (singleProgrammingLanguage of programminglanguagelist.progLanguageList; track singleProgrammingLanguage.name; let index = $index){
+                    <app-programming-language [proglanguage]="singleProgrammingLanguage"></app-programming-language>
+                }
+            </div>
         </div>
         <div class="right-col">
-
+            <div class="sticker">
+                
+                <img class="before" src="./assets/design/02_skills/A.png" alt="">
+                <img class="after" src="./assets/design/02_skills/C.png" alt="">
+                <img class="arrow" src="./assets/design/02_skills/Arrow.png" alt="">
+                <span class="before"><h5>Pull to peel</h5></span>
+            </div>
+            
         </div>
     </div>
 </section>

@@ -1,0 +1,18 @@
+@use './../../../../../public/assets/styles/all-styles.scss' as all;
+div{
+    @include all.d-flex($flexdir: column, $jc: center, $alit: center);
+    width: 7.2rem;
+    height: 10rem;
+    img{
+        width: 100%;
+        position: fixed;
+        filter: grayscale(1);
+    }
+    &:hover{
+        img{
+            filter: none;
+            width: 80%;
+        }
+        
+    }
+}

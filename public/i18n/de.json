@@ -15,5 +15,10 @@
         "text2": "Meine Begeisterung für Usability hat mich schließlich zur Frontend-Entwicklung geführt, wo ich mein technisches Wissen mit der Entwicklung nutzerfreundlicher Anwendungen verbinde. Dank meiner Weiterbildung bei der Developer Akademie kann ich nun moderne, benutzerzentrierte Frontend-Lösungen umsetzen – mit Fokus auf klaren Code, intuitive UI und nachhaltige User Experience.",
         "text3": "Ich möchte gerne Ideen in benutzerfreundliche Erlebnisse verwandeln - lass es uns einfach zusammen machen! ",
         "letstalk": "Lass uns reden"
+    },
+    "skills":{
+        "stack": "MEIN STACK",
+        "intro": "Diese sind die Programmiersprache, die ich während der Weiterbildung bei der Developer Akademie gelernt habe:",
+        "pull": "Zieh das ab"
     }
 }
