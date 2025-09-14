@@ -19,6 +19,7 @@
     "skills":{
         "stack": "MEIN STACK",
         "intro": "Diese sind die Programmiersprache, die ich während der Weiterbildung bei der Developer Akademie gelernt habe:",
-        "pull": "Zieh das ab"
+        "pull": "Zieh das ab",
+        "interest": "Ich bin auch interessiert für:"
     }
 }

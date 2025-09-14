@@ -19,6 +19,7 @@
     "skills":{
         "stack": "MY STACK",
         "intro": "These are skills I've been gained during my training at Developer Akademie:",
-        "pull": "Pull to peel"
+        "pull": "Pull to peel",
+        "interest": "Also, I'm interested in diving into: "
     }
 }

@@ -5,8 +5,11 @@ div{
     height: 10rem;
     img{
         width: 100%;
-        position: fixed;
         filter: grayscale(1);
+    }
+    span{
+        position: absolute;
+        bottom: -1.5rem;
     }
     &:hover{
         img{

@@ -29,20 +29,22 @@ section{
         .mid-col{
             width: 55%;
             background: url(./../../../../public/assets/design/02_skills/1.Skills-description.png);
-                background-position: top;
-                background-size: contain;
-                background-repeat: no-repeat;
+            background-position: top;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include all.d-flex($flexdir: column, $rgap: 8rem);
             .short-intro{
                 width: 100%;
                 height: auto;
                 color: all.$color1;
                 @include all.d-flex($alit: center, $jc: center);
                 p{
-                    padding: 4rem 0 0 4rem ;
+                    position: absolute;
+                    top: -4rem;
+                    left: 3rem;
                 }
             }
             .programming-language{
-                // width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -70,7 +72,7 @@ section{
                     top: 24rem;
                     right: 7rem;
                 }
-                span{
+                #pull-to-peel{
                     width: 20rem;
                     height: 20rem;
                     position: absolute;
@@ -80,6 +82,28 @@ section{
                     h5{
                         font-size: 4rem;
                         text-align: center;
+                    }
+                }
+                #other-interest{
+                    width: 20rem;
+                    height: 20rem;
+                    position: absolute;
+                    top: 20rem;
+                    padding: 2rem 1rem 2rem 1rem;
+                    @include all.d-flex($flexdir: column, $jc: space-between, $alit: center, $gap: 1rem);
+                    h6{
+                        text-align: center;
+                    }
+                    img{
+                        width: 6rem;
+                        height: 6rem;
+                        filter: grayscale(100%);
+                        position: absolute;
+                        top: 10rem;
+                        left: 7rem;
+                    }
+                    p{
+                        font-size: 1.6rem;
                     }
                 }
             }
