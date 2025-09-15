@@ -1,0 +1,11 @@
+<div>
+    <div class="img-div">
+        <img class="project-screenshot" src="{{singleproj.imgPath}}" alt="{{singleproj.altText}}">
+        <img *ngIf="singleproj.ihk" id="ihk-sticker" src="./assets/design/03_portfolio/ihk-sticker.png" alt="featured project sticker" style="display: flex"> 
+        <div class="project-details-button">
+            <a href="singleproject">{{'portfolio.btn' | translate}}</a>
+        </div>
+    </div>
+    <h6>{{singleproj.projname}}</h6>
+    <p>{{singleproj.desc}}</p>
+</div>

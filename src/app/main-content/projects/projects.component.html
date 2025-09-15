@@ -1,20 +1,21 @@
 <section>
     <div class="content">
-        <div id="top-left">
-            <h3>MY CRAFT</h3>
-            <h2>Projects</h2>
-            <div>
-                <img src="./assets/design/03_portfolio/Color option 3.png" alt="">
+            <div id="top-left">
+                <h3>{{ 'portfolio.mycraft' | translate }}</h3>
+                <h2>{{ 'portfolio.projects' | translate }}</h2>
+                <div>
+                    <img src="./assets/design/03_portfolio/Color option 3.png" alt="underline the word projects">
+                </div>
+                <p>{{ 'portfolio.desc' | translate }}</p>
             </div>
-        </div>
-        <div id="top-right">
-
-        </div>
-        <div id="bottom-left">
-
-        </div>
-        <div id="bottom-right">
-
-        </div>
+            <div id="top-right">
+                <app-single-project-intro [singleproj]="join!"></app-single-project-intro>
+            </div>
+            <div id="bottom-left">
+                <app-single-project-intro [singleproj]="elPolloLoco!"></app-single-project-intro>
+            </div>
+            <div id="bottom-right">
+                <app-single-project-intro [singleproj]="pokedex!"></app-single-project-intro>
+            </div>
     </div>
 </section>

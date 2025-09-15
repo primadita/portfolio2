@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-programming-language',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './programming-language.component.html',
   styleUrl: './programming-language.component.scss'
 })

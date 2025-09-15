@@ -21,5 +21,23 @@
         "intro": "Diese sind die Programmiersprache, die ich während der Weiterbildung bei der Developer Akademie gelernt habe:",
         "pull": "Zieh das ab",
         "interest": "Ich bin auch interessiert für:"
+    },
+    "portfolio": {
+        "mycraft": "MEINE WERKE",
+        "projects": "Projekte",
+        "desc": "Aus zehn Projekten habe ich diejenigen ausgewählt, die meine Fähigkeiten am besten demonstrieren. Jedes Projekt ist abgeschlossen und bereit für Tests. Mein Schwerpunkt lag auf sauberem Coding und Barrierefreiheitsregelung sowie auf feinen Details bei der Umsetzung. Schauen Sie sich das gerne an. Ich freue mich über Ihr Feedback.",
+        "btn": "Projektdetails",
+        "join":{
+            "desc": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu. ",
+            "details": ""
+        },
+        "elpolloloco":{
+            "desc": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen.",
+            "details": ""
+        },
+        "pokedex":{
+            "desc":"",
+            "details": ""
+        }
     }
 }

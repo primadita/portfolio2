@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MainContentComponent } from './main-content/main-content.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 // import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

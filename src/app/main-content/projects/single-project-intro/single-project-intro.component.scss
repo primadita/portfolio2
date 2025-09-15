@@ -1,0 +1,61 @@
+@use './../../../../../public/assets/styles/all-styles.scss' as all;
+
+div{
+    width: 100%;
+    padding: 2rem;
+    height: 60dvh;
+    @include all.d-flex($alit:flex-start);
+    .img-div{
+        width: 80rem;
+        height: 50rem;
+        overflow: hidden;
+        transition: 650ms ease;
+        border-radius: 2.5rem;
+        display: flex;
+        .project-screenshot{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80rem;
+            height: 50rem;
+        }
+        #ihk-sticker{
+            position: absolute;
+            left: 5rem;
+            width: 20rem;
+            display: flex;
+        }
+        .project-details-button{
+            width: 18rem;
+            height: 5rem;
+            @include all.button-like();
+            display: none;
+            a{
+                color: all.$color2;
+            }
+        }
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px -18dvh  36px -8rem inset;
+            
+            .project-screenshot{
+                width: 120%;
+                height: 120%;
+            }
+
+            .project-details-button{
+                display: flex;
+                position: absolute;
+                left: 50rem;
+                bottom: 5rem;
+                &:hover{
+                    // @include all.button-like($shadow: 0 0);
+                    box-shadow: 0 0;
+                    background: all.$highlight3 ;
+                    bottom: 4.5rem;
+                    left: 50.5rem;
+                }
+            }
+            
+        }
+    }
+}

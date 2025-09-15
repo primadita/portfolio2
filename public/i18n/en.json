@@ -21,5 +21,23 @@
         "intro": "These are skills I've been gained during my training at Developer Akademie:",
         "pull": "Pull to peel",
         "interest": "Also, I'm interested in diving into: "
+    },
+    "portfolio": {
+        "mycraft": "MY CRAFT",
+        "projects": "Projects",
+        "desc": "From ten projects, I chose the ones that best demonstrate my skills. Each project is complete and ready for testing. My focus was on clean coding and barrier-free standards and fine details in implementation. Please feel free to take a look. Your feedback would be greatly appreciated.",
+        "btn": "Project details",
+        "join":{
+            "desc": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
+            "details": ""
+        },
+        "elpolloloco":{
+            "desc": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            "details": ""
+        },
+        "pokedex":{
+            "desc":"",
+            "details": ""
+        }
     }
 }
