@@ -14,7 +14,10 @@
         "text1": "Hey, ich bin Felicia – Frontend-Entwicklerin mit Hintergrund in Medizintechnik und Usability. Nach meinen Abschlüssen (Bachelor in Biomedizintechnik und Master in Hörtechnik und Audiologie) habe ich mehrere Jahre in der Medizinproduktindustrie als System- und Entwicklungsingenieurin, technische Audiologin und Usability Engineer gearbeitet. In dieser Zeit habe ich gelernt, wie entscheidend eine durchdachte Nutzererfahrung ist.",
         "text2": "Meine Begeisterung für Usability hat mich schließlich zur Frontend-Entwicklung geführt, wo ich mein technisches Wissen mit der Entwicklung nutzerfreundlicher Anwendungen verbinde. Dank meiner Weiterbildung bei der Developer Akademie kann ich nun moderne, benutzerzentrierte Frontend-Lösungen umsetzen – mit Fokus auf klaren Code, intuitive UI und nachhaltige User Experience.",
         "text3": "Ich möchte gerne Ideen in benutzerfreundliche Erlebnisse verwandeln - lass es uns einfach zusammen machen! ",
-        "letstalk": "Lass uns reden"
+        "letstalk": "Lass uns reden",
+        "homebase": "Wohnsitz in Köln",
+        "workremote": "Bereitschaft für Remote-Arbeiten",
+        "onsite": "Vor-Ort-Präsenz im Umkreis von 40km"
     },
     "skills":{
         "stack": "MEIN STACK",
@@ -39,5 +42,8 @@
             "desc":"",
             "details": ""
         }
+    },
+    "testimonials": {
+        "profile": "Profil"
     }
 }

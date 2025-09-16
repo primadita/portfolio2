@@ -6,8 +6,8 @@ div{
     height: 60dvh;
     @include all.d-flex($alit:flex-start);
     .img-div{
-        width: 80rem;
-        height: 50rem;
+        width: 70rem;
+        height: 70rem;
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
@@ -16,8 +16,8 @@ div{
             position: absolute;
             top: 0;
             left: 0;
-            width: 80rem;
-            height: 50rem;
+            width: 70rem;
+            height: 60rem;
         }
         #ihk-sticker{
             position: absolute;

@@ -4,6 +4,7 @@ section{
     background: url(./../../../../public/assets/design/00_header/01_Hero.png);
     background-size: cover;
     background-position: center;
+    height: auto;
     height: 100dvh;
     width: 100%;
     @include all.d-flex($alit: center);

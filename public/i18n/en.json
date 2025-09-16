@@ -14,7 +14,10 @@
         "text1": "Hi, I’m Felicia – a Frontend Developer with a background in medical technology and usability. After completing my Bachelor’s degree in Biomedical Engineering and my Master’s degree in Hearing Technology and Audiology, I worked for several years in the medical device industry as a System and Development Engineer, Technical Audiologist, and Usability Engineer. During this time, I learned how crucial well-thought-out user experience is.",
         "text2": "My passion for usability eventually led me to frontend development, where I combine my technical expertise with creating user-friendly applications. Through my training at Developer Akademie, I am now able to build modern, user-centered frontend solutions – with a focus on clean code, intuitive UI, and sustainable user experience.",
         "text3": "I'd love to turn ideas into user-friendly experiences - let's make it happen!",
-        "letstalk": "Let's talk"
+        "letstalk": "Let's talk",
+        "homebase": "Based in Cologne",
+        "workremote": "Open to work remote and hybrid",
+        "onsite": "On-site presence within 40km"
     },
     "skills":{
         "stack": "MY STACK",
@@ -39,5 +42,8 @@
             "desc":"",
             "details": ""
         }
+    },
+    "testimonials": {
+        "profile": "profile"
     }
 }

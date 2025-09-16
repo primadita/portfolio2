@@ -4,21 +4,23 @@ section{
     background: all.$color2;
     width: 100%;
     color: all.$color1;
+    min-height: 120vh; // Section nimmt mindestens die volle Viewport-Höhe ein
     @include all.d-flex($alit: center);
     .content{
         width: 100%;
-        height: 120dvh;
+        height: auto;
         max-width: 1920px;
         display: flex;
         flex-wrap: wrap;
+        gap: 4rem;
+        margin-bottom: 4rem; // Abstand nach unten
         div{
-            width: 50%;
-            height: 60dvh;
+            width: 70rem;
             padding: 2rem;
             @include all.d-flex($flexdir: column, $alit: flex-start);
             app-single-project-intro{
                 width: 100%;
-                height: 60dvh;
+                min-height: 40dvh; 
             }
         }
     }

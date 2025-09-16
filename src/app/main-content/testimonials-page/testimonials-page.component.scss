@@ -1,0 +1,47 @@
+@use './../../../../public/assets/styles/all-styles.scss' as all;
+
+section{
+    background: all.$color2;
+    width: 100%;
+    color: all.$color1;
+    @include all.d-flex($alit: center);
+    .content{
+        width: 100%;
+        height: auto;
+        min-height: 60dvh;
+        max-width: 1920px;
+        @include all.d-flex($flexdir:column, $alit: flex-end);
+        padding: 20rem;
+        .h3{
+            @include all.d-flex($flexdir: row);
+            >.arrow{
+                animation-name: left-to-right;
+                animation-duration: 3s;
+                >img{
+                    width: 10rem;
+                }
+            }
+        }
+        .testimonial-sect{
+            @include all.d-flex($flexdir: row);
+            margin-top: 4rem;
+            #colleague1{
+                position: absolute;
+                transform: rotate(-4deg);
+                left: -140rem;
+                top: 0rem;
+            }
+            #colleague2{
+                position: absolute;
+                left: -95rem;
+                top: 5rem;
+            }
+            #colleague3{
+                position: absolute;
+                transform: rotate(4deg);
+                left:-55rem;
+                top: 0rem;
+            }
+        }
+    }
+}
