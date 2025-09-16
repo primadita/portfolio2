@@ -1,9 +1,12 @@
 {
-    "navbar.aboutme": "About me",
-    "navbar.skills": "Skills",
-    "navbar.projects": "Projects",
-    "navbar.contact": "Contact",
-
+    "navbar":{
+        "aboutme": "About me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "altTextEN" : "language button for english",
+        "altTextDE" : "language button for german language"
+    },
     "landingpage": {
         "hello": "I'M FELICIA TRETTER",
         "contact":"Get in touch"

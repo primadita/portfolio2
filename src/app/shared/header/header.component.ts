@@ -11,13 +11,16 @@ import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } 
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  currentLanguage: string = 'en';
+
   constructor(private translate:TranslateService){
     this.translate.addLangs(['de','en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang(this.currentLanguage);
+    this.translate.use(this.currentLanguage);
   }
 
   useLanguage(language: string):void {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

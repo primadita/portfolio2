@@ -1,9 +1,12 @@
 {
-    "navbar.aboutme": "Über mich",
-    "navbar.skills": "Fähigkeiten",
-    "navbar.projects": "Projekte",
-    "navbar.contact": "Kontakt",
-
+    "navbar": {
+        "aboutme": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt",
+        "altTextEN" : "Auswahlbutton für Englische Sprache",
+        "altTextDE" : "Auswahlbutton für Deutsche Sprache"
+    },
     "landingpage": {
         "hello": "ICH BIN FELICIA TRETTER",
         "contact":"Kontaktieren Sie mich"

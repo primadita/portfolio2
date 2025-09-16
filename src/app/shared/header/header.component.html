@@ -1,13 +1,13 @@
 <header>
-    <div>
+    <div class="content">
         <div class="logo">
-            <img class="before" src="./assets/icons/felicious_turquoise.png" alt="">
-            <img class="after" src="./assets/icons/felicious_mustard.png" alt="">
+            <img class="before" src="./assets/icons/felicious_turquoise.png" alt="Felicious Logo">
+            <img class="after" src="./assets/icons/felicious_mustard.png" alt="Felicious Logo">
         </div>
         <app-navbar></app-navbar>
         <div class="switch-language">
-            <button (click)="useLanguage('en')"><img src="./assets/icons/EN_hover.png" alt=""></button>
-            <button (click)="useLanguage('de')"><img src="./assets/icons/DE_def.png" alt=""></button>
+            <button (click)="useLanguage('en')"><img [src]="currentLanguage === 'en'? './assets/icons/EN_hover.png':'./assets/icons/EN_def.png'" alt="{{'navbar.altTextEN'|translate}}"></button>
+            <button (click)="useLanguage('de')"><img [src]="currentLanguage === 'de'? './assets/icons/DE_hover.png':'./assets/icons/DE_def.png'" alt="{{'navbar.altTextDE'|translate}}"></button>
         </div>
     </div>
 </header>

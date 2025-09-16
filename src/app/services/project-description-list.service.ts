@@ -12,7 +12,7 @@ export class ProjectDescriptionListService {
       projname: 'Join',
       imgPath: './assets/design/03_portfolio/29_Join thumbnail.png',
       altText: 'Join thumbnail', 
-      desc: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      desc: 'portfolio.join.desc',
       details: 'Lorem ipsum',
       ihk: true,
       duration: '4 weeks'

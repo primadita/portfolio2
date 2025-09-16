@@ -1,0 +1,30 @@
+@use './../../../../public/assets/styles/all-styles.scss' as all;
+
+section{
+    background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
+    width: 100%;
+    color: all.$color2;
+    min-height: 100dvh; // Section nimmt mindestens die volle Viewport-Höhe ein
+    @include all.d-flex($alit: center);
+    .content{
+        width: 100%;
+        height: auto;
+        max-width: 1920px;
+        padding: 25rem;
+        @include all.d-flex($flexdir:row, $jc: space-between);
+        .left{
+            width: 40%;
+            >div{
+                img{
+                    width: 28rem;
+                }
+            }
+        }
+        .right{
+            width: 60%;
+            img{
+                width: 15rem;
+            }
+        }
+    }
+}

@@ -11,8 +11,6 @@
 .content{
     width: 100%;
     max-width: 1920px;
-    display: flex;
-    justify-content: center;
 }
 html{
     font-size: 10px;
@@ -20,6 +18,10 @@ html{
 section{
     width: 100%;
     height: 100dvh;
+}
+header, app-main-section, app-imprint, app-single-project-overview, footer{
+    display: flex;
+    justify-content: center;
 }
 .d-none{
     display: none;

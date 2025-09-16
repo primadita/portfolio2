@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectDescriptionListService } from '../../../services/project-description-list.service';
 
 @Component({
   selector: 'app-single-project-intro',
@@ -9,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './single-project-intro.component.scss'
 })
 export class SingleProjectIntroComponent {
+  
   @Input() singleproj = {
     projname: 'Join',
     imgPath: './assets/design/03_portfolio/29_Join thumbnail.png',
