@@ -3,104 +3,141 @@
 section{
     background: url(./../../../../public/assets/design/00_header/01_Hero.png);
     background-size: cover;
-    background-position: center;
-    height: 100dvh;
-    width: 100%;
-    @include all.d-flex($alit: center);
-    >div{
-        width: 100%;
-        max-width: 1300px;
-        >.align-left{
+    background-position: bottom;
+    height: auto;
+    min-height: 100dvh;
+    .content{
+        @include all.d-flex($jc:center, $alit: center);
+        .maintitle{
             width: 100%;
-            padding-left: 24rem;
-            padding-right: 24rem;
-            @include all.d-flex($alit: flex-start, $jc: center, $gap: 2rem);
-            .wavehand{
-                left: 12rem;
-                top: -9rem;
-                opacity: 0;
-                transition: 500ms;
-                
-            }
-            .button-like-white{
-                @include all.button-like($color: white, $shadow:0);
-                transition: 0.5s;
-                .after{
-                    display: none;
-                }
-                &:hover{
-                    background: all.$highlight2;
-                    .before{
-                        display: none;
+            max-width: 1000px;
+            padding: 3rem;
+            @include all.d-flex($flexdir:column);
+            .top{
+                width: 100%;
+                #image-and-name{
+                    z-index: 2;
+                    position: absolute;
+                    width: 22rem;
+                    bottom: 0;
+                    right: 5rem;
+                    transform: rotate(10deg);
+                    @include all.d-flex($flexdir: column, $alit: center);
+                    img{
+                        width: 100%;
+                        filter: grayscale(100%);
                     }
-                    .after{
-                        display: flex;
+                    h5{
+                        position: absolute;
+                        top: 22rem;
+                        left: 12rem;
+                        transform: translate(-50%, 0);
+                        z-index: 3;
                     }
-                }
-                &:hover ~.wavehand{
-                    opacity: 1;
-                    animation: wave-in;
-                    animation-duration: 0.5s;
-                    animation-iteration-count: 1;
-                    animation-fill-mode: forwards;
-                }
-                &:not(:hover) ~.wavehand{
-                    animation: wave-out;
-                    animation-duration: 0.5s;
-                    animation-iteration-count: 1;
-                    animation-fill-mode: forwards;
-                }
-                
-            }
-            .frontend{
-                @include all.d-flex($flexdir: row);
-                span{
-                    transition: 400ms;
-                    .after{
+                    h5.after{
                         display: none;
                     }
                     &:hover{
-                        .before{
+                        img{
+                            filter: grayscale(0);
+                        }
+                        h5.before{
                             display: none;
                         }
-                        .after{
+                        h5.after{
                             display: flex;
-                            color: #24dd80;
+                        }
+                    }
+                }
+                .align-left{
+                    width: 100%;
+                    @include all.d-flex($alit: flex-start, $jc: center, $gap: 2rem);
+                    .wavehand{
+                        position: absolute;
+                        left: 12rem;
+                        bottom: 20rem;
+                        opacity: 0;
+                        transition: 500ms;
+                    }
+                    .button-like-white{
+                        @include all.button-like($color: white, $shadow:0);
+                        transition: 500ms;
+                        .after{
+                            display: none;
+                        }
+                        &:hover{
+                            background: all.$highlight2;
+                            .before{
+                                display: none;
+                            }
+                            .after{
+                                display: flex;
+                            }
+                        }
+                        &:hover ~.wavehand{
+                            opacity: 1;
+                            animation: wave-in;
+                            animation-duration: 0.5s;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards;
+                        }
+                        &:not(:hover) ~.wavehand{
+                            animation: wave-out;
+                            animation-duration: 0.5s;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards;
+                        }
+                        
+                    }
+                    .frontend{
+                        @include all.d-flex($flexdir: row);
+                        span{
+                            transition: 400ms;
+                            .after{
+                                display: none;
+                            }
+                            &:hover{
+                                .before{
+                                    display: none;
+                                }
+                                .after{
+                                    display: flex;
+                                    color: #24dd80;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
-        >.align-right{
-            width: 100%;
-            padding-left: 24rem;
-            padding-right: 24rem;
-            @include all.d-flex($alit: flex-end, $jc: center, $gap: 2rem);
-            .developer{
-                @include all.d-flex($flexdir:row);
-                h1{
+            .bottom{
+                width: 100%;
+                @include all.d-flex($alit: flex-end, $jc: center, $gap: 2rem);
+                .developer{
+                    @include all.d-flex($flexdir:row);
+                    h1{
+                        &:hover{
+                            animation: change-to-lowercase;
+                            animation-duration: 400ms;
+                        }
+                    }
+                }
+                .button-like-white{
+                    @include all.button-like($color: white);
+                    a{
+                        color: white;
+                    }
                     &:hover{
-                        animation: change-to-lowercase;
-                        animation-duration: 400ms;
+                        background: #1073ea;
+                        box-shadow: 0 0;
+                        top: 0.5rem;
+                        left: 0.5rem;
                     }
                 }
             }
-            .button-like-white{
-                @include all.button-like($color: white);
-                a{
-                    color: white;
-                }
-                &:hover{
-                    background: #1073ea;
-                    box-shadow: 0 0;
-                    top: 0.5rem;
-                    left: 0.5rem;
-                }
-            }
         }
-        >.extern-profiles{
+        .extern-profiles{
             position: absolute;
-            top: 40rem;
+            bottom: 15rem;
             left: 5rem;
             @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 1rem);
             a{
@@ -115,38 +152,7 @@ section{
                 &:hover{
                     background: #1aa8b5;
                 }
-            }    
-        }
-        #image-and-name{
-            width: 22rem;
-            position: absolute;
-            top: 0;
-            right: 20%;
-            transform: rotate(10deg);
-            img{
-                width: 100%;
-                filter: grayscale(100%);
-            }
-            h5{
-                top: -5rem;
-                left: 7rem;
-                z-index: 5;
-            }
-            h5.after{
-                display: none;
-            }
-            &:hover{
-                img{
-                    filter: grayscale(0);
-                }
-                h5.before{
-                    display: none;
-                }
-                h5.after{
-                    display: flex;
-                }
-                
-            }
+            } 
         }
     }
 }

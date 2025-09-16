@@ -9,7 +9,8 @@
     },
     "landingpage": {
         "hello": "I'M FELICIA TRETTER",
-        "contact":"Get in touch"
+        "contact":"Get in touch",
+        "altImg": "Photo of Felicia"
     },
 
     "aboutme": {

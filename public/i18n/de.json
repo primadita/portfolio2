@@ -9,7 +9,8 @@
     },
     "landingpage": {
         "hello": "ICH BIN FELICIA TRETTER",
-        "contact":"Kontaktieren Sie mich"
+        "contact":"Kontaktieren Sie mich",
+        "altImg": "Foto von Felicia"
     },
 
     "aboutme": {
