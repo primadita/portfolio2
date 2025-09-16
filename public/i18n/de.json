@@ -21,7 +21,11 @@
         "letstalk": "Lass uns reden",
         "homebase": "Wohnsitz in Köln",
         "workremote": "Bereitschaft für Remote-Arbeiten",
-        "onsite": "Vor-Ort-Präsenz im Umkreis von 40km"
+        "onsite": "Vor-Ort-Präsenz im Umkreis von 40km",
+        "sym_home": "Symbol über Wohnort",
+        "sym_remote": "Symbol über mobiles Arbeiten",
+        "sym_relocation": "Symbol über Distanz auf einer Karte",
+        "underline": "über mich unterstreichen"
     },
     "skills":{
         "stack": "MEIN STACK",

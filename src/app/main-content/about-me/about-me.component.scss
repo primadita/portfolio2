@@ -2,38 +2,30 @@
 
 section{
     background: white;
-    width: 100%;
-    @include all.d-flex($alit: center);
     .content{
-        width: 100%;
         height: auto;
-        min-height: 50dvh;
+        min-height: 100dvh;
         max-width: 1920px;
-        padding-left: 15rem;
-        padding-right: 15rem;
-        gap: 10rem;
-        .left{
+        padding: 10rem;
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
+        gap: 5rem;
+        .left-column{
             width: 50%;
-            height: 100dvh;
             @include all.d-flex($flexdir: column, $jc: center, $alit: center);
-            div{
-                width: 90%;
-                width: 56rem;
+            .postit{
+                width: 52rem;
                 height: 15rem;
-                // position: absolute;
-                @include all.d-flex($alit: center, $jc: center);
+                @include all.d-flex($flexdir: row, $alit: center, $jc: center);
                 .label{
-                    width: 56rem;
+                    width: 52rem;
                     height: 15rem;
                 }
                 p{
                     z-index: 4;
-                    font-size: 2.4rem;
+                    font-size: 2.2rem;
                     position: absolute;
-                    // top: -11rem;
-                    width: 56rem;
-                    height: 15rem;
-                    @include all.d-flex($flexdir: row, $alit: center, $jc: center, $cgap: 2rem);
+                    bottom: 7rem;
+                    @include all.d-flex($flexdir: row, $alit: center, $jc: center, $cgap: 1rem);
                     color: all.$color2;
                     .innertext-logo{
                         height: 3rem;
@@ -48,25 +40,19 @@ section{
                 transform: rotate(4deg);
                 top: 27rem;
             }
-            
-            
         }
-        .right{
+        .right-column{
             width: 50%;
-            height: 100dvh;
             @include all.d-flex($flexdir: column, $alit: left);
-            h2{
-                &:hover ~.line-div{
-                    animation: left-to-right;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    opacity: 1;
-                }
-            }
             .line-div{
                 width: 0;
                 opacity: 0;
                 overflow: hidden;
+                animation: left-to-right;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                animation-direction: alternate;
                 img{
                     width: 32rem;
                 }

@@ -21,7 +21,11 @@
         "letstalk": "Let's talk",
         "homebase": "Based in Cologne",
         "workremote": "Open to work remote and hybrid",
-        "onsite": "On-site presence within 40km"
+        "onsite": "On-site presence within 40km",
+        "sym_home": "homebase symbol",
+        "sym_remote": "working from home symbol",
+        "sym_relocation": "distance symbol on map",
+        "underline": "underline about me"
     },
     "skills":{
         "stack": "MY STACK",
