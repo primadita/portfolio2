@@ -2,32 +2,28 @@
 
 div{
     width: 100%;
-    padding: 2rem;
-    height: 60dvh;
-    @include all.d-flex($alit:flex-start);
+    height: 50dvh;
+    @include all.d-flex($alit:flex-start, $jc: flex-start, $flexdir: column, $rgap: 2rem);
     .img-div{
-        width: 70rem;
-        height: 70rem;
+        width: 50rem;
+        min-height: 35rem;
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
-        display: flex;
+        @include all.d-flex();
         .project-screenshot{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 70rem;
-            height: 60rem;
+            width: 50rem;
+            height: 35rem;
         }
         #ihk-sticker{
             position: absolute;
-            left: 5rem;
-            width: 20rem;
-            display: flex;
+            width: 17rem;
+            left: 2rem;
         }
         .project-details-button{
             width: 18rem;
             height: 5rem;
+            position: absolute;
             @include all.button-like();
             display: none;
             a{
@@ -35,8 +31,7 @@ div{
             }
         }
         &:hover{
-            box-shadow: rgba(0, 0, 0, 0.3) 0px -18dvh  36px -8rem inset;
-            
+            box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
             .project-screenshot{
                 width: 120%;
                 height: 120%;
@@ -45,14 +40,13 @@ div{
             .project-details-button{
                 display: flex;
                 position: absolute;
-                left: 50rem;
+                right: 5rem;
                 bottom: 5rem;
                 &:hover{
-                    // @include all.button-like($shadow: 0 0);
                     box-shadow: 0 0;
                     background: all.$highlight3 ;
+                    right: 4.5rem;
                     bottom: 4.5rem;
-                    left: 50.5rem;
                 }
             }
             

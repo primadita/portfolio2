@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Injectable, Input } from '@angular/core';
+import { Component, inject, Injectable, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectDescriptionListService } from '../../../services/project-description-list.service';
 
@@ -10,6 +10,7 @@ import { ProjectDescriptionListService } from '../../../services/project-descrip
   styleUrl: './single-project-intro.component.scss'
 })
 export class SingleProjectIntroComponent {
+  projectdesclist = inject(ProjectDescriptionListService);
   
   @Input() singleproj = {
     projname: 'Join',

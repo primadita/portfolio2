@@ -2,25 +2,20 @@
 
 section{
     background: all.$color2;
-    width: 100%;
     color: all.$color1;
-    min-height: 120vh; // Section nimmt mindestens die volle Viewport-Höhe ein
-    @include all.d-flex($alit: center);
+    height: 180dvh;
     .content{
-        width: 100%;
         height: auto;
-        max-width: 1920px;
-        display: flex;
+        padding: 10rem;
+        @include all.d-flex($flexdir: row, $jc: center, $alit: center, $cgap: 4rem, $rgap: 4rem);
         flex-wrap: wrap;
-        gap: 4rem;
-        margin-bottom: 4rem; // Abstand nach unten
         div{
-            width: 70rem;
-            padding: 2rem;
-            @include all.d-flex($flexdir: column, $alit: flex-start);
+            width: 50rem;
+            height: auto;
+            @include all.d-flex($flexdir: column, $alit: flex-start,$jc: flex-start);
             app-single-project-intro{
                 width: 100%;
-                min-height: 40dvh; 
+                height: 60dvh; 
             }
         }
     }
@@ -34,11 +29,8 @@ section{
         opacity: 0;
         overflow: hidden;
         padding: 0;
-        animation-name: left-to-right;
-        animation-duration: 3s;
+        animation: left-to-right 3s infinite alternate;
         animation-fill-mode: both;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
         img{
             width: 25rem;
             height:3rem;
