@@ -12,8 +12,9 @@ import { ProgrammingLanguageListService } from '../../services/programming-langu
 })
 export class SkillPageComponent {
   programminglanguagelist = inject(ProgrammingLanguageListService);
-  
+  peeled = false;
+
   peelsticker():void{
-    
+    this.peeled = true;  
   }
 }

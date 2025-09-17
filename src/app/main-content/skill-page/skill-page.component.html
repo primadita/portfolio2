@@ -1,14 +1,17 @@
 .<section>
     <div class="content">
-        <div class="left-col">
+        <div class="left-column">
             <h3>{{'skills.stack' | translate}}</h3>
-            <h2>Skill set</h2>
-            <div>
-                <img src="./assets/design/02_skills/Color-option-3.png" alt="">
+            <div class="skill-title">
+                <h2>Skill set</h2>
+                <div>
+                    <img src="./assets/design/02_skills/Color-option-3.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="mid-col">
+        <div class="mid-column">
             <div class="short-intro">
+                <img src="./assets/design/02_skills/1.Skills-description.png" alt="paper background">
                 <p>{{ 'skills.intro' | translate }}</p>
             </div>
             <div class="programming-language">
@@ -17,17 +20,21 @@
                 }
             </div>
         </div>
-        <div class="right-col">
+        <div class="right-column">
             <div class="sticker" (click)="peelsticker()">
-                <img class="before" src="./assets/design/02_skills/A.png" alt="front sticker">
-                <img class="after" src="./assets/design/02_skills/C.png" alt="back sticker">
-                <img class="arrow" src="./assets/design/02_skills/Arrow.png" alt="arrow to peel">
-                <span id="pull-to-peel"class="before"><h5>{{ 'skills.pull' | translate}}</h5></span>
-                <span id="other-interest" class="after">
-                    <h6>{{ 'skills.interest' | translate}}</h6>
-                    <img src="./assets/icons/icon_Scrum.png" alt="">
-                    <p>Scrum</p>
-                </span>
+                <ng-container *ngIf="!peeled">
+                    <img class="before" src="./assets/design/02_skills/A.png" alt="front sticker">    
+                    <img class="before arrow" src="./assets/design/02_skills/Arrow.png" alt="arrow to peel">
+                    <span id="pull-to-peel"class="before"><h5>{{ 'skills.pull' | translate}}</h5></span>
+                </ng-container>
+                <ng-container *ngIf="peeled">
+                    <img class="after" src="./assets/design/02_skills/C.png" alt="back sticker">
+                    <span id="other-interest" class="after">
+                        <h6>{{ 'skills.interest' | translate}}</h6>
+                        <img src="./assets/icons/icon_Scrum.png" alt="">
+                        <p>Scrum</p>
+                    </span>
+                </ng-container>    
             </div>
             
         </div>
