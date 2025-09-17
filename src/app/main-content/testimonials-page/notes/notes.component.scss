@@ -3,8 +3,8 @@
 .single-note{
     background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png');
     background-size: cover;
-    width: 50rem;
-    height: 33rem;
+    width: 45rem;
+    height: 29.5rem;
     padding: 3rem;
     overflow: hidden;
     color: all.$color2;
@@ -16,15 +16,20 @@
             @include all.d-flex($flexdir: column, $alit: flex-start);
         }
         >span{
-            width: 20rem;
+            width: 17rem;
             >a{
                 color: all.$color2;
                 @include all.d-flex($flexdir:row, $alit:center, $jc: flex-end);
             } 
         }
     }
+    &:hover{
+        background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
+        background-size: cover;
+        // z-index: 20;
+    }
 }
-.active{
-    background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
-    background-size: cover;
-}
+// .active{
+//     background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
+//     background-size: cover;
+// }

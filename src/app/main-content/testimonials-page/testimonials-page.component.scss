@@ -2,21 +2,17 @@
 
 section{
     background: all.$color2;
-    width: 100%;
     color: all.$color1;
-    @include all.d-flex($alit: center);
     .content{
-        width: 100%;
-        height: auto;
-        min-height: 60dvh;
-        max-width: 1920px;
-        @include all.d-flex($flexdir:column, $alit: flex-end);
-        padding: 20rem;
+        @include all.d-flex($flexdir:column, $jc: flex-start, $alit: flex-end);
+        padding: 0 10rem 0 10rem;
         .h3{
             @include all.d-flex($flexdir: row);
             >.arrow{
-                animation-name: left-to-right;
-                animation-duration: 3s;
+                // animation-name: left-to-right;
+                // animation-direction: alternate-reverse;
+                // animation-duration: 3s;
+                // animation-iteration-count: infinite;
                 >img{
                     width: 10rem;
                 }
@@ -28,20 +24,31 @@ section{
             #colleague1{
                 position: absolute;
                 transform: rotate(-4deg);
-                left: -140rem;
+                left: -112rem;
                 top: 0rem;
+                // z-index: 4;
             }
             #colleague2{
                 position: absolute;
-                left: -95rem;
+                left: -75rem;
                 top: 5rem;
             }
             #colleague3{
                 position: absolute;
                 transform: rotate(4deg);
-                left:-55rem;
+                left:-45rem;
                 top: 0rem;
             }
         }
     }
+}
+app-notes{
+        &:hover{
+        // background: url('./../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
+        // background-size: cover;
+        // backdrop-filter: brightness(90%);
+        filter: brightness(90%);
+        z-index: 20;
+    }
+    
 }
