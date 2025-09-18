@@ -1,0 +1,38 @@
+@use './../../../public/assets/styles/all-styles.scss' as all;
+#pagetitle{
+    background: url('./../../../public/assets/design/02_skills/03_Skills_2.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    // position: absolute;
+    color: all.$color2;
+    height: 40rem;
+    .content{
+        padding: 10rem 15rem 10rem 15rem;
+        @include all.d-flex($flexdir: column, $alit: flex-start);
+    }
+}
+#pagecontent{
+    background: all.$color2;
+    height: auto;
+    .content{
+        padding: 5rem 15rem 10rem 15rem;
+        #back-btn{
+            padding-bottom: 3rem;
+            a{
+                background: none;
+                border: 0;
+                color: all.$color1;
+                cursor: pointer;
+                @include all.d-flex($flexdir:row, $jc: flex-start, $cgap: 1rem);
+                img{
+                    height: 4rem;
+                }
+            }
+        }
+        @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 2rem);
+        h4{
+            color: all.$highlight2; 
+        }
+    }
+}

@@ -74,6 +74,27 @@
         "altGit":"rollendes Github Logo",
         "altEmail":"rollender Umschlag",
         "altLinkedIn":"rollendes LinkedIn Logo"
+    },
+    "imprint":{
+        "title": "Rechtlicher Hinweis",
+        "lead1": "Impressum",
+        "lead2": "Entdecken Sie das Board",
+        "lead3": "Akzeptanz der Bedingungen",
+        "text3": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen und alle Richtlinien, Leitlinien oder Änderungen daran, die Ihnen von Zeit zu Zeit vorgelegt werden, an und stimmen diesen zu. Wir, die aufgeführten Studenten, können die Allgemeinen Geschäftsbedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.",
+        "lead4": "Umfang und Eigentumsrechte des Produkts",
+        "text4": "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für eine umfassende persönliche und geschäftliche Nutzung vorgesehen. Daher können wir keine Garantie für die konsistente Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte dieses Produkts übernehmen.",
+        "text5": "Das Design des Portfolios ist Eigentum der Developer Akademie GmbH. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
+        "lead6": "Eigentumsrechte",
+        "text6": "Abgesehen von den Entwürfen, die Eigentum der Developer Akademie GmbH sind, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und anderer geschützter Informationen.",
+        "lead7": "Nutzung des Produkts",
+        "text7": "Portfolio ist ausschließlich für rechtmäßige Zwecke in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften bestimmt. Jede Nutzung von Portfolio für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von Portfolio.",
+        "lead8": "Haftungsausschluss und Haftungsbeschränkung",
+        "text8": "Portfolio wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studenten oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden für entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder in Verbindung mit der Nutzung oder Leistung von Portfolio ergeben.",
+        "lead9": "Haftungsfreistellung",
+        "text9": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studenten, die Developer Akademie und unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung des Portfolios und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben oder damit in Zusammenhang stehen.",
+        "text10": "Bei Fragen oder Hinweisen wenden Sie sich bitte an felicia.primadita(at)web.de.",
+        "text11": "Datum: 26. Juli 2025",
+        "back": "Zurück"
     }
 
 }
