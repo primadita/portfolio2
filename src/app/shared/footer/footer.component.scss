@@ -1,0 +1,66 @@
+@use './../../../../public/assets/styles/all-styles.scss' as all;
+
+footer{
+    background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    min-height: 10rem;
+    .content{
+        @include all.d-flex($flexdir: column, $alit: flex-start, $jc: center, $rgap: 1rem);
+        color: all.$color2;
+        padding: 1rem 15rem 1rem 15rem;
+        #logo-with-text{
+            @include all.d-flex($flexdir: row, $jc: flex-start, $alit: center, $cgap: 2rem);
+            cursor: pointer;
+            img{
+                height: 5rem;
+            }
+            .logo{
+                position: absolute;
+            }
+            .after{
+                opacity: 0;
+            }
+            .text{
+                padding-left:5rem;
+            }
+            &:hover{
+                .after{
+                    opacity: 1;
+                }
+                .before{
+                    opacity: 0;
+                }
+            }
+        }
+        #footer-links{
+            width: 100%;
+            @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
+            a{
+                span{
+                    color: all.$color2;
+                }
+                .underline{
+                    position: absolute;
+                    bottom: -1.5rem;
+                    left: -1rem;
+                    img{
+                        width: 12rem;
+                    }
+                }
+                .button-like-noframe{
+                    @include all.d-flex($flexdir: column);
+                    @include all.button-like($color:all.$color2, $pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
+                    color: all.$color2;
+                    background: all.$highlight2;
+                    img{
+                        position: absolute;
+                        top: -3rem;
+                        left: 0;
+                    }
+                }
+            }
+        } 
+    }
+}

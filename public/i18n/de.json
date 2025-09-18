@@ -10,7 +10,8 @@
     "landingpage": {
         "hello": "ICH BIN FELICIA TRETTER",
         "contact":"Kontaktieren Sie mich",
-        "altImg": "Foto von Felicia"
+        "altImg": "Foto von Felicia",
+        "altHand": "winkende hand"
     },
 
     "aboutme": {
@@ -62,7 +63,17 @@
         "question_email": "Wie ist Ihre Email Adresse?",
         "question_message": "Wie kann ich Ihnen helfen?",
         "placeholder_name": "Hier kommt Ihr Name hin",
-        "placeholder_text": "Hey Felicia, ich bin interessiert für ...."
+        "placeholder_text": "Hey Felicia, ich bin interessiert für ....",
+        "invalid_name": "Ups! Es scheint, dass Ihr Name fehlt.",
+        "invalid_email": "Hoppla! Ihre E-Mail-Adresse ist erforderlich.",
+        "invalid_message":"Was benötigen Sie für die Entwicklung?",
+        "privatepolicy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+    }, 
+    "footer":{
+        "imprint":"Impressum",
+        "altGit":"rollendes Github Logo",
+        "altEmail":"rollender Umschlag",
+        "altLinkedIn":"rollendes LinkedIn Logo"
     }
 
 }
