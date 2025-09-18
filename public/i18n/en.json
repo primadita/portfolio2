@@ -53,5 +53,18 @@
     },
     "testimonials": {
         "profile": "profile"
+    },
+    "contact": {
+        "pagetitle":"CONTACT ME",
+        "pagetitlebig": "Ready to work together?",
+        "introduction": "Do you have an exciting challenge in the frontend area and are looking for support for your development team, or do you simply have questions about my work? Feel free to write to me. I am looking forward to hear from you!",
+        "question_name": "What's your name?",
+        "question_email": "What's your email?",
+        "question_message": "How can I help you?",
+        "placeholder_name": "Your name goes here",
+        "placeholder_text": "Hello Felicia, I am interested in...",
+        "invalid_name": "Oops! It seems that your name is missing",
+        "invalid_email": "Hoppla! Your email is required",
+        "invalid_message":"What do you need to develop?"
     }
 }

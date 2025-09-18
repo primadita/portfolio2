@@ -4,27 +4,119 @@ section{
     background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
     width: 100%;
     color: all.$color2;
-    min-height: 100dvh; // Section nimmt mindestens die volle Viewport-Höhe ein
-    @include all.d-flex($alit: center);
     .content{
         width: 100%;
         height: auto;
         max-width: 1920px;
-        padding: 25rem;
-        @include all.d-flex($flexdir:row, $jc: space-between);
-        .left{
-            width: 40%;
-            >div{
+        padding: 15rem;
+        @include all.d-flex($flexdir:row, $jc: space-between, $gap: 5rem);
+        .left-column{
+            width: 50%;
+            p{
+                padding: 4rem 0 4rem 0;
+            }
+            div{
+                @include all.left-to-right-animation();
                 img{
-                    width: 28rem;
+                    width: 25rem;
+                    right: -19rem;
                 }
             }
         }
         .right{
-            width: 60%;
+            width: 40%;
+            @include all.d-flex($flexdir:column);
             img{
                 width: 15rem;
+                transform: rotate(20deg);
+                position: absolute;
+                right: 0;
+                top: 0;
             }
+            form{
+                @include all.d-flex($flexdir: column, $alit: left, $rgap: 2rem);
+                padding-top: 10rem;
+                width: 100%;
+                h3{
+                    font-size: 2.4rem;
+                    &:hover{
+                        color: all.$highlight2;
+                    }
+                }
+                input, textarea{
+                    background: transparent;
+                    border: 0;
+                    padding-bottom: 2rem;
+                    width: 100%;
+                    border-bottom: 1px solid all.$highlight1;
+                    color: all.$color2;
+                    &:hover{
+                        border-bottom-color: all.$highlight3;
+                    }
+                }
+                span{
+                    font-size: 1.8rem;
+                    color: red;
+                    bottom: 6rem;
+                }
+                
+                >.privacy-policy{
+                    #confirm{
+                        border: 0;
+                    }
+                    >label{
+                        font-size: 1.6rem;
+                        font-weight: regular;
+                    }
+                    [type="checkbox"] {
+                        -webkit-appearance: none;
+                    }
+                    [type="checkbox"] + label::before {
+                        width: 2.1rem;
+                        height: 2.1rem;
+                        background-image: url("./../../../../public/assets/icons/unchecked.png");
+                        display: block;
+                        content: "";
+                        float: left;
+                    }
+                    [type="checkbox"]:hover+label::before {
+                        background-image: url("./../../../../public/assets/icons/unchecked_hover.png");
+                    }
+                    [type="checkbox"]:checked+label::before {
+                        background-image: url("./../../../../public/assets/icons/checked.png");
+                    }
+                    [type="checkbox"]:checked:hover+label::before {
+                        background-image: url("./../../../../public/assets/icons/checked_hover.png");
+                    }
+                }
+                >#submit-btn{
+                    // @include all.d-flex($flexdir: row, $jc: flex-end, $alit: right);
+                    margin-left: auto;
+                    >button{
+                        padding: 0;
+                        @include all.button-like($color: gray);
+                        border-bottom: none;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        &.btn-disabled{
+                            cursor: not-allowed;
+                        }
+                        &.btn-enabled{
+                            @include all.button-like($color: all.$color2);
+                            background-color: transparent;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: all.$highlight3;
+                                @include all.button-like($color: all.$color2, $shadow: 0 0);
+                                cursor: pointer;
+                                top: 0.5rem;
+                                left: 0.5rem;
+                            }
+                        }
+                        
+                    }
+                }  
+            }    
         }
     }
 }

@@ -26,6 +26,20 @@ header, section, footer{
 .d-none{
     display: none;
 }
+::placeholder {
+    color: all.$color2; /* Firefox */
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: all.$color2;
+}
+
+
+// ::placeholder:invalid {
+//     color: red; /* Firefox */
+// }
+// ::-ms-input-placeholder:invalid { /* Edge 12 -18 */
+//     color: red;
+// }
 // #endregion
 
 // #region FONTS
@@ -68,7 +82,7 @@ h6{
     font-size: 1.8rem;
     font-weight: all.$bold;
 }
-span, p{
+span, p, input, textarea{
     font-family: all.$font1;
     font-size: 1.8rem;
     font-weight: all.$regular;

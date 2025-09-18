@@ -9,12 +9,22 @@
 }
 
 @mixin button-like($color: white, $pad: 1.2rem 2rem 1.2rem 2rem, $shadow: 0.5rem 0.5rem){
-    border: 0.1rem solid $color;
-    border-radius: 2.5rem;
-    box-shadow: $shadow;
-    color: $color;
-    font-family: 'Bricolage Grotesque';
-    font-size: 2rem;
-    padding: $pad;
+  border: 0.1rem solid $color;
+  border-radius: 2.5rem;
+  box-shadow: $shadow;
+  color: $color;
+  font-family: 'Bricolage Grotesque';
+  font-size: 2rem;
+  padding: $pad;
+}
 
+@mixin left-to-right-animation($dur:3s, $dir: alternate){
+  width: 0;
+    opacity: 0;
+    overflow: hidden;
+    animation: left-to-right;
+    animation-duration: $dur;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: $dir;
 }

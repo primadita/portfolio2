@@ -53,5 +53,16 @@
     },
     "testimonials": {
         "profile": "Profil"
+    },
+    "contact": {
+        "pagetitle":"KONTAKTIEREN SIE MICH",
+        "pagetitlebig": "Bereit zur Zusammenarbeit?",
+        "introduction": "Haben Sie eine spannende Herausforderung im Frontend Bereich und suchen Unterstützung für Ihr Entwicklerteam oder haben Sie einfach Fragen zu meiner Arbeit?Schreiben Sie mir gerne. Ich freue mich darauf, von Ihnen zu hören!",
+        "question_name": "Wie heißen Sie?",
+        "question_email": "Wie ist Ihre Email Adresse?",
+        "question_message": "Wie kann ich Ihnen helfen?",
+        "placeholder_name": "Hier kommt Ihr Name hin",
+        "placeholder_text": "Hey Felicia, ich bin interessiert für ...."
     }
+
 }

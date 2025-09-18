@@ -45,14 +45,7 @@ section{
             width: 50%;
             @include all.d-flex($flexdir: column, $alit: left);
             .line-div{
-                width: 0;
-                opacity: 0;
-                overflow: hidden;
-                animation: left-to-right;
-                animation-duration: 3s;
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-                animation-direction: alternate;
+                @include all.left-to-right-animation();
                 img{
                     width: 32rem;
                 }
