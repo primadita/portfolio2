@@ -39,17 +39,24 @@
         "projects": "Projects",
         "desc": "From ten projects, I chose the ones that best demonstrate my skills. Each project is complete and ready for testing. My focus was on clean coding and barrier-free standards and fine details in implementation. Please feel free to take a look. Your feedback would be greatly appreciated.",
         "btn": "Project details",
+        "next": "Next Project",
+        "description":"Description",
+        "implementation": "Implementation Details",
+        "duration": "Duration: ",
         "join":{
             "desc": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
-            "details": ""
+            "details": "The project was build as a group task. While building a web-app using HTML, CSS, JavaScript and Firebase, working together as a team and get familiar with GitHub to work in a group project was a strong focus on this project. My task was to ...",
+            "duration": "5 weeks"
         },
         "elpolloloco":{
             "desc": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-            "details": ""
+            "details": "The game was build completely using JavaScript. The aim of the solo project was to deepen the skills in OOP (Object-oriented Programming). Maintaining cean code was also focus of the project.",
+            "duration": "3 weeks"
         },
         "pokedex":{
-            "desc":"",
-            "details": ""
+            "desc":"Pokemon-Trainer-Register based on data from Pokemon API. Get creative to create a list of pokemons with its characters, specification and stats",
+            "details": "The aim of the solo project was to learn how to bind API in the website and to deal with async communication without disregarding clean code. Get creative with the design of the website but keeping the structure of the UI neat.",
+            "duration": "1 week"
         }
     },
     "testimonials": {

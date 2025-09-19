@@ -39,17 +39,24 @@
         "projects": "Projekte",
         "desc": "Aus zehn Projekten habe ich diejenigen ausgewählt, die meine Fähigkeiten am besten demonstrieren. Jedes Projekt ist abgeschlossen und bereit für Tests. Mein Schwerpunkt lag auf sauberem Coding und Barrierefreiheitsregelung sowie auf feinen Details bei der Umsetzung. Schauen Sie sich das gerne an. Ich freue mich über Ihr Feedback.",
         "btn": "Projektdetails",
+        "next": "Nächstes Projekt",
+        "description":"Beschreibung",
+        "implementation": "Implementierungsdetails",
+        "duration": "Dauer: ",
         "join":{
             "desc": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu. ",
-            "details": ""
+            "details": "Das Projekt wurde als Gruppenaufgabe durchgeführt. Bei der Entwicklung einer Web-App mit HTML, CSS, JavaScript und Firebase lag ein starker Fokus auf der Zusammenarbeit im Team und dem Kennenlernen von GitHub für die Arbeit in einem Gruppenprojekt. Meine Aufgabe war es, ...",
+            "duration": "5 Wochen"
         },
         "elpolloloco":{
             "desc": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen.",
-            "details": ""
+            "details": "Das Spiel wurde vollständig mit JavaScript entwickelt. Das Ziel des Solo-Projekts war es, die Kenntnisse in OOP (objektorientierte Programmierung) zu vertiefen. Ein weiterer Schwerpunkt des Projekts war die Pflege eines sauberen Codes.",
+            "duration": "3 Wochen"
         },
         "pokedex":{
-            "desc":"",
-            "details": ""
+            "desc":"Pokemon-Trainer-Register based on data from Pokemon API. Get creative to create a list of pokemons with its characters, specification and stats",
+            "details": "Das Ziel des Solo-Projekts war es, zu lernen, wie man APIs in die Website einbindet und mit asynchroner Kommunikation umgeht, ohne dabei den sauberen Code zu vernachlässigen. Seien Sie kreativ beim Design der Website, aber achten Sie darauf, dass die Struktur der Benutzeroberfläche übersichtlich bleibt.",
+            "duration": "1 Woche"
         }
     },
     "testimonials": {

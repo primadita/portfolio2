@@ -1,0 +1,87 @@
+@use './../../../public/assets/styles/all-styles.scss' as all;
+
+section{
+    background: url('./../../../public/assets/design/03_portfolio/Notebookpaper.png');
+    background-color: black;
+    background-size: cover;
+    background-position: left;
+    .content{
+        padding: 5rem 10rem 5rem 10rem; 
+        @include all.d-flex($flexdir:column, $alit: flex-start, $jc: space-between, $rgap: 3rem);
+        #back-btn{
+            a{
+                @include all.d-flex($flexdir: row, $jc: flex-start, $alit:center, $cgap: 1rem);
+                color: all.$color1;
+                img{
+                    height: 4rem;
+                }
+            }
+        }
+        .main-div{
+            width: 100%;
+            @include all.d-flex($flexdir: row, $jc: space-between);
+            .left-column{
+                width: 40%;
+                // overflow: hidden;
+                @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 2rem);
+                .project-title{
+                    width: 100%;
+                    .line-div{
+                        width: 100%;
+                        img{
+                            width: 80%; //TO DO: adjust -- join 35%, el pollo loco 80%, pokedex 60%
+                            height: 3rem;
+                        }
+                    }
+                }
+                span{
+                    @include all.d-flex($flexdir:row, $cgap: 0.5rem);
+                }
+                .required-skills{
+                    width: 100%;
+                    @include all.d-flex($flexdir: row, $jc: flex-start, $cgap: 2rem);
+                }
+            }
+            .right-column{
+                width: 50%;
+                @include all.d-flex($flexdir:column, $alit: flex-end, $jc: center, $rgap: 5rem);
+                .project-screenshot{
+                    @include all.d-flex($flexdir:column, $alit: flex-end, $jc: center);
+                    .screenshot{
+                        width: 90%;
+                        border-radius: 2.5rem;
+                    }
+                    .stamps{
+                        width: 15rem;
+                        height: 15rem;
+                        position: absolute;
+                        right: -7rem;
+                    }
+                }
+                .github-livetest{
+                    @include all.d-flex($flexdir: row, $cgap: 3rem);
+                    .button-like-white{
+                        @include all.button-like();
+                        a{
+                            color: all.$color2;
+                        }
+                        &:hover{
+                            @include all.push-button();
+                        }
+                    }
+                }
+            }
+        }
+        .next{
+                width: 100%;
+                @include all.d-flex($flexdir:row, $jc: flex-end);
+                a{
+                    @include all.d-flex($flexdir:row, $cgap: 1rem);
+                    color: all.$color2;
+                    img{
+                        height: 4rem;
+                    }
+                }
+            }
+    }
+}
