@@ -60,6 +60,8 @@
         }
     },
     "testimonials": {
+        "intheirwords":"IN THEIR WORDS:",
+        "thoughts": "Colleagues' Thoughts",
         "profile": "profile"
     },
     "contact": {

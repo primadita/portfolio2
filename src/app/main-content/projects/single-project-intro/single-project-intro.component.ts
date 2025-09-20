@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Injectable, Input } from '@angular/core';
+import { Component, inject, Injectable, input, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectDescriptionListService } from '../../../services/project-description-list.service';
+import { Project } from '../../../shared/interfaces/project';
 
 @Component({
   selector: 'app-single-project-intro',
@@ -12,13 +13,5 @@ import { ProjectDescriptionListService } from '../../../services/project-descrip
 export class SingleProjectIntroComponent {
   projectdesclist = inject(ProjectDescriptionListService);
   
-  @Input() singleproj = {
-    projname: 'Join',
-    imgPath: './assets/design/03_portfolio/29_Join thumbnail.png',
-    altText: 'Join thumbnail',
-    desc: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    details: 'Lorem ipsum',
-    ihk: true,
-    duration: "4 weeks"
-  }
+  @Input() singleproj!: Project;
 }
