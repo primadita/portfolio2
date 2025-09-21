@@ -39,6 +39,7 @@
         "projects": "Projects",
         "desc": "From ten projects, I chose the ones that best demonstrate my skills. Each project is complete and ready for testing. My focus was on clean coding and barrier-free standards and fine details in implementation. Please feel free to take a look. Your feedback would be greatly appreciated.",
         "btn": "Project details",
+        "previous": "Previous project",
         "next": "Next Project",
         "description":"Description",
         "implementation": "Implementation Details",

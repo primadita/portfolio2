@@ -9,13 +9,13 @@
                 <p>{{ 'portfolio.desc' | translate }}</p>
             </div>
             <div id="top-right">
-                <app-single-project-intro [singleproj]="join!"></app-single-project-intro>
+                <app-single-project-intro [singleproj]="join!" (gotoDetailPage)="gotoSingleProjectOverview($event)"></app-single-project-intro>
             </div>
             <div id="bottom-left">
-                <app-single-project-intro [singleproj]="elPolloLoco!"></app-single-project-intro>
+                <app-single-project-intro [singleproj]="elPolloLoco!" (gotoDetailPage)="gotoSingleProjectOverview($event)"></app-single-project-intro>
             </div>
             <div id="bottom-right">
-                <app-single-project-intro [singleproj]="pokedex!"></app-single-project-intro>
+                <app-single-project-intro [singleproj]="pokedex!" (gotoDetailPage)="gotoSingleProjectOverview($event)"></app-single-project-intro>
             </div>
     </div>
 </section>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Skill } from '../shared/interfaces/skill';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class ProgrammingLanguageListService {
 
   constructor() { }
 
-  progLanguageList = [
+  progLanguageList: Skill[] = [
     {
       imgPath: './assets/icons/icon_HTML.png',
       altText: 'HTML icon',
@@ -39,9 +40,9 @@ export class ProgrammingLanguageListService {
       name: 'GIT'
     },
     {
-      imgPath: './assets/icons/icon_GIT_small.png',
-      altText: 'GIT icon',
-      name: 'GIT'
+      imgPath: './assets/icons/icon_Firebase.png',
+      altText: 'Firebase icon',
+      name: 'Firebase'
     },
   ]
 }

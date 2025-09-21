@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Skill } from '../../shared/interfaces/skill';
 
 @Component({
   selector: 'app-required-skills',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './required-skills.component.scss'
 })
 export class RequiredSkillsComponent {
-
+  @Input() icon!: Skill;
 }

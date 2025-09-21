@@ -39,6 +39,7 @@
         "projects": "Projekte",
         "desc": "Aus zehn Projekten habe ich diejenigen ausgewählt, die meine Fähigkeiten am besten demonstrieren. Jedes Projekt ist abgeschlossen und bereit für Tests. Mein Schwerpunkt lag auf sauberem Coding und Barrierefreiheitsregelung sowie auf feinen Details bei der Umsetzung. Schauen Sie sich das gerne an. Ich freue mich über Ihr Feedback.",
         "btn": "Projektdetails",
+        "previous": "Vorheriges Projekt",
         "next": "Nächstes Projekt",
         "description":"Beschreibung",
         "implementation": "Implementierungsdetails",

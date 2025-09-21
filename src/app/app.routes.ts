@@ -6,5 +6,5 @@ import { SingleProjectOverviewComponent } from './single-project-overview/single
 export const routes: Routes = [
     {path:'', component: MainContentComponent},
     {path:'imprint', component: ImprintComponent},
-    {path:'singleproject', component: SingleProjectOverviewComponent}
+    {path:'singleproject/:projectname', component: SingleProjectOverviewComponent}
 ];

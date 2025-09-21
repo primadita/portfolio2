@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Injectable, input, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Injectable, input, Input, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectDescriptionListService } from '../../../services/project-description-list.service';
 import { Project } from '../../../shared/interfaces/project';
@@ -11,7 +11,7 @@ import { Project } from '../../../shared/interfaces/project';
   styleUrl: './single-project-intro.component.scss'
 })
 export class SingleProjectIntroComponent {
-  projectdesclist = inject(ProjectDescriptionListService);
-  
+  // projectdesclist = inject(ProjectDescriptionListService);
   @Input() singleproj!: Project;
+  @Output() gotoDetailPage = new EventEmitter<string>();
 }

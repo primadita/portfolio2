@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Project } from '../shared/interfaces/project';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class ProjectDescriptionListService {
 
   constructor() { }
 
-  projDescriptionList = [
+  projDescriptionList: Project[] = [
     {
       projname: 'Join',
       imgPath: './assets/design/03_portfolio/29_Join thumbnail.png',
@@ -22,8 +23,8 @@ export class ProjectDescriptionListService {
       angular: true,
       ts: true,
       firebase: true,
-      link_next: '#join',
-      link_back: '#projects',
+      link_next: 'singleproject/El%20Pollo%20Loco',
+      link_back: 'singleproject/Pokedéx',
       link_github: '',
       link_livetest: ''
     },
@@ -41,8 +42,8 @@ export class ProjectDescriptionListService {
       angular: false,
       ts: false,
       firebase: false,
-      link_next: '#el-pollo-loco',
-      link_back: '#projects',
+      link_next: 'singleproject/Pokedéx',
+      link_back: 'singleproject/Join',
       link_github: 'https://github.com/primadita/el-pollo-loco.git',
       link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/el-pollo-loco/index.html'
     },
@@ -60,8 +61,8 @@ export class ProjectDescriptionListService {
       angular: true,
       ts: false,
       firebase: false,
-      link_next: '#pokedex',
-      link_back: '#projects',
+      link_next: 'singleproject/Join',
+      link_back: 'singleproject/El%20Pollo%20Loco',
       link_github: 'https://github.com/primadita/pokedex.git',
       link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/pokedex/index.html'
     }
