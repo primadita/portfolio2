@@ -10,11 +10,11 @@ div{
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
-        @include all.d-flex();
+        @include all.d-flex($alit: center);
         .project-screenshot{
             width: 50rem;
             height: 35rem;
-            // animation: moveup-and-down 1s infinite alternate;
+            border-radius: 2.5rem;
         }
         #ihk-sticker{
             position: absolute;

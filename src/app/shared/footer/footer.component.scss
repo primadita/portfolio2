@@ -5,7 +5,7 @@ footer{
     background-position: bottom;
     background-size: cover;
     width: 100%;
-    min-height: 10rem;
+    height: 15rem;
     .content{
         @include all.d-flex($flexdir: column, $alit: flex-start, $jc: center, $rgap: 1rem);
         color: all.$color2;
