@@ -123,14 +123,8 @@ section{
                 }
                 .button-like-white{
                     @include all.button-like($color: white);
-                    a{
-                        color: white;
-                    }
                     &:hover{
-                        background: #1073ea;
-                        box-shadow: 0 0;
-                        top: 0.5rem;
-                        left: 0.5rem;
+                        @include all.push-button();
                     }
                 }
             }

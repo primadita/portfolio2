@@ -18,6 +18,9 @@
   font-family: 'Bricolage Grotesque';
   font-size: 2rem;
   padding: $pad;
+  a{
+    color: $color;
+  }
 }
 
 @mixin push-button($color: var.$color2, $bgc: var.$highlight3, $pad: 1.2rem 2rem 1.2rem 2rem){

@@ -51,25 +51,20 @@ section{
                 }
             }
             .first{
-                padding-top: 5rem;
-                padding-bottom: 1rem;
+                padding: 5rem 0 1rem 0;
             }
             .last{
-                padding-top: 1rem;
-                padding-bottom: 5rem;
+                padding: 1rem 0 5rem 0;
             }
             .button-div{
                 @include all.d-flex($jc: flex-end, $flexdir: row);
                 >.button-like-black{
                     @include all.button-like($color: all.$color1);
-                    a{
-                        color: all.$color1;
-                    }
+                    // a{
+                    //     color: all.$color1;
+                    // }
                     &:hover{
-                        background: all.$highlight3;
-                        box-shadow: 0 0;
-                        top: 0.5rem;
-                        left: 0.5rem;
+                        @include all.push-button($color: all.$color1);
                     }
                 }
             }

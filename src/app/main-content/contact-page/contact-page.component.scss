@@ -106,11 +106,8 @@ section{
                             background-color: transparent;
                             cursor: pointer;
                             &:hover{
-                                background-color: all.$highlight3;
-                                @include all.button-like($color: all.$color2, $shadow: 0 0);
+                                @include all.push-button();
                                 cursor: pointer;
-                                top: 0.5rem;
-                                left: 0.5rem;
                             }
                         }
                         

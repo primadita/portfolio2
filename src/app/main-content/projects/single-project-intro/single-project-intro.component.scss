@@ -27,9 +27,6 @@ div{
             position: absolute;
             @include all.button-like();
             display: none;
-            a{
-                color: all.$color2;
-            }
         }
         &:hover{
             box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
