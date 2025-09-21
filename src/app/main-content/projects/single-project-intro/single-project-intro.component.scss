@@ -3,18 +3,17 @@
 div{
     width: 100%;
     height: 50dvh;
-    @include all.d-flex($alit:flex-start, $jc: flex-start, $flexdir: column, $rgap: 2rem);
+    @include all.d-flex($alit:flex-start, $jc: center, $flexdir: column, $rgap: 2rem);
     .img-div{
         width: 50rem;
-        min-height: 35rem;
+        height: 35rem;
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
-        @include all.d-flex($alit: center);
+        @include all.d-flex();
         .project-screenshot{
             width: 50rem;
             height: 35rem;
-            border-radius: 2.5rem;
         }
         #ihk-sticker{
             position: absolute;
