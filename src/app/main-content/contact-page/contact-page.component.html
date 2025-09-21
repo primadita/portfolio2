@@ -64,7 +64,7 @@
                 <!-- #endregion -->
                 <div class="privacy-policy">
                     <input id="confirm" type="checkbox" [(ngModel)]="privacyChecked" name="privacy" />
-                    <label for="confirm">I've read the <a href="">privacy policy </a> and agree to the processing of my data as outlined.</label>
+                    <label for="confirm" [innerHTML]="'contact.privatepolicy'|translate"></label>
                 </div>
                 <div id="submit-btn">
                     <button 

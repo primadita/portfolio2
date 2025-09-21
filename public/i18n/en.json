@@ -77,7 +77,7 @@
         "invalid_name": "Oops! It seems that your name is missing",
         "invalid_email": "Hoppla! Your email is required",
         "invalid_message":"What do you need to develop?",
-        "privatepolicy":"I've read the privacy policy and agree to the processing of my data as outlined."
+        "privatepolicy":"I've read the <a href='imprint'> privacy policy</a> and agree to the processing of my data as outlined."
     }, 
     "footer":{
         "imprint":"Legal notice",

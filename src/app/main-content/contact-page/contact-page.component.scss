@@ -16,10 +16,12 @@ section{
                 padding: 4rem 0 4rem 0;
             }
             div{
+                width: 100%;
+                @include all.d-flex($alit: right);
                 @include all.left-to-right-animation();
                 img{
                     width: 25rem;
-                    right: -19rem;
+                    right: -15rem;
                 }
             }
         }
@@ -90,16 +92,16 @@ section{
                     }
                 }
                 >#submit-btn{
-                    // @include all.d-flex($flexdir: row, $jc: flex-end, $alit: right);
                     margin-left: auto;
                     >button{
                         padding: 0;
                         @include all.button-like($color: gray);
                         border-bottom: none;
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                         cursor: pointer;
                         &.btn-disabled{
                             cursor: not-allowed;
+                            background: transparent;
                         }
                         &.btn-enabled{
                             @include all.button-like($color: all.$color2);
