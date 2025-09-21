@@ -37,7 +37,7 @@
 }
 
 @mixin left-to-right-animation($dur:3s, $dir: alternate){
-  width: 0;
+    width: 0;
     opacity: 0;
     overflow: hidden;
     animation: left-to-right;

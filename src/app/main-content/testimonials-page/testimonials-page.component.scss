@@ -3,40 +3,39 @@
 section{
     background: all.$color2;
     color: all.$color1;
+    height: auto;
+    min-height: 60dvh;
     .content{
         @include all.d-flex($flexdir:column, $jc: flex-start, $alit: flex-end);
-        padding: 0 10rem 0 10rem;
+        padding: 4rem 10rem 4rem 10rem;
         .h3{
             @include all.d-flex($flexdir: row);
             >.arrow{
-                // animation-name: left-to-right;
-                // animation-direction: alternate-reverse;
-                // animation-duration: 3s;
-                // animation-iteration-count: infinite;
+                // @include all.left-to-right-animation($dir: alternate-reverse);
                 >img{
                     width: 10rem;
                 }
             }
         }
         .testimonial-sect{
-            @include all.d-flex($flexdir: row);
+            @include all.d-flex($flexdir: row, $alit: center, $jc: center);
             margin-top: 4rem;
             #colleague1{
-                position: absolute;
+                // position: absolute;
                 transform: rotate(-4deg);
-                left: -112rem;
+                left: 20rem;
                 top: 0rem;
                 // z-index: 4;
             }
             #colleague2{
-                position: absolute;
-                left: -75rem;
+                // position: absolute;
+                left: 10rem;
                 top: 5rem;
             }
             #colleague3{
-                position: absolute;
+                // position: absolute;
                 transform: rotate(4deg);
-                left:-45rem;
+                left:0rem;
                 top: 0rem;
             }
         }

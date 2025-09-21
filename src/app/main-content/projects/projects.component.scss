@@ -3,19 +3,19 @@
 section{
     background: all.$color2;
     color: all.$color1;
-    height: 180dvh;
+    height: auto;
+    min-height: 100dvh;
     .content{
-        height: auto;
-        padding: 10rem;
-        @include all.d-flex($flexdir: row, $jc: center, $alit: center, $cgap: 4rem, $rgap: 4rem);
+        padding: 16rem;
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $rgap: 5rem);
         flex-wrap: wrap;
         div{
-            width: 50rem;
+            width: 45%;
             height: auto;
             @include all.d-flex($flexdir: column, $alit: flex-start,$jc: flex-start);
             app-single-project-intro{
                 width: 100%;
-                height: 60dvh; 
+                height: 55dvh; 
             }
         }
     }
