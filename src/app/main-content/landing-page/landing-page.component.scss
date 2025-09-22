@@ -5,7 +5,7 @@ section{
     background-size: cover;
     background-position: bottom;
     height: auto;
-    min-height: 100dvh;
+    min-height: calc(100dvh - 10dvh);
     .content{
         @include all.d-flex($jc:center, $alit: center);
         .maintitle{
