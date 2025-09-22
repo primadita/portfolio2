@@ -131,7 +131,7 @@ section{
         }
         .extern-profiles{
             position: absolute;
-            bottom: 15rem;
+            bottom: 20rem;
             left: 5rem;
             @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 1rem);
             a{

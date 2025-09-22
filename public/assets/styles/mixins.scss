@@ -46,3 +46,16 @@
     animation-fill-mode: forwards;
     animation-direction: $dir;
 }
+
+@mixin noBackground-noBorder(){
+  border: 0;
+  background: transparent;
+}
+
+@mixin adjustBgImg($pos: bottom, $height: 100dvh){
+  background-size: cover;
+  background-position: $pos;
+  height: $height;
+  width: 100%;
+
+}

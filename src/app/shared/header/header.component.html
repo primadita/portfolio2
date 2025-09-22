@@ -1,8 +1,11 @@
 <header>
+    <!-- #region DESKTOP VIEW -->
     <div class="content">
         <div class="logo">
-            <img class="before" src="./assets/icons/felicious_turquoise.png" alt="Felicious Logo">
-            <img class="after" src="./assets/icons/felicious_mustard.png" alt="Felicious Logo">
+            <a href=""> 
+                <img class="before" src="./assets/icons/felicious_turquoise.png" alt="Felicious Logo">
+                <img class="after" src="./assets/icons/felicious_mustard.png" alt="Felicious Logo">
+            </a>
         </div>
         <app-navbar></app-navbar>
         <div class="switch-language">
@@ -10,4 +13,41 @@
             <button (click)="useLanguage('de')"><img [src]="currentLanguage === 'de'? './assets/icons/DE_hover.png':'./assets/icons/DE_def.png'" alt="{{'navbar.altTextDE'|translate}}"></button>
         </div>
     </div>
+    <!-- #endregion -->
+    <!-- #region MOBILE VIEW -->
+    <div class="mobile-view">
+        <!-- BURGER BUTTON BLENDED OUT -->
+        <div class="standard-mobile-view" [class.open]="menuOpen">
+            <div class="logo" >
+                <a href=""> 
+                    <img class="before" src="./assets/icons/felicious_turquoise.png" alt="Felicious Logo">
+                </a>
+            </div>
+            <button id="burger-btn" (click)="toggleMenu()" [class.open]="menuOpen">
+                <img src="./assets/design/00_header/02_burgerbtn.png" alt="Burger button">
+            </button>
+        </div>
+        <!-- BURGER BUTTON BLENDED IN -->
+        <div id="burger-btn-view" [class.open]="menuOpen">
+            <div class="logo">
+                <a href=""> 
+                    <img src="./assets/icons/felicious_turquoise.png" alt="Felicious Logo">
+                </a>
+                <button (click)="toggleMenu()">
+                    <img src="./assets/design/00_header/02_closebtn.png" alt="close button">
+                </button>
+            </div>
+            <app-navbar></app-navbar>
+            <div id="switch-language">
+                <button (click)="useLanguage('en')"><img [src]="currentLanguage === 'en'? './assets/icons/EN_hover.png':'./assets/icons/EN_def.png'" alt="{{'navbar.altTextEN'|translate}}"></button>
+                <button (click)="useLanguage('de')"><img [src]="currentLanguage === 'de'? './assets/icons/DE_hover.png':'./assets/icons/DE_def.png'" alt="{{'navbar.altTextDE'|translate}}"></button>
+            </div>
+            <div class="extern-profiles">
+                <a href="https://www.linkedin.com/in/felicia-primadita-tretter/"><img src="./assets/icons/icon_LinkedIn.png" alt="go to LinkedIn profile"></a>
+                <a href="https://github.com/primadita"><img src="./assets/icons/icon_GITHUB_small.png" alt="go to Github profile"></a>
+                <a href="mailto:felicia.primadita@web.de"><img src="./assets/icons/icon_Email.png" alt="send Felicia an email to felicia.primadita@web.de"></a>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
 </header>

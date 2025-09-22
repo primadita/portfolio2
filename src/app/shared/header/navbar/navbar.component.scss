@@ -1,5 +1,6 @@
 @use './../../../../../public/assets/styles/all-styles.scss' as all;
 
+// #region Desktop-view 
 .navbar{
     width: 100%;
     @include all.d-flex($jc: space-around, $alit: center, $flexdir: row);
@@ -41,4 +42,10 @@
             opacity: 1;
         }
     }
+    // #endregion
+    // #region Mobile-view
+    @include all.mobile{
+        @include all.d-flex($flexdir: column, $jc: center, $rgap:3rem);
+    }
+    // #endregion
 }

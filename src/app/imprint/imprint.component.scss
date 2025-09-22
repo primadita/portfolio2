@@ -7,7 +7,7 @@
     color: all.$color2;
     height: 40rem;
     .content{
-        padding: 10rem 15rem 10rem 15rem;
+        padding: 5rem 15rem 10rem 15rem;
         @include all.d-flex($flexdir: column, $alit: flex-start);
     }
 }

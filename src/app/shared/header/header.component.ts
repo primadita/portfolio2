@@ -11,25 +11,66 @@ import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } 
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
-  currentLanguage: string = 'en';
-  savedLang!: string;
+  // #region ATTRIBUTES
   
+  /**
+   * The currently active language. Default is `'en'`.
+   */
+  currentLanguage: string = 'en';
 
+  /**
+   * The saved language from localStorage. 
+   * Used to persist the user's language preference.
+   */
+  savedLang!: string;
+
+  /**
+   * Indicates whether the navigation menu is open or closed.
+   */
+  menuOpen = false;
+  // #endregion
+
+  /**
+   * Creates an instance of HeaderComponent.
+   * Initializes the translation service with the default language.
+   *
+   * @param translate The translation service used to switch application languages.
+   */
   constructor(private translate:TranslateService){
-    // this.translate.addLangs(['de','en']);
-    // this.currentLanguage = this.savedLang ? this.savedLang:'en';
     this.translate.setDefaultLang(this.currentLanguage);
     this.translate.use(this.currentLanguage);
   }
 
+  // #region METHODS
+
+   /**
+   * Changes the application language.
+   *
+   * @param language The language code (e.g., `'en'`, `'de'`, `'fr'`).
+   */
   useLanguage(language: string):void {
     this.currentLanguage = language;
     this.translate.use(language);
     localStorage.setItem('language',language);
   }
+
+  /**
+   * Initializes the component.
+   * Loads the saved language from localStorage and sets it as the current language.
+   */
   ngOnInit(): void {
     this.savedLang = localStorage.getItem('language') || 'en';
     this.currentLanguage = this.savedLang;
     this.translate.use(this.currentLanguage);
   }
+
+   /**
+   * Toggles the state of the navigation menu.
+   * Logs the current menu state to the console.
+   */
+  toggleMenu(){
+    this.menuOpen = !this.menuOpen;
+    console.log(this.menuOpen);
+  }
+  // #endregion
 }
