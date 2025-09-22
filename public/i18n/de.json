@@ -63,7 +63,10 @@
     "testimonials": {
         "intheirwords":"MIT IHREN WORTEN",
         "thoughts": "In Augen Meiner Kollegen",
-        "profile": "Profil"
+        "profile": "Profil",
+        "testi1": "All good",
+        "testi2": "Weird but friendly",
+        "testi3": "Helpful"
     },
     "contact": {
         "pagetitle":"KONTAKTIEREN SIE MICH",

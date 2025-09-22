@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Opinion } from '../../../shared/interfaces/opinion';
 
 @Component({
   selector: 'app-notes',
@@ -9,5 +10,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './notes.component.scss'
 })
 export class NotesComponent {
-
+  @Input() singletesti!:Opinion;
 }

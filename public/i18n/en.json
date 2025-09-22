@@ -63,7 +63,11 @@
     "testimonials": {
         "intheirwords":"IN THEIR WORDS:",
         "thoughts": "Colleagues' Thoughts",
-        "profile": "profile"
+        "profile": "profile",
+        "testi1": "All good",
+        "testi2": "Weird but friendly",
+        "testi3": "Helpful"
+
     },
     "contact": {
         "pagetitle":"CONTACT ME",
