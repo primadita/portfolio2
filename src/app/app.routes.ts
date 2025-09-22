@@ -2,9 +2,11 @@ import { Routes } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { SingleProjectOverviewComponent } from './single-project-overview/single-project-overview.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 export const routes: Routes = [
     {path:'', component: MainContentComponent},
     {path:'imprint', component: ImprintComponent},
-    {path:'singleproject/:projectname', component: SingleProjectOverviewComponent}
+    {path:'singleproject/:projectname', component: SingleProjectOverviewComponent},
+    // {path: 'feedback', component: FeedbackComponent}
 ];

@@ -55,7 +55,7 @@
             "duration": "3 weeks"
         },
         "pokedex":{
-            "desc":"Pokemon-Trainer-Register based on data from Pokemon API. Get creative to create a list of pokemons with its characters, specification and stats",
+            "desc":"Pokemon-Trainer-Register based on data from Pokemon API. Get creative to create a list of pokemons with its characters, specification and stats.",
             "details": "The aim of the solo project was to learn how to bind API in the website and to deal with async communication without disregarding clean code. Get creative with the design of the website but keeping the structure of the UI neat.",
             "duration": "1 week"
         }
@@ -77,7 +77,8 @@
         "invalid_name": "Oops! It seems that your name is missing",
         "invalid_email": "Hoppla! Your email is required",
         "invalid_message":"What do you need to develop?",
-        "privatepolicy":"I've read the <a href='imprint'> privacy policy</a> and agree to the processing of my data as outlined."
+        "privatepolicy":"I've read the <a href='imprint' (click)='saveInput()'> privacy policy</a> and agree to the processing of my data as outlined.",
+        "send": "Send"
     }, 
     "footer":{
         "imprint":"Legal notice",
@@ -105,5 +106,12 @@
         "text10": "For any questions or notices, please contact us at felicia.primadita(at)web.de.",
         "text11": "Date: July 26, 2025",
         "back": "Back"
+    },
+    "feedback":{
+        "button": "Back to homepage",
+        "positive_head": "Your message has been successfully sent!",
+        "positive_text": "Thank you for your message. I'll response as soon as possible.",
+        "error_head": "Error occured",
+        "error_text": "Sorry, your message can't be sent yet. Please check your internet connection or try again later."
     }
 }

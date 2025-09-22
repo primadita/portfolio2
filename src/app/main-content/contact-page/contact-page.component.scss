@@ -9,113 +9,127 @@ section{
         height: auto;
         max-width: 1920px;
         padding: 15rem;
-        @include all.d-flex($flexdir:row, $jc: space-between, $gap: 5rem);
-        .left-column{
-            width: 50%;
-            p{
-                padding: 4rem 0 4rem 0;
-            }
-            div{
-                width: 100%;
-                @include all.d-flex($alit: right);
-                @include all.left-to-right-animation();
-                img{
-                    width: 25rem;
-                    right: -15rem;
+        @include all.d-flex($flexdir: column);
+        .columns{
+            @include all.d-flex($flexdir:row, $jc: space-between, $gap: 5rem);
+            #left-column{
+                width: 50%;
+                p{
+                    padding: 4rem 0 4rem 0;
                 }
+                div{
+                    width: 100%;
+                    @include all.d-flex($alit: right);
+                    @include all.left-to-right-animation();
+                    img{
+                        width: 25rem;
+                        right: -15rem;
+                    }
+                }
+            }
+            #right-column{
+                width: 40%;
+                @include all.d-flex($flexdir:column);
+                img{
+                    width: 15rem;
+                    transform: rotate(20deg);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                form{
+                    @include all.d-flex($flexdir: column, $alit: left, $rgap: 2rem);
+                    padding-top: 10rem;
+                    width: 100%;
+                    h3{
+                        font-size: 2.4rem;
+                        &:hover{
+                            color: all.$highlight2;
+                        }
+                    }
+                    input, textarea{
+                        background: transparent;
+                        border: 0;
+                        padding-bottom: 2rem;
+                        width: 100%;
+                        border-bottom: 1px solid all.$highlight1;
+                        color: all.$color2;
+                        &:hover{
+                            border-bottom-color: all.$highlight3;
+                        }
+                    }
+                    span{
+                        font-size: 1.8rem;
+                        color: red;
+                        bottom: 6rem;
+                    }
+                    
+                    >.privacy-policy{
+                        #confirm{
+                            border: 0;
+                        }
+                        >label{
+                            font-size: 1.6rem;
+                            font-weight: regular;
+                        }
+                        [type="checkbox"] {
+                            -webkit-appearance: none;
+                        }
+                        [type="checkbox"] + label::before {
+                            width: 2.1rem;
+                            height: 2.1rem;
+                            background-image: url("./../../../../public/assets/icons/unchecked.png");
+                            display: block;
+                            content: "";
+                            float: left;
+                        }
+                        [type="checkbox"]:hover+label::before {
+                            background-image: url("./../../../../public/assets/icons/unchecked_hover.png");
+                        }
+                        [type="checkbox"]:checked+label::before {
+                            background-image: url("./../../../../public/assets/icons/checked.png");
+                        }
+                        [type="checkbox"]:checked:hover+label::before {
+                            background-image: url("./../../../../public/assets/icons/checked_hover.png");
+                        }
+                    }
+                    >#submit-btn{
+                        margin-left: auto;
+                        >button{
+                            padding: 0;
+                            @include all.button-like($color: gray);
+                            border-bottom: none;
+                            font-size: 2rem;
+                            cursor: pointer;
+                            &.btn-disabled{
+                                cursor: not-allowed;
+                                background: transparent;
+                            }
+                            &.btn-enabled{
+                                @include all.button-like($color: all.$color2);
+                                background-color: transparent;
+                                cursor: pointer;
+                                &:hover{
+                                    @include all.push-button();
+                                    cursor: pointer;
+                                }
+                            }
+                            
+                        }
+                    }  
+                }    
             }
         }
-        .right{
-            width: 40%;
-            @include all.d-flex($flexdir:column);
-            img{
-                width: 15rem;
-                transform: rotate(20deg);
-                position: absolute;
-                right: 0;
-                top: 0;
+        .feedback{
+            width: 100%;
+            @include all.d-flex($flexdir: column, $rgap: 5rem);
+            .homepage-btn{
+                @include all.button-like();
+                cursor: pointer;
+                &:hover{
+                    @include all.push-button();
+                }
             }
-            form{
-                @include all.d-flex($flexdir: column, $alit: left, $rgap: 2rem);
-                padding-top: 10rem;
-                width: 100%;
-                h3{
-                    font-size: 2.4rem;
-                    &:hover{
-                        color: all.$highlight2;
-                    }
-                }
-                input, textarea{
-                    background: transparent;
-                    border: 0;
-                    padding-bottom: 2rem;
-                    width: 100%;
-                    border-bottom: 1px solid all.$highlight1;
-                    color: all.$color2;
-                    &:hover{
-                        border-bottom-color: all.$highlight3;
-                    }
-                }
-                span{
-                    font-size: 1.8rem;
-                    color: red;
-                    bottom: 6rem;
-                }
-                
-                >.privacy-policy{
-                    #confirm{
-                        border: 0;
-                    }
-                    >label{
-                        font-size: 1.6rem;
-                        font-weight: regular;
-                    }
-                    [type="checkbox"] {
-                        -webkit-appearance: none;
-                    }
-                    [type="checkbox"] + label::before {
-                        width: 2.1rem;
-                        height: 2.1rem;
-                        background-image: url("./../../../../public/assets/icons/unchecked.png");
-                        display: block;
-                        content: "";
-                        float: left;
-                    }
-                    [type="checkbox"]:hover+label::before {
-                        background-image: url("./../../../../public/assets/icons/unchecked_hover.png");
-                    }
-                    [type="checkbox"]:checked+label::before {
-                        background-image: url("./../../../../public/assets/icons/checked.png");
-                    }
-                    [type="checkbox"]:checked:hover+label::before {
-                        background-image: url("./../../../../public/assets/icons/checked_hover.png");
-                    }
-                }
-                >#submit-btn{
-                    margin-left: auto;
-                    >button{
-                        padding: 0;
-                        @include all.button-like($color: gray);
-                        border-bottom: none;
-                        font-size: 2rem;
-                        cursor: pointer;
-                        &.btn-disabled{
-                            cursor: not-allowed;
-                            background: transparent;
-                        }
-                        &.btn-enabled{
-                            @include all.button-like($color: all.$color2);
-                            background-color: transparent;
-                            cursor: pointer;
-                            &:hover{
-                                @include all.push-button();
-                                cursor: pointer;
-                            }
-                        }
-                        
-                    }
-                }  
-            }    
         }
     }
 }

@@ -55,7 +55,7 @@
             "duration": "3 Wochen"
         },
         "pokedex":{
-            "desc":"Pokemon-Trainer-Register based on data from Pokemon API. Get creative to create a list of pokemons with its characters, specification and stats",
+            "desc":"Das Pokemon-Trainer-Register basiert auf Daten aus der Pokemon-API. Mit Kreativität wurde eine Liste von Pokemon mit ihren Charakteren, Spezifikationen und Statistiken gestalten.",
             "details": "Das Ziel des Solo-Projekts war es, zu lernen, wie man APIs in die Website einbindet und mit asynchroner Kommunikation umgeht, ohne dabei den sauberen Code zu vernachlässigen. Seien Sie kreativ beim Design der Website, aber achten Sie darauf, dass die Struktur der Benutzeroberfläche übersichtlich bleibt.",
             "duration": "1 Woche"
         }
@@ -77,7 +77,8 @@
         "invalid_name": "Ups! Es scheint, dass Ihr Name fehlt.",
         "invalid_email": "Hoppla! Ihre E-Mail-Adresse ist erforderlich.",
         "invalid_message":"Was benötigen Sie für die Entwicklung?",
-        "privatepolicy": "Ich habe die <a href='imprint'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+        "privatepolicy": "Ich habe die <a href='imprint' (click)='saveInput()'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "send": "Senden"
     }, 
     "footer":{
         "imprint":"Impressum",
@@ -105,6 +106,13 @@
         "text10": "Bei Fragen oder Hinweisen wenden Sie sich bitte an felicia.primadita(at)web.de.",
         "text11": "Datum: 26. Juli 2025",
         "back": "Zurück"
+    },
+    "feedback":{
+        "button": "Zurück zur Startseite",
+        "positive_head": "Deine Nachricht wurde erfolgreich verschickt!",
+        "positive_text": "Vielen Dank für deine Nachricht. Ich werde Ihnen schnellstmöglich eine Rückmeldung geben.",
+        "error_head": "Fehler aufgetreten",
+        "error_text": "Leider kann Ihre Nachricht noch nicht gesendet werden. Bitte überprüfen Sie Ihre Internetverbindung oder versuchen Sie es später erneut."
     }
 
 }

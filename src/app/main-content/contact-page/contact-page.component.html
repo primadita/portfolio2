@@ -1,82 +1,103 @@
 <section>
     <div class="content">
-        <div class="left-column">
-            <h3>{{'contact.pagetitle' | translate}}</h3>
-            <h2>{{'contact.pagetitlebig' | translate}}</h2>
-            <br>
-            <p>{{ 'contact.introduction' | translate }}</p>
-            <div>
-                <img src="./assets/design/05_contact/contact-arrow.png" alt="arrow to contact form">
+        <div *ngIf="!hideColumns" class="columns">
+            <div id="left-column">
+                <h3>{{'contact.pagetitle' | translate}}</h3>
+                <h2>{{'contact.pagetitlebig' | translate}}</h2>
+                <br>
+                <p>{{ 'contact.introduction' | translate }}</p>
+                <div>
+                    <img src="./assets/design/05_contact/contact-arrow.png" alt="arrow to contact form">
+                </div>
+            </div>
+            <div id="right-column">
+                <img src="./assets/design/mein-sticker.png" alt="personal logo">
+                <form (ngSubmit)="onSubmit(contactPage)" #contactPage="ngForm">
+                    <!-- #region INPUT NAME -->
+                    <label for="name"><h3>{{'contact.question_name' | translate}}</h3></label>
+                    <input 
+                        [(ngModel)]="contactData.name"
+                        (ngModelChange)="saveInput()" 
+                        type="text"
+                        name="name"
+                        id="name" 
+                        [placeholder]="name.invalid && name.touched ? '': ('contact.placeholder_name'| translate)"
+                        required
+                        #name="ngModel">
+                    <span *ngIf="name.invalid && name.touched">
+                        <ng-container>
+                            {{'contact.invalid_name' | translate}}
+                        </ng-container>
+                    </span>
+                    <!-- #endregion -->
+                    <!-- #region INPUT EMAIL -->
+                    <label for="email"><h3>{{'contact.question_email' | translate}}</h3></label>
+                    <input 
+                        [(ngModel)]="contactData.email"
+                        (ngModelChange)="saveInput()"
+                        type="text" 
+                        name="email" 
+                        id="email" 
+                        [placeholder]="email.invalid && email.touched ? '' : ('youremail@email.com')" 
+                        required 
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        #email="ngModel">
+                    <span *ngIf="email.invalid && email.touched">
+                        <ng-container>
+                            {{'contact.invalid_email' | translate}}
+                        </ng-container>
+                    </span>
+                    <!-- #endregion -->
+                    <!-- #region INPUT TEXT MESSAGE -->
+                    <label for="message"><h3>{{'contact.question_message' | translate}}</h3></label>
+                    <textarea 
+                        #message="ngModel" 
+                        minlength="4" 
+                        [(ngModel)]="contactData.message" 
+                        (ngModelChange)="saveInput()"
+                        name="message" 
+                        id="message" 
+                        [placeholder]="message.invalid && message.touched ? '': ('contact.placeholder_text'|translate)" 
+                        required>
+                    </textarea>
+                    <span *ngIf="message.invalid && message.touched">
+                        <ng-container>
+                            {{ 'contact.invalid_message' | translate }}
+                        </ng-container>
+                    </span>
+                    <!-- #endregion -->
+                    <div class="privacy-policy">
+                        <input id="confirm" type="checkbox" [(ngModel)]="privacyChecked" (ngModelChange)="saveInput()" name="privacy" />
+                        <label for="confirm" [innerHTML]="'contact.privatepolicy'|translate"></label>
+                    </div>
+                    <div id="submit-btn">
+                        <button 
+                            type="submit"
+                            [disabled]="!contactPage.valid || !privacyChecked"
+                            [ngClass]="{
+                                'btn-disabled': !contactPage.valid || !privacyChecked,
+                                'btn-enabled': contactPage.valid && privacyChecked
+                            }">
+                        {{'contact.send' | translate }}</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="right">
-            <img src="./assets/design/mein-sticker.png" alt="personal logo">
-            <form (ngSubmit)="onSubmit(contactPage)" #contactPage="ngForm">
-                <!-- #region INPUT NAME -->
-                <label for="name"><h3>{{'contact.question_name' | translate}}</h3></label>
-                <input 
-                    [(ngModel)]="contactData.name" 
-                    type="text"
-                    name="name"
-                    id="name" 
-                    [placeholder]="name.invalid && name.touched ? '': ('contact.placeholder_name'| translate)"
-                    required
-                    #name="ngModel">
-                <span *ngIf="name.invalid && name.touched">
-                    <ng-container>
-                        {{'contact.invalid_name' | translate}}
-                    </ng-container>
-                </span>
-                <!-- #endregion -->
-                <!-- #region INPUT EMAIL -->
-                <label for="email"><h3>{{'contact.question_email' | translate}}</h3></label>
-                <input 
-                    [(ngModel)]="contactData.email" 
-                    type="text" 
-                    name="email" 
-                    id="email" 
-                    [placeholder]="email.invalid && email.touched ? '' : ('youremail@email.com')" 
-                    required 
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                    #email="ngModel">
-                <span *ngIf="email.invalid && email.touched">
-                    <ng-container>
-                        {{'contact.invalid_email' | translate}}
-                    </ng-container>
-                </span>
-                <!-- #endregion -->
-                <!-- #region INPUT TEXT MESSAGE -->
-                <label for="message"><h3>{{'contact.question_message' | translate}}</h3></label>
-                <textarea 
-                    #message="ngModel" 
-                    minlength="4" 
-                    [(ngModel)]="contactData.messsage" 
-                    name="message" 
-                    id="message" 
-                    [placeholder]="message.invalid && message.touched ? '': ('contact.placeholder_text'|translate)" 
-                    required>
-                </textarea>
-                <span *ngIf="message.invalid && message.touched">
-                    <ng-container>
-                        {{ 'contact.invalid_message' | translate }}
-                    </ng-container>
-                </span>
-                <!-- #endregion -->
-                <div class="privacy-policy">
-                    <input id="confirm" type="checkbox" [(ngModel)]="privacyChecked" name="privacy" />
-                    <label for="confirm" [innerHTML]="'contact.privatepolicy'|translate"></label>
-                </div>
-                <div id="submit-btn">
-                    <button 
-                        type="submit"
-                        [disabled]="!contactPage.valid || !privacyChecked"
-                        [ngClass]="{
-                            'btn-disabled': !contactPage.valid || !privacyChecked,
-                            'btn-enabled': contactPage.valid && privacyChecked
-                        }">
-                    Send</button>
-                </div>
-            </form>
+        <div *ngIf="!hideFeedback" class="feedback">
+            <div class="success">
+                <h2>{{ successMessage[0] | translate }}</h2>
+                <p>{{ successMessage[1] | translate }}</p>
+            </div>
+            <div class="error">
+                <h2>{{ errorMessage[0] | translate }}</h2>
+                <p>{{ errorMessage[1] | translate }}</p>
+            </div>
+            <div class="homepage-btn">
+                <a href="">
+                    {{ 'feedback.button' | translate }}
+                </a>
+            </div>
+            
         </div>
     </div>
 </section>
