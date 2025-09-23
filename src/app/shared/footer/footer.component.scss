@@ -68,16 +68,13 @@ footer{
 // #endregion
 // #region OTHER MEDIA
         @include all.notebook{
-            padding-left: 5rem;
-            padding-right: 5rem;
+            @include all.paddingLeftRightOnly($pad: 5rem);
         }
         @include all.tablet{
             @include all.d-flex($flexdir: column, $jc: space-between);
-            padding-left: 5rem;
-            padding-right: 5rem;
+            @include all.paddingLeftRightOnly($pad: 5rem);
             @media (max-width: 380px) {
-                padding-left: 3rem;
-                padding-right: 3rem;
+                @include all.paddingLeftRightOnly($pad: 3rem);
             }
             #logo-with-text, h6{
                 display: none;
@@ -135,7 +132,6 @@ footer{
                         }
                     }
                 }
-                
             }
         }        
     }

@@ -83,11 +83,9 @@ section{
         // #region OTHER MEDIA VIEW
         @include all.notebook{
             @include all.d-flex($flexdir:column-reverse, $jc: center, $rgap: 5rem);
-            padding-left: 15rem;
-            padding-right: 15rem;
+            @include all.paddingLeftRightOnly($pad:15rem);
             @include all.mobile{
-                padding-left: 5rem;
-                padding-right: 5rem;
+                @include all.paddingLeftRightOnly($pad:5rem);
             }
             .right-column{
                 width: 100%;

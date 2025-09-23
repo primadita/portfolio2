@@ -111,8 +111,7 @@ section{
                     @include all.d-flex($flexdir:row);
                     h1{
                         &:hover{
-                            animation: change-to-lowercase;
-                            animation-duration: 400ms;
+                            animation: change-to-lowercase 400ms forwards;
                         }
                     }
                 }
@@ -219,8 +218,7 @@ section{
                 cursor: pointer;
 
                 img{
-                    width: 4rem;
-                    height: 4rem;
+                    @include all.square($length: 4rem);
                 }
                 &:hover{
                     background: #1aa8b5;

@@ -6,8 +6,7 @@ button{
 }
 .logo{
     img{
-        width: 6rem;
-        height: 6rem;
+        @include all.square($length: 6rem);
     }
 }
 header{
@@ -77,6 +76,7 @@ header{
         #burger-btn-view.open{
             position: absolute;
             top: 0;
+            padding-top: 2rem;
             @include all.d-flex($flexdir: column, $jc: flex-start, $alit: center, $rgap: 5rem);
             background: url('./../../../../public/assets/design/00_header/01_Hero.png');
             @include all.adjustBgImg($height: 100dvh);
@@ -91,8 +91,7 @@ header{
                     @include all.d-flex($alit: center, $jc: center);
                     @include all.button-like($color: all.$color2, $pad: 0.2rem 0.2rem, $shadow: 0 0);
                     img{
-                        width: 4rem;
-                        height: 4rem;
+                        @include all.square($length: 4rem);
                     }
                 }
             }
