@@ -10,5 +10,10 @@ import { Opinion } from '../../../shared/interfaces/opinion';
   styleUrl: './notes.component.scss'
 })
 export class NotesComponent {
+  /**
+   * A single opinion passed into the component.
+   * 
+   * @input
+   */
   @Input() singletesti!:Opinion;
 }

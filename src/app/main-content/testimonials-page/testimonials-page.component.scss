@@ -4,50 +4,61 @@ section{
     background: all.$color2;
     color: all.$color1;
     height: auto;
-    min-height: 60dvh;
+    min-height: 40dvh;
     .content{
         @include all.d-flex($flexdir:column, $jc: flex-start, $alit: flex-end);
-        padding: 4rem 10rem 4rem 10rem;
+        padding: 10rem 15rem 10rem 15rem;
         .h3{
             @include all.d-flex($flexdir: row);
             >.arrow{
-                // @include all.left-to-right-animation($dir: alternate-reverse);
                 >img{
                     width: 10rem;
                 }
             }
         }
+        h2{
+            text-align: right;
+        }
         .testimonial-sect{
             @include all.d-flex($flexdir: row, $alit: center, $jc: center);
+            width: 100%;
             margin-top: 4rem;
             #colleague1{
-                // position: absolute;
                 transform: rotate(-4deg);
-                left: 20rem;
-                top: 0rem;
-                // z-index: 4;
+                @include all.adjustTopLeft($left: 10%);
             }
             #colleague2{
-                // position: absolute;
-                left: 10rem;
-                top: 5rem;
+                @include all.adjustTopLeft($top: 5rem);
             }
             #colleague3{
-                // position: absolute;
                 transform: rotate(4deg);
-                left:0rem;
-                top: 0rem;
+                @include all.adjustTopLeft($left: -10%);
             }
         }
     }
-}
-app-notes{
-        &:hover{
-        // background: url('./../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
-        // background-size: cover;
-        // backdrop-filter: brightness(90%);
-        filter: brightness(90%);
-        z-index: 20;
+    @media (max-width: 1370px) {
+        .content{
+            @include all.paddingLeftRightOnly($pad: 5rem);   
+        }
     }
-    
+    @include all.notebook{
+        .content{
+            .testimonial-sect{
+                @include all.d-flex($flexdir: column, $jc: center, $alit: center);
+                width: 100%;
+                #colleague1{
+                    @include all.adjustTopLeft($top: 0, $left: 0rem);
+                    transform: rotate(-8deg);
+                }
+                #colleague2{
+                    @include all.adjustTopLeft($top: -2rem, $left: 0);
+                }
+                #colleague3{
+                    @include all.adjustTopLeft($top: -3rem, $left: 1rem);
+                    transform: rotate(5deg);
+                }
+            }
+        }
+    }
+
 }

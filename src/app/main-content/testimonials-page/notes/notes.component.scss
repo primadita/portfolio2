@@ -11,7 +11,6 @@
     @include all.d-flex($flexdir: column, $jc: space-between);
     >div{
         @include all.d-flex($flexdir: row, $jc: space-between);
-
         >div{
             @include all.d-flex($flexdir: column, $alit: flex-start);
         }
@@ -24,12 +23,31 @@
         }
     }
     &:hover{
-        background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
+        background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png');
         background-size: cover;
-        // z-index: 20;
+        filter:brightness(120%) contrast(80%);
+        color: all.$color1;
+    }
+    @media (max-width: 1200px) {
+        width: 38rem;
+        height: 24.9rem;
+        >div{
+            >div{
+                width: 70%;
+            }
+        }
+    }
+    @include all.notebook{
+        width: 45rem;
+        height: 29.5rem;
+    }
+    @media (max-width: 460px){
+        background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/b-portrait.png');
+        @include all.adjustBgImg($pos: center, $height: 47rem);
+        width: 31rem;
+        &:hover{
+            background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/b-portrait.png');
+            background-size: cover;
+        }
     }
 }
-// .active{
-//     background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/A.png'),;
-//     background-size: cover;
-// }
