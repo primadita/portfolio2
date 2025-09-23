@@ -203,6 +203,12 @@ section{
                     @include all.push-button();
                 }
             }
+            @include all.mobile{
+                padding-top: 15rem;
+                h2{
+                    font-size: 5.6rem;
+                }
+            }
         }
         // #endregion
     }

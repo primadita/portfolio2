@@ -178,7 +178,7 @@ section{
                     @include all.d-flex($flexdir: column);
                     #image-and-name{
                         width: 22rem;
-                        top: 50rem;
+                        top: 38rem;
                         left: 5rem;
                         h5{
                             top: 8rem;
@@ -186,9 +186,9 @@ section{
                         }
                     }
                     .align-left{
-                        @include all.d-flex($flexdir: column, $alit: flex-start,$rgap: 2rem);
+                        @include all.d-flex($flexdir: column, $alit: flex-start);
                         .wavehand{
-                            bottom: 12.5rem;
+                            bottom: 11.5rem;
                             left: 12rem;
                         }
                         .frontend{
@@ -201,7 +201,7 @@ section{
                     }
                 }
                 .bottom-row{
-                    @include all.d-flex($flexdir: column, $alit: flex-end, $rgap: 2rem);
+                    @include all.d-flex($flexdir: column, $alit: flex-end);
                 }
             }
         }
