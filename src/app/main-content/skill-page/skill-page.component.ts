@@ -10,7 +10,16 @@ import { ProgrammingLanguageListService } from '../../services/programming-langu
   templateUrl: './skill-page.component.html',
   styleUrl: './skill-page.component.scss'
 })
+
+/**
+ * Component responsible for displaying skills.
+ * 
+ * Retrieves a list of programming languages from the
+ * {@link ProgrammingLanguageListService} and provides
+ * interactive behavior such as "peeling a sticker".
+ */
 export class SkillPageComponent {
+  
   // #region ATTRIBUTES
   /**
    * Service that provides the list of programming languages.

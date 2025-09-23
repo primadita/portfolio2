@@ -10,8 +10,29 @@ import { Project } from '../../../shared/interfaces/project';
   templateUrl: './single-project-intro.component.html',
   styleUrl: './single-project-intro.component.scss'
 })
+
+/**
+ * Component responsible for displaying an introduction to a single project.
+ * 
+ * Accepts a project as input and provides an output event to notify
+ * when navigation to the detailed project page is requested.
+ */
 export class SingleProjectIntroComponent {
-  // projectdesclist = inject(ProjectDescriptionListService);
+  // #region ATTRIBUTES
+  /**
+   * The project data to be displayed in the introduction.
+   *
+   * @input
+   * @type {Project}
+   */
   @Input() singleproj!: Project;
+
+  /**
+   * Event emitter that notifies when the user requests
+   * navigation to the detailed project page.
+   *
+   * @output
+   * @type {EventEmitter<string>}
+   */
   @Output() gotoDetailPage = new EventEmitter<string>();
 }
