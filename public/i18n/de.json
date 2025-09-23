@@ -70,7 +70,7 @@
     },
     "contact": {
         "pagetitle":"KONTAKTIEREN SIE MICH",
-        "pagetitlebig": "Bereit zur Zusammenarbeit?",
+        "pagetitlebig": "Bereit zur Zusammen<wbr>arbeit?",
         "introduction": "Haben Sie eine spannende Herausforderung im Frontend Bereich und suchen Unterstützung für Ihr Entwicklerteam oder haben Sie einfach Fragen zu meiner Arbeit?Schreiben Sie mir gerne. Ich freue mich darauf, von Ihnen zu hören!",
         "question_name": "Wie heißen Sie?",
         "question_email": "Wie ist Ihre Email Adresse?",

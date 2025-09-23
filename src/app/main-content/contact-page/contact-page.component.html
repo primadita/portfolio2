@@ -1,15 +1,19 @@
 <section>
     <div class="content">
         <div *ngIf="!hideColumns" class="columns">
+        <img class="mobile" src="./assets/design/mein-sticker.png" alt="personal logo">
+        <!-- #region INTRODUCTION -->
             <div id="left-column">
                 <h3>{{'contact.pagetitle' | translate}}</h3>
-                <h2>{{'contact.pagetitlebig' | translate}}</h2>
+                <h2 [innerHTML]="'contact.pagetitlebig' | translate">{{'contact.pagetitlebig' | translate}}</h2>
                 <br>
                 <p>{{ 'contact.introduction' | translate }}</p>
-                <div>
+                <div class="arrow desktop">
                     <img src="./assets/design/05_contact/contact-arrow.png" alt="arrow to contact form">
                 </div>
             </div>
+        <!-- #endregion -->
+        <!-- #region CONTACT FORM -->
             <div id="right-column">
                 <img src="./assets/design/mein-sticker.png" alt="personal logo">
                 <form (ngSubmit)="onSubmit(contactPage)" #contactPage="ngForm">
@@ -66,11 +70,15 @@
                         </ng-container>
                     </span>
                     <!-- #endregion -->
+                    <!-- #region Privacy Policy and SEND button -->
                     <div class="privacy-policy">
                         <input id="confirm" type="checkbox" [(ngModel)]="privacyChecked" (ngModelChange)="saveInput()" name="privacy" />
                         <label for="confirm" [innerHTML]="'contact.privatepolicy'|translate"></label>
                     </div>
                     <div id="submit-btn">
+                        <div class="arrow mobile">
+                            <img src="./assets/design/05_contact/contact-arrow.png" alt="arrow to contact form">
+                        </div>
                         <button 
                             type="submit"
                             [disabled]="!contactPage.valid || !privacyChecked"
@@ -80,9 +88,12 @@
                             }">
                         {{'contact.send' | translate }}</button>
                     </div>
+                    <!-- #endregion -->
                 </form>
+                <!-- #endregion -->
             </div>
         </div>
+        <!-- #region Feedback Message -->
         <div *ngIf="!hideFeedback" class="feedback">
             <div class="success">
                 <h2>{{ successMessage[0] | translate }}</h2>
@@ -97,7 +108,7 @@
                     {{ 'feedback.button' | translate }}
                 </a>
             </div>
-            
         </div>
+        <!-- #endregion -->
     </div>
 </section>

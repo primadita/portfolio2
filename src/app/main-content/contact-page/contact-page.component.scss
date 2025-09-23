@@ -1,8 +1,17 @@
 @use './../../../../public/assets/styles/all-styles.scss' as all;
 
+.mobile{
+    display: none;
+    @include all.notebook{
+        @include all.d-flex();
+    }
+}
+
 section{
     background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
     width: 100%;
+    height: auto;
+    min-height: 40dvh;
     color: all.$color2;
     .content{
         width: 100%;
@@ -10,10 +19,29 @@ section{
         max-width: 1920px;
         padding: 15rem;
         @include all.d-flex($flexdir: column);
+        @media (max-width: 1250px) {
+            @include all.paddingLeftRightOnly($pad: 10rem);
+        }
+        @include all.tablet{
+            @include all.paddingLeftRightOnly($pad: 5rem);
+        }
+        @include all.mobile{
+            @include all.paddingLeftRightOnly($pad: 3rem)
+        }
         .columns{
             @include all.d-flex($flexdir:row, $jc: space-between, $gap: 5rem);
+            // #region Introduction
             #left-column{
                 width: 50%;
+                h2{
+                    @media (max-width: 1125px) {
+                        font-size: 5.4rem;
+                    }
+                    @media (max-width: 460px) {
+                        font-size: 5rem;
+                        word-break: break-word;
+                    }
+                }
                 p{
                     padding: 4rem 0 4rem 0;
                 }
@@ -27,15 +55,15 @@ section{
                     }
                 }
             }
+            // #endregion
+            // #region Contact Form
             #right-column{
                 width: 40%;
                 @include all.d-flex($flexdir:column);
                 img{
                     width: 15rem;
                     transform: rotate(20deg);
-                    position: absolute;
-                    right: 0;
-                    top: 0;
+                    @include all.adjustTopRight($pos: absolute);
                 }
                 form{
                     @include all.d-flex($flexdir: column, $alit: left, $rgap: 2rem);
@@ -76,8 +104,7 @@ section{
                             -webkit-appearance: none;
                         }
                         [type="checkbox"] + label::before {
-                            width: 2.1rem;
-                            height: 2.1rem;
+                            @include all.square($length: 2.1rem);
                             background-image: url("./../../../../public/assets/icons/unchecked.png");
                             display: block;
                             content: "";
@@ -114,12 +141,58 @@ section{
                                     cursor: pointer;
                                 }
                             }
-                            
                         }
-                    }  
+                    } 
                 }    
+            // #endregion 
             }
+            // #endregion
+            // #region RESPONSIVE
+            @include all.notebook{
+                @include all.d-flex($flexdir: column, $jc: center);
+                @include all.paddingLeftRightOnly($pad: 5rem);
+                padding-top: 5rem;
+                >img.mobile{
+                    @include all.square($length: 17rem);
+                    transform: rotate(20deg);
+                    @include all.adjustTopLeft($left: 20rem);
+                    @media (max-width: 510px) {
+                        left: 12rem;
+                    }
+                    @media (max-width: 380px) {
+                        left: 8rem;
+                    }
+                }
+                #left-column{
+                    width: 100%;
+                    .desktop{
+                        display: none;
+                    }
+                }
+                #right-column{
+                    width: 100%;
+                    >img{
+                        display: none;
+                    }
+                    form{
+                        #submit-btn{
+                            width: 100%;
+                            @include all.d-flex($flexdir: row, $alit: center, $jc: space-between);
+                            .arrow.mobile{
+                                transform: rotate(-20deg);
+                                bottom: 3rem;
+                                left: 15rem;
+                            }                            
+                        }
+                    }
+                }
+            }
+            @include all.tablet{
+                @include all.paddingLeftRightOnly($pad:0);
+            }
+            // #endregion
         }
+        // #region Feedback message
         .feedback{
             width: 100%;
             @include all.d-flex($flexdir: column, $rgap: 5rem);
@@ -131,5 +204,6 @@ section{
                 }
             }
         }
+        // #endregion
     }
 }
