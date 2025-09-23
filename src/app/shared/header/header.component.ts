@@ -70,7 +70,6 @@ export class HeaderComponent implements OnInit{
    */
   toggleMenu(){
     this.menuOpen = !this.menuOpen;
-    console.log(this.menuOpen);
   }
   // #endregion
 }

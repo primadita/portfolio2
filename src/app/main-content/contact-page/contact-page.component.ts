@@ -141,7 +141,6 @@ export class ContactPageComponent {
    * @returns {void}
    */
   saveInput(){
-    console.log('saved data', this.contactData, this.privacyChecked)
     sessionStorage.setItem('contactForm', JSON.stringify(this.contactData));
     sessionStorage.setItem('privacyPolicyChecked', JSON.stringify(this.privacyChecked));
   }
