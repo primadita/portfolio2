@@ -1,11 +1,8 @@
 @use './../../../../public/assets/styles/all-styles.scss' as all;
-
+// #region NORMAL DESKTOP VIEW
 footer{
     background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
-    background-position: bottom;
-    background-size: cover;
-    width: 100%;
-    height: 15rem;
+    @include all.adjustBgImg($height: 17rem);
     .content{
         @include all.d-flex($flexdir: column, $alit: flex-start, $jc: center, $rgap: 1rem);
         color: all.$color2;
@@ -61,6 +58,86 @@ footer{
                     }
                 }
             }
+            @media (max-width: 1250px) {
+                padding-top: 2rem;
+            }
         } 
+        #mobile-view{
+            display: none;
+        }
+// #endregion
+// #region OTHER MEDIA
+        @include all.notebook{
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+        @include all.tablet{
+            @include all.d-flex($flexdir: column, $jc: space-between);
+            padding-left: 5rem;
+            padding-right: 5rem;
+            @media (max-width: 380px) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            #logo-with-text, h6{
+                display: none;
+            }
+            #mobile-view{
+                @include all.d-flex($flexdir: column);
+                width: 100%;
+                #mobile-view-logo{
+                    @include all.d-flex($flexdir: row, $jc: space-between);
+                    width: 100%;
+                    #logo-with-text{
+                        @include all.d-flex($flexdir: row, $jc: flex-start, $alit: center, $cgap: 2rem);
+                        img{
+                            height: 5rem;
+                        }
+                        @media (max-width: 480px) {
+                            padding-top: 3rem;
+                            .text{
+                                display: none;
+                            }
+                        }
+                    }
+                    h6{
+                        @include all.d-flex($jc: flex-end);
+                        text-align: right;
+                        overflow-wrap: break-word;
+                    }
+                }
+                #mobile-view-imprint{
+                    @include all.d-flex($flexdir: row, $jc: flex-end);
+                    width: 100%;
+                    #imprint-lnk{
+                        span{
+                            color: all.$color2;
+                        }
+                        .underline{
+                            position: absolute;
+                            bottom: -1.5rem;
+                            left: -1rem;
+                            img{
+                                width: 12rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #footer-links{
+                >#imprint-lnk{
+                    display: none;
+                }
+                #github-lnk, #linkedin-lnk, #mail-lnk{
+                    .button-like-noframe{
+                        .rolling-object{
+                            top: -3.5rem;
+                        }
+                    }
+                }
+                
+            }
+        }        
     }
+    // #endregion
 }
