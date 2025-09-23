@@ -14,6 +14,12 @@
 }
 html{
     font-size: 10px;
+    @include all.tablet{
+        font-size: 9px;
+    }
+    @include all.mobile{
+        font-size: 8px;
+    }
 }
 section{
     width: 100%;
@@ -32,14 +38,6 @@ header, section, footer{
 ::-ms-input-placeholder { /* Edge 12 -18 */
     color: all.$color2;
 }
-
-
-// ::placeholder:invalid {
-//     color: red; /* Firefox */
-// }
-// ::-ms-input-placeholder:invalid { /* Edge 12 -18 */
-//     color: red;
-// }
 // #endregion
 
 // #region FONTS
@@ -56,6 +54,15 @@ h1{
     font-family: all.$font1;
     font-size: 12.8rem;
     font-weight: all.$bold;
+    @include all.notebook{
+        font-size: 11rem;
+    }
+    @include all.tablet{
+        font-size: 10rem;
+    }
+    @include all.mobile{
+        font-size: 5rem;
+    }
 }
 h2{
     font-family: all.$font1;

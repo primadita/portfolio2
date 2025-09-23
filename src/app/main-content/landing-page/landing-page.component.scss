@@ -2,18 +2,17 @@
 
 section{
     background: url(./../../../../public/assets/design/00_header/01_Hero.png);
-    background-size: cover;
-    background-position: bottom;
-    height: auto;
+    @include all.adjustBgImg($height: auto);
     min-height: calc(100dvh - 10dvh);
     .content{
         @include all.d-flex($jc:center, $alit: center);
+        // #region MAIN AREA - DESKTOP VIEW
         .maintitle{
             width: 100%;
-            max-width: 1000px;
+            max-width: 100rem;
             padding: 3rem;
             @include all.d-flex($flexdir:column);
-            .top{
+            .top-row{
                 width: 100%;
                 #image-and-name{
                     z-index: 2;
@@ -60,7 +59,7 @@ section{
                         transition: 500ms;
                     }
                     .button-like-white{
-                        @include all.button-like($color: white, $shadow:0);
+                        @include all.button-like($color: all.$color2, $shadow:0);
                         transition: 500ms;
                         .after{
                             display: none;
@@ -76,16 +75,12 @@ section{
                         }
                         &:hover ~.wavehand{
                             opacity: 1;
-                            animation: wave-in;
-                            animation-duration: 0.5s;
+                            animation: wave-in 0.5s forwards;
                             animation-iteration-count: 1;
-                            animation-fill-mode: forwards;
                         }
                         &:not(:hover) ~.wavehand{
-                            animation: wave-out;
-                            animation-duration: 0.5s;
+                            animation: wave-out 0.5s forwards;
                             animation-iteration-count: 1;
-                            animation-fill-mode: forwards;
                         }
                         
                     }
@@ -109,7 +104,7 @@ section{
                     }
                 }
             }
-            .bottom{
+            .bottom-row{
                 width: 100%;
                 @include all.d-flex($alit: flex-end, $jc: center, $gap: 2rem);
                 .developer{
@@ -128,10 +123,94 @@ section{
                     }
                 }
             }
+            // #endregion
+            // #region NOTEBOOK VIEW
+            @include all.notebook{
+                max-width: 75rem;
+                .top-row{
+                    #image-and-name{
+                        width: 20rem;
+                        right: 0;
+                        img{
+                            animation: grayscale-animation 5s forwards;
+                            animation-iteration-count: 1;
+                        }
+                        h5{
+                            top: 20rem;
+                            left: 10rem;
+                        }
+                        h5.before{
+                            opacity: 1;
+                            animation: switch-to-none 4s forwards;
+                            animation-iteration-count: 1;
+                        }
+                        h5.after{
+                            display: flex;
+                            opacity: 0;
+                            animation: switch-to-flex 4s forwards;
+                            animation-iteration-count: 1;
+                        }
+                    }
+                    .align-left{
+                        .button-like-white{
+                            // .before{
+                            //     animation: switch-to-none 4s forwards;
+                            //     animation-iteration-count: 1;
+                            // }
+                            // .after{
+                            //     opacity: 0;
+                            //     // display: flex;
+                            //     animation: switch-to-flex 4s forwards;
+                            //     animation-iteration-count: 1;
+                            // }
+                        }
+                        
+                    }
+                }
+            }
+            // #endregion
+            // #region MOBILE VIEW
+            @include all.mobile{
+                width: 100%;
+                height: calc(100dvh - 10dvh);
+                @include all.d-flex($flexdir: column, $jc: flex-start);
+                padding: 5rem 4rem 5rem 4rem;
+                .top-row{
+                    @include all.d-flex($flexdir: column);
+                    #image-and-name{
+                        width: 22rem;
+                        top: 50rem;
+                        left: 5rem;
+                        h5{
+                            top: 8rem;
+                            left:11rem;
+                        }
+                    }
+                    .align-left{
+                        @include all.d-flex($flexdir: column, $alit: flex-start,$rgap: 2rem);
+                        .wavehand{
+                            bottom: 12.5rem;
+                            left: 12rem;
+                        }
+                        .frontend{
+                            span{
+                                .after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bottom-row{
+                    @include all.d-flex($flexdir: column, $alit: flex-end, $rgap: 2rem);
+                }
+            }
         }
+        // #endregion
+        // #region EXTERNAL LINKS
         .extern-profiles{
             position: absolute;
-            bottom: 20rem;
+            bottom: 10rem;
             left: 5rem;
             @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 1rem);
             a{
@@ -146,7 +225,15 @@ section{
                 &:hover{
                     background: #1aa8b5;
                 }
-            } 
+            }
+            @include all.bigscreen{
+                bottom: 70rem;
+                left: 30rem;
+            }
+            @include all.mobile{
+                display: none;
+            }
         }
+        // #endregion
     }
 }

@@ -38,3 +38,16 @@
     0% {top: -1rem};
     100% {top: 1rem};
 }
+
+@keyframes grayscale-animation {
+    0%{filter: grayscale(100%)};
+    100%{filter: grayscale(0)};
+}
+
+@keyframes switch-to-none {
+    to{opacity: 0}
+}
+
+@keyframes switch-to-flex {
+    to{opacity: 1}
+}
