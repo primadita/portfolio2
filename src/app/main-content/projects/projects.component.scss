@@ -1,26 +1,50 @@
 @use './../../../../public/assets/styles/all-styles.scss' as all;
 
+// #region NORMAL VIEW
 section{
     background: all.$color2;
     color: all.$color1;
     height: auto;
-    min-height: 100dvh;
+    min-height: 50dvh;
     .content{
-        padding: 16rem;
-        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $rgap: 5rem);
+        padding: 10rem 15rem 10rem 15rem;
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $rgap: 5rem, $cgap: 3rem);
         flex-wrap: wrap;
+        @media (max-width: 1230px) {
+            @include all.paddingLeftRightOnly($pad: 6rem);
+        }
         div{
             width: 45%;
+            min-width: 40rem;
             height: auto;
             @include all.d-flex($flexdir: column, $alit: flex-start,$jc: flex-start);
             app-single-project-intro{
                 width: 100%;
-                height: 55dvh; 
+                height: auto; 
+            }
+        }
+        // #endregion
+        @include all.notebook{
+            @include all.paddingLeftRightOnly($pad: 15rem);
+            div{
+                width: 100%;
+                height: auto;
+                @include all.d-flex($flexdir:column, $alit:space-between, $jc: center);
+            }
+        }
+        @include all.tablet{
+            @include all.paddingLeftRightOnly($pad: 5rem);
+        }
+        @include all.mobile{
+            @include all.paddingLeftRightOnly($pad: 3rem);
+            div{
+                min-width: 20rem;
             }
         }
     }
 }
 
+// #region SECTION TITLE / INTRODUCTION
 #top-left{
     justify-content: center;
     >div{
@@ -40,3 +64,4 @@ section{
         padding-top: 5rem;
     }
 }
+// #endregion

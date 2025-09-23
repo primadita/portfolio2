@@ -1,40 +1,53 @@
 @use './../../../../../public/assets/styles/all-styles.scss' as all;
 
+.project-details-button-white{
+    width: 18rem;
+    height: 5rem;
+    cursor: pointer;
+    @include all.button-like();
+}
+.project-details-button-black{
+    width: 18rem;
+    height: 5rem;
+    cursor: pointer;
+    @include all.button-like(all.$color1);
+}
+
 div{
     width: 100%;
     height: 50dvh;
     @include all.d-flex($alit:flex-start, $jc: center, $flexdir: column, $rgap: 2rem);
     .img-div{
-        width: 50rem;
-        height: 35rem;
+        width: 100%;
+        height: auto;
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
         @include all.d-flex();
         .project-screenshot{
-            width: 50rem;
-            height: 35rem;
+            width: 100%;
+            min-height: 28rem;
+            max-height: 35rem;
         }
         #ihk-sticker{
             position: absolute;
-            width: 17rem;
-            left: 2rem;
+            width: 15rem;
+            left: 0;
         }
-        .project-details-button{
-            width: 18rem;
-            height: 5rem;
+        .project-details-button-white{
+            // width: 18rem;
+            // height: 5rem;
             position: absolute;
-            @include all.button-like();
+            // @include all.button-like();
             display: none;
         }
         &:hover{
             box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
             .project-screenshot{
-                width: 120%;
-                height: 120%;
+                @include all.square($length: 120%);
             }
 
-            .project-details-button{
+            .project-details-button-white{
                 display: flex;
                 position: absolute;
                 right: 5rem;
@@ -46,7 +59,34 @@ div{
                     bottom: 4.5rem;
                 }
             }
-            
+        }
+    }
+    .mobile{
+        display: none;
+    }
+    @include all.notebook{
+        .img-div{
+            box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
+            >.project-details-button-white{
+                display: none;   
+            }
+            &:hover{
+                .project-details-button-white{
+                    display: none;
+                }
+            }
+        }
+        .mobile{
+            @include all.d-flex();
+            width: 18rem;
+            right: -60%;
+            @media (max-width: 430px) {
+                right: -45%;
+            }
+            &:hover{
+                @include all.push-button($color: all.$color1, $bgc: transparent);
+                left: calc(55% + 4rem);
+            }
         }
     }
 }
