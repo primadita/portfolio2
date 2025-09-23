@@ -11,10 +11,27 @@ import { ProgrammingLanguageListService } from '../../services/programming-langu
   styleUrl: './skill-page.component.scss'
 })
 export class SkillPageComponent {
+  // #region ATTRIBUTES
+  /**
+   * Service that provides the list of programming languages.
+   */
   programminglanguagelist = inject(ProgrammingLanguageListService);
-  peeled = false;
 
+    
+  /**
+   * Flag that indicates whether the sticker has been peeled.
+   * Default is `false`.
+   */
+  peeled = false;
+  // #endregion
+
+  // #region METHODS
+  /**
+   * Marks the sticker as peeled.
+   * Sets {@link peeled} to `true`.
+   */
   peelsticker():void{
     this.peeled = true;  
   }
+  // #endregion
 }
