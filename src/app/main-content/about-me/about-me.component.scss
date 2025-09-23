@@ -1,25 +1,36 @@
 @use './../../../../public/assets/styles/all-styles.scss' as all;
 
 section{
-    background: white;
+    background: all.$color2;
+    height: auto;
+    min-height: 40dvh;
     .content{
-        height: auto;
-        min-height: 100dvh;
         max-width: 1920px;
         padding: 10rem;
         @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
         gap: 5rem;
+        @media (max-width: 1240px) {
+            padding-right: 5rem;   
+        }
+        // #region POST-IT
         .left-column{
-            width: 50%;
+            width: 40%;
             @include all.d-flex($flexdir: column, $jc: center, $alit: center);
             .postit{
                 width: 52rem;
                 height: 15rem;
+                @media (max-width: 1240px) {
+                    width: 50rem;  
+                }
                 @include all.d-flex($flexdir: row, $alit: center, $jc: center);
                 .label{
                     width: 52rem;
                     height: 15rem;
+                    @media (max-width: 1240px) {
+                        width: 50rem;  
+                    }
                 }
+                
                 p{
                     z-index: 4;
                     font-size: 2.2rem;
@@ -41,6 +52,8 @@ section{
                 top: 27rem;
             }
         }
+        // #endregion
+        // #region ABOUT ME
         .right-column{
             width: 50%;
             @include all.d-flex($flexdir: column, $alit: left);
@@ -60,14 +73,54 @@ section{
                 @include all.d-flex($jc: flex-end, $flexdir: row);
                 >.button-like-black{
                     @include all.button-like($color: all.$color1);
-                    // a{
-                    //     color: all.$color1;
-                    // }
                     &:hover{
                         @include all.push-button($color: all.$color1);
                     }
                 }
             }
         }
+        // #endregion
+        // #region OTHER MEDIA VIEW
+        @include all.notebook{
+            @include all.d-flex($flexdir:column-reverse, $jc: center, $rgap: 5rem);
+            padding-left: 15rem;
+            padding-right: 15rem;
+            @include all.mobile{
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+            .right-column{
+                width: 100%;
+            }
+            .left-column{
+                .postit{
+                    width: 52rem;
+                    .label{
+                        width: 52rem;
+                    }
+                    @media (max-width: 490px) {
+                        width: 48rem;
+                        .label{
+                            width: 48rem;
+                        }
+                        p{
+                            font-size: 2rem;
+                        }
+                    }
+                    @media (max-width: 402px){
+                        width: 35rem;
+                        overflow-wrap: break-word;
+                        .label{
+                            width: 35rem;
+                        }
+                        p{
+                            max-width: 25rem;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }

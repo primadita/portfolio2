@@ -93,6 +93,9 @@ span, p, input, textarea{
     font-family: all.$font1;
     font-size: 1.8rem;
     font-weight: all.$regular;
+    @include all.mobile{
+        font-size: 2rem;
+    }
 }
 footer{
     font-family: all.$font1;
