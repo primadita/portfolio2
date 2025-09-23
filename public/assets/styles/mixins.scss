@@ -57,5 +57,20 @@
   background-position: $pos;
   height: $height;
   width: 100%;
+}
 
+@mixin paddingLeftRightOnly($pad: 0){
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+@mixin adjustTopRight($top: 0, $right: 0, $pos: relative){
+  position: $pos;
+  top: $top;
+  right: $right;
+}
+
+@mixin square($length: 0){
+  width: $length;
+  height: $length;
 }

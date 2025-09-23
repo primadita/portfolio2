@@ -16,6 +16,10 @@ div{
             filter: none;
             width: 80%;
         }
-        
+    }
+    @include all.notebook{
+        img{
+            filter: grayscale(0);
+        }
     }
 }

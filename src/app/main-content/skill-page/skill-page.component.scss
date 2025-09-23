@@ -1,33 +1,42 @@
 @use './../../../../public/assets/styles/all-styles.scss' as all;
 
 section{
-    background: url('./../../../../public/assets/design/02_skills/03_Skills.png');
-    background-size: cover;
-    background-position: bottom;
+    background: url('./../../../../public/assets/design/02_skills/03_Skills_2.png');
     color: all.$color2;
-    height: auto;
+    @include all.adjustBgImg($height: auto);
+    min-height: 60dvh;
     .content{
-        height: auto;
-        min-height: 60dvh;
         padding: 15rem 10rem;
-        @include all.d-flex($flexdir: row, $jc: space-between, $alit: flex-start, $cgap: 2rem);
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: flex-start, $cgap: 4rem);
+        // #region SECTION TITLE
         .left-column{
             width: 30%;
             text-align: right;
             .skill-title{
                 width: auto;
                 >div{
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                    @include all.adjustTopRight($pos: absolute);
                     height: 8rem;
                     >img{
+                        width: 100%;
                         height: 100%;
                         transform: scaleX(-1);
                     }
                 }
             }  
         }
+        @media (max-width: 1150px) {
+            @include all.paddingLeftRightOnly($pad: 8rem);
+            .left-column{
+                .skill-title{
+                    h2{
+                        font-size: 5.7rem;
+                    }
+                }
+            }
+        }
+        // #endregion
+        // # region PROG LANGUAGE SKILL LIST
         .mid-column{
             width: 55%;
             @include all.d-flex($flexdir: column, $rgap: 5rem);
@@ -36,14 +45,18 @@ section{
                 height: auto;
                 color: all.$color1;
                 @include all.d-flex($alit: center, $jc: center);
-                img{
+                .paper{
                     width: 100%;
                     height: 10rem;
+                }
+                .mobile{
+                    display: none;
                 }
                 p{
                     position: absolute;
                     top: 2rem;
                     left: 1.5rem;
+                    padding: 1rem;
                 }
             }
             .programming-language{
@@ -51,6 +64,8 @@ section{
                 flex-wrap: wrap;
             }
         }
+        // #endregion
+        // #region STICKER
         .right-column{
             width: 20%;
             @include all.d-flex($jc:center, $alit: flex-end);
@@ -61,23 +76,19 @@ section{
                 @include all.d-flex($jc: center, $alit:center);
                 img{
                     width: 100%;
-                    position: absolute;
-                    top: 17rem;
+                    @include all.adjustTopRight($top: 17rem, $right: -6rem, $pos: absolute);
                 }
                 .after{
                     opacity: 1;
                 }
                 .arrow{
                     width: 25%;
-                    position: absolute;
-                    top: 21rem;
+                    @include all.adjustTopRight($top: 21rem, $pos: absolute);
                 }
                 #pull-to-peel{
-                    width: 20rem;
-                    height: 20rem;
+                    @include all.square($length: 20rem);
                     padding: 1rem;
-                    position: absolute;
-                    top: 20rem;
+                    @include all.adjustTopRight($top: 20rem, $right: -6rem, $pos: absolute);
                     @include all.d-flex($jc: center, $alit: center);
                     h5{
                         font-size: 4rem;
@@ -85,8 +96,7 @@ section{
                     }
                 }
                 #other-interest{
-                    width: 20rem;
-                    height: 20rem;
+                    @include all.square($length: 20rem);
                     position: absolute;
                     top: 18rem;
                     padding: 2rem 1rem 2rem 1rem;
@@ -95,8 +105,7 @@ section{
                         text-align: center;
                     }
                     img{
-                        width: 6rem;
-                        height: 6rem;
+                        @include all.square($length: 6rem);
                         filter: grayscale(100%);
                         position: absolute;
                         top: 9.5rem;
@@ -107,5 +116,114 @@ section{
                 }
             }
         }
+        // #endregion
+        // #region OTHER MEDIA'S VIEW
+        @include all.notebook{
+            @include all.d-flex($flexdir: column, $rgap: 6rem);
+            width: 100%;
+            padding: 10rem;
+            .left-column{
+                @include all.d-flex($alit: flex-end);
+                width: 100%;
+            }
+            .mid-column{
+                width: 100%;
+            }
+            .right-column{
+                width: 100%;
+                .sticker{
+                    width: 20rem;
+                    @include all.d-flex($jc: center, $alit:center);
+                    top:0;
+                    left: 0;
+                    img{
+                        width: 100%;
+                        @include all.adjustTopRight($right: 2rem);
+                    }
+                    .arrow{
+                        @include all.adjustTopRight($top: -16rem, $right: 2rem);
+                    }
+                    #pull-to-peel{
+                        @include all.adjustTopRight($top: -20rem, $right: 3rem);
+                    }
+                    #other-interest{
+                        @include all.adjustTopRight($top: -20rem, $right: 1.5rem);
+                        h6{
+                            text-align: center;
+                        }
+                        img{
+                            @include all.square($length: 6rem);
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                        }
+                        p{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        @include all.tablet{
+            @include all.paddingLeftRightOnly($pad: 3rem);
+            .mid-column{
+                .short-intro{
+                    .desktop{
+                        display: none;
+                    }
+                    .mobile{
+                        @include all.d-flex();
+                        height: 22rem;
+                    }
+                    p{
+                        padding: 3rem 1rem 3rem 1rem;
+                    }
+                }
+            }
+            .right-column{
+                .sticker{
+                    @include all.d-flex($alit: flex-start, $jc: flex-start);
+                    top: 10rem;
+                    left: -10rem;
+                    img{
+                        @include all.adjustTopRight($top:-5rem, $right: 10rem);
+                    }
+                    .arrow{
+                        @include all.adjustTopRight($top: -21rem, $right: 2rem);
+                    }
+                    #pull-to-peel{
+                        @include all.adjustTopRight($top: -26rem, $right: 10rem);
+                    }
+                    #other-interest{
+                        @include all.adjustTopRight($top: -25rem, $right: 10.5rem);
+                        h6{
+                            text-align: center;
+                        }
+                        img{
+                            @include all.square($length: 6rem);
+                        }
+                    }
+                    @media (max-width: 450px) {
+                        position: relative;
+                        bottom: 0;
+                        right: 0;
+                        img{
+                            @include all.adjustTopRight($top:-5rem, $right: 0rem);
+                        }
+                        .arrow{
+                            @include all.adjustTopRight($top: -21rem, $right: -7rem);
+                        }
+                        #pull-to-peel{
+                            @include all.adjustTopRight($top: -26rem, $right: 0rem);
+                        }
+                        #other-interest{
+                            @include all.adjustTopRight($top: -25rem, $right: 0.5rem);
+                        }
+                    }
+                }
+                
+            }
+        }
+        // #endregion
     }
 }

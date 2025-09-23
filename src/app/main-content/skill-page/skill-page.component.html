@@ -1,5 +1,6 @@
 .<section>
     <div class="content">
+        <!-- #region SECTION TITLE -->
         <div class="left-column">
             <h3>{{'skills.stack' | translate}}</h3>
             <div class="skill-title">
@@ -9,9 +10,12 @@
                 </div>
             </div>
         </div>
+        <!-- #endregion -->
+         <!-- #region PROGRAMMING LAGUAGE LIST -->
         <div class="mid-column">
             <div class="short-intro">
-                <img src="./assets/design/02_skills/1.Skills-description.png" alt="paper background">
+                <img class="paper desktop" src="./assets/design/02_skills/1.Skills-description.png" alt="paper background">
+                <img class="paper mobile" src="./assets/design/02_skills/1B.Mobile.png" alt="paper background">
                 <p>{{ 'skills.intro' | translate }}</p>
             </div>
             <div class="programming-language">
@@ -20,6 +24,8 @@
                 }
             </div>
         </div>
+        <!-- #endregion -->
+         <!-- #region STICKER -->
         <div class="right-column">
             <div class="sticker" (click)="peelsticker()">
                 <ng-container *ngIf="!peeled">
@@ -35,8 +41,8 @@
                         <p>Scrum</p>
                     </span>
                 </ng-container>    
-            </div>
-            
+            </div>    
         </div>
+        <!-- #endregion -->
     </div>
 </section>
