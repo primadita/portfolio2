@@ -1,6 +1,6 @@
 <section>
     <div class="content">
-        <div id="back-btn">
+        <div id="back-btn" class="desktop">
             <a href="{{proj?.link_back}}">
                 <img src="./assets/design/03_portfolio/Breadcrumb_arrow_3.png" alt="{{'imprint.back'|translate}}">
                 <h6>{{'portfolio.previous'|translate}}</h6>
@@ -50,11 +50,27 @@
             </div>
             <!-- #endregion -->
         </div>
-        <div class="next">
+        <div id="next" class="desktop">
             <a href="{{proj?.link_next}}">
                 <h6>{{'portfolio.next'|translate}}</h6>
                 <img src="./assets/design/03_portfolio/Next project arrow 3.png" alt="{{'portfolio.next'|translate}}">
             </a>
         </div>
+        <!-- #region PREVIOUS/NEXT ARROW for mobile view -->
+        <div id="previous-next-button" class="mobile">
+            <div id="back-btn-mobile">
+                <a href="{{proj?.link_back}}">
+                    <img src="./assets/design/03_portfolio/Breadcrumb_arrow_3.png" alt="{{'imprint.back'|translate}}">
+                    <h6>{{'portfolio.previous'|translate}}</h6>
+                </a>
+            </div>
+            <div id="next-btn-mobile">
+                <a href="{{proj?.link_next}}">
+                    <h6>{{'portfolio.next'|translate}}</h6>
+                    <img src="./assets/design/03_portfolio/Next project arrow 3.png" alt="{{'portfolio.next'|translate}}">
+                </a>
+            </div>
+        </div>
+        <!-- #endregion -->
     </div>
 </section>
