@@ -134,9 +134,9 @@ section{
                 @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
                 width: 100%;
                 div{
-                    @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
                     width: 100%;
                     a{
+                        @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
                         h6{
                             color: all.$color2;
                         }
@@ -166,9 +166,16 @@ section{
                             @include all.d-flex($flexdir: row, $cgap: 1rem, $rgap: 1rem);
                             flex-wrap: wrap;
                         }
-                        
                     }
                     .right-column{
+                        @media (max-width: 400px) {
+                            .project-screenshot{
+                                .screenshot{
+                                    width: 35rem;
+                                }
+                            } 
+                        }
+                        
                         .github-livetest{
                             width: 100%;
                             @include all.d-flex($flexdir: row, $jc: flex-end, $cgap: 8rem);
