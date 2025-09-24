@@ -131,11 +131,12 @@ section{
                 }
             }
             .mobile{
-                @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
+                @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $cgap:5rem);
                 width: 100%;
                 div{
-                    width: 100%;
+                    @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
                     a{
+    
                         @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
                         h6{
                             color: all.$color2;
