@@ -7,6 +7,7 @@
             </a>
         </div>
         <div class="main-div">
+            <!-- #region Project Summary -->
             <div class="left-column">
                 <div class="project-title">
                     <h2>{{proj?.projname}}</h2>
@@ -31,6 +32,8 @@
                     <app-required-skills *ngIf="proj?.firebase" [icon]="firebase!"></app-required-skills>
                 </div>
             </div>
+            <!-- #endregion -->
+            <!-- #region Project Image -->
             <div class="right-column">
                 <div class="project-screenshot">
                     <img class="screenshot" src="{{proj?.imgPath}}" alt="{{proj?.altText}}">
@@ -45,6 +48,7 @@
                     </div>
                 </div>
             </div>
+            <!-- #endregion -->
         </div>
         <div class="next">
             <a href="{{proj?.link_next}}">
