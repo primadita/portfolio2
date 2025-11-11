@@ -6,7 +6,7 @@ section{
     @include all.adjustBgImg($height: auto);
     min-height: 60dvh;
     .content{
-        padding: 15rem 10rem;
+        padding: 13rem 10rem;
         @include all.d-flex($flexdir: row, $jc: space-between, $alit: flex-start, $cgap: 4rem);
         // #region SECTION TITLE
         .left-column{
@@ -131,9 +131,9 @@ section{
         // #endregion
         // #region OTHER MEDIA'S VIEW
         @include all.notebook{
-            @include all.d-flex($flexdir: column, $rgap: 5rem);
             width: 100%;
             padding: 10rem 10rem 12rem 10rem;
+            @include all.d-flex($flexdir: column, $rgap: 5rem);
             .left-column{
                 @include all.d-flex($alit: flex-end);
                 width: 100%;
