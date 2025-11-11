@@ -7,8 +7,7 @@ section{
     .content{
         max-width: 1920px;
         padding: 10rem;
-        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
-        gap: 5rem;
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $cgap: 5rem);
         @media (max-width: 1240px) {
             padding-right: 5rem;   
         }
@@ -61,6 +60,9 @@ section{
                 @include all.left-to-right-animation();
                 img{
                     width: 32rem;
+                    @include all.mobile{
+                        width: 26rem;
+                    }
                 }
             }
             .first{
@@ -83,7 +85,7 @@ section{
         // #region OTHER MEDIA VIEW
         @include all.notebook{
             @include all.d-flex($flexdir:column-reverse, $jc: center, $rgap: 5rem);
-            @include all.paddingLeftRightOnly($pad:15rem);
+            @include all.paddingLeftRightOnly($pad:10rem);
             @include all.mobile{
                 @include all.paddingLeftRightOnly($pad:5rem);
             }

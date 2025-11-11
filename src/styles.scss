@@ -68,6 +68,13 @@ h2{
     font-family: all.$font1;
     font-size: 6.4rem;
     font-weight: all.$bold;
+    @include all.tablet{
+        font-size: 6rem;
+    }
+    @include all.mobile{
+        font-size: 5rem;
+    }
+
 }
 h3, label{
     font-family: all.$font1;
