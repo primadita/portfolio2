@@ -95,11 +95,17 @@ h6{
     font-family: all.$font1;
     font-size: 1.8rem;
     font-weight: all.$bold;
+    @include all.mobile{
+        font-size: 2rem;
+    }
 }
 span, p, input, textarea{
     font-family: all.$font1;
     font-size: 1.8rem;
     font-weight: all.$regular;
+    @include all.tablet{
+        font-size: 2rem;
+    }
     @include all.mobile{
         font-size: 2rem;
     }
