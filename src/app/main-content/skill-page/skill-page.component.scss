@@ -69,50 +69,57 @@ section{
         .right-column{
             width: 20%;
             @include all.d-flex($jc:center, $alit: flex-end);
+            @include all.adjustTopRight($top: 17rem);
             .sticker{
-                width: 20rem;
+                @include all.square($length: 20rem);
                 transform: rotate(10deg);
                 cursor: pointer;
                 @include all.d-flex($jc: center, $alit:center);
-                img{
+                .before{
                     width: 100%;
-                    @include all.adjustTopRight($top: 17rem, $right: -6rem, $pos: absolute);
-                }
-                .after{
-                    opacity: 1;
                 }
                 .arrow{
                     width: 25%;
-                    @include all.adjustTopRight($top: 21rem, $pos: absolute);
+                    @include all.adjustTopRight($top: 4rem, $right: 8rem, $pos: absolute);
                 }
                 #pull-to-peel{
-                    @include all.square($length: 20rem);
+                    @include all.square($length: 100%);
                     padding: 1rem;
-                    @include all.adjustTopRight($top: 20rem, $right: -6rem, $pos: absolute);
+                    @include all.adjustTopRight($top: 3rem, $pos: absolute);
                     @include all.d-flex($jc: center, $alit: center);
                     h5{
                         font-size: 4rem;
                         text-align: center;
                     }
                 }
+                .after{
+                    opacity: 1;
+                    @include all.square($length: 100%);
+                    @include all.adjustTopRight($pos: absolute);
+                }
                 #other-interest{
-                    @include all.square($length: 20rem);
-                    position: absolute;
-                    top: 18rem;
-                    padding: 2rem 1rem 2rem 1rem;
-                    @include all.d-flex($flexdir: column, $jc: space-between, $alit: center, $gap: 1rem);
+                    padding: 2rem;
+                    @include all.d-flex($flexdir: column, $jc: space-between, $alit: flex-end, $gap: 1rem);
                     h6{
                         text-align: center;
                     }
-                    img{
-                        @include all.square($length: 6rem);
-                        filter: grayscale(100%);
-                        position: absolute;
-                        top: 9.5rem;
+                    .other-interests-icons{
+                        width: 100%;
+                        @include all.d-flex($flexdir: row, $jc: space-around);
+                        img{
+                            @include all.square($length: 6rem);
+                            filter: grayscale(100%);
+                        }
                     }
-                    p{
-                        font-size: 1.6rem;
+                    .other-interests-label{
+                        width: 100%;
+                        @include all.d-flex($flexdir: row, $jc: space-around);
+                        p{
+                            font-size: 1.6rem;
+                        }
                     }
+                    
+                    
                 }
             }
         }

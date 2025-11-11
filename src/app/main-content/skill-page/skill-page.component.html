@@ -25,7 +25,7 @@
             </div>
         </div>
         <!-- #endregion -->
-         <!-- #region STICKER -->
+        <!-- #region STICKER -->
         <div class="right-column">
             <div class="sticker" (click)="peelsticker()">
                 <ng-container *ngIf="!peeled">
@@ -37,8 +37,14 @@
                     <img class="after" src="./assets/design/02_skills/C.png" alt="back sticker">
                     <span id="other-interest" class="after">
                         <h6>{{ 'skills.interest' | translate}}</h6>
-                        <img src="./assets/icons/icon_Scrum.png" alt="">
-                        <p>Scrum</p>
+                        <div class="other-interests-icons">
+                            <img src="./assets/icons/icon_Scrum.png" alt="Scrum icon">
+                            <img src="./assets/icons/icon_Python.png" alt="Python icon">
+                        </div>
+                        <div class="other-interests-label">
+                            <p>Scrum</p>
+                            <p>Python</p>
+                        </div>
                     </span>
                 </ng-container>    
             </div>    

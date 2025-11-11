@@ -44,5 +44,10 @@ export class ProgrammingLanguageListService {
       altText: 'Firebase icon',
       name: 'Firebase'
     },
+    {
+      imgPath: './assets/icons/icon_API.png',
+      altText: 'API icon',
+      name: 'API'
+    },
   ]
 }

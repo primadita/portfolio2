@@ -61,7 +61,7 @@ export class ContactPageComponent {
    * Contains the endpoint, request body builder, and headers.
    */
   post = {
-    endPoint: 'https://www.dumpling-and-jazz.de/sendMail.php',
+    endPoint: 'https://www.felicia-primadita-tretter.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers:{
