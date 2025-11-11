@@ -9,6 +9,7 @@ section{
         // #region MAIN AREA - DESKTOP VIEW
         .maintitle{
             width: 100%;
+            height: 100%;
             max-width: 100rem;
             padding: 3rem;
             @include all.d-flex($flexdir:column);
@@ -170,16 +171,16 @@ section{
             // #endregion
             // #region MOBILE VIEW
             @include all.mobile{
-                width: 100%;
-                height: calc(100dvh - 10dvh);
+                max-width: 50rem;
+                max-height: calc(100dvh - 10dvh);
                 @include all.d-flex($flexdir: column, $jc: flex-start);
                 padding: 5rem 4rem 5rem 4rem;
                 .top-row{
                     @include all.d-flex($flexdir: column);
                     #image-and-name{
                         width: 22rem;
-                        top: 38rem;
-                        left: 5rem;
+                        top: 40rem;
+                        right: calc((100% - 18rem - 6rem)/2);
                         h5{
                             top: 8rem;
                             left:11rem;

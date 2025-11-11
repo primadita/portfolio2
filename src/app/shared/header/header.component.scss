@@ -51,51 +51,53 @@ header{
 
 header{
     @include all.mobile{
-    .content{
-        display: none;
-    }
-    .mobile-view{
-        width: 100%;
-        @include all.d-flex();
-        .standard-mobile-view{
+        height: 10.5rem;
+        .content{
+            display: none;
+        }
+        .mobile-view{
             width: 100%;
-            @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
-            padding: 0 4rem 0 4rem;
-            #burger-btn{
-                img{
-                    width: 5rem;
-                }
-            }
-        }
-        .standard-mobile-view.open{
-            display: none;
-        }
-        #burger-btn-view{
-            display: none;
-        }
-        #burger-btn-view.open{
-            position: absolute;
-            top: 0;
-            padding-top: 2rem;
-            @include all.d-flex($flexdir: column, $jc: flex-start, $alit: center, $rgap: 5rem);
-            background: url('./../../../../public/assets/design/00_header/01_Hero.png');
-            @include all.adjustBgImg($height: 100dvh);
-            .logo{
+            
+            @include all.d-flex();
+            .standard-mobile-view{
                 width: 100%;
+                @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
                 padding: 0 4rem 0 4rem;
-                @include all.d-flex($flexdir: row, $jc: space-between);
-            }
-            .extern-profiles{
-                @include all.d-flex($flexdir: row, $jc: space-around, $alit: center, $cgap: 2rem);
-                a{
-                    @include all.d-flex($alit: center, $jc: center);
-                    @include all.button-like($color: all.$color2, $pad: 0.2rem 0.2rem, $shadow: 0 0);
+                #burger-btn{
                     img{
-                        @include all.square($length: 4rem);
+                        width: 5rem;
                     }
                 }
             }
-        }
-    }        
-}
+            .standard-mobile-view.open{
+                display: none;
+            }
+            #burger-btn-view{
+                display: none;
+            }
+            #burger-btn-view.open{
+                position: absolute;
+                top: 0;
+                padding-top: 2rem;
+                @include all.d-flex($flexdir: column, $jc: flex-start, $alit: center, $rgap: 5rem);
+                background: url('./../../../../public/assets/design/00_header/01_Hero.png');
+                @include all.adjustBgImg($height: 100dvh);
+                .logo{
+                    width: 100%;
+                    padding: 0 4rem 0 4rem;
+                    @include all.d-flex($flexdir: row, $jc: space-between);
+                }
+                .extern-profiles{
+                    @include all.d-flex($flexdir: row, $jc: space-around, $alit: center, $cgap: 2rem);
+                    a{
+                        @include all.d-flex($alit: center, $jc: center);
+                        @include all.button-like($color: all.$color2, $pad: 0.2rem 0.2rem, $shadow: 0 0);
+                        img{
+                            @include all.square($length: 4rem);
+                        }
+                    }
+                }
+            }
+        }        
+    }
 }
