@@ -6,7 +6,7 @@ import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, TranslatePipe, TranslateDirective, TranslateModule],
+  imports: [CommonModule, NavbarComponent, TranslatePipe, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

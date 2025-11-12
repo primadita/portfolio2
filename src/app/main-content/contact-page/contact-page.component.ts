@@ -4,11 +4,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { PatternValidatorDirective } from "../../shared/directives/pattern-validator.directive";
 
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [TranslateModule, CommonModule, FormsModule, RouterModule],
+  imports: [TranslateModule, CommonModule, FormsModule, RouterModule, PatternValidatorDirective],
   templateUrl: './contact-page.component.html',
   styleUrl: './contact-page.component.scss'
 })

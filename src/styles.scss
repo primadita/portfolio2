@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     position: relative;
+    cursor: default;
 }
 .content{
     width: 100%;
@@ -37,6 +38,15 @@ header, section, footer{
 }
 ::-ms-input-placeholder { /* Edge 12 -18 */
     color: all.$color2;
+}
+:-webkit-any-link{
+    color: all.$highlight2;
+}
+input{
+    cursor: text;
+}
+button, a{
+    cursor: pointer;
 }
 // #endregion
 
@@ -76,7 +86,7 @@ h2{
     }
 
 }
-h3, label{
+h3{
     font-family: all.$font1;
     font-size: 2rem;
     font-weight: all.$medium;
@@ -99,7 +109,7 @@ h6{
         font-size: 2rem;
     }
 }
-span, p, input, textarea{
+span, p{
     font-family: all.$font1;
     font-size: 1.8rem;
     font-weight: all.$regular;
@@ -109,6 +119,16 @@ span, p, input, textarea{
     @include all.mobile{
         font-size: 2rem;
     }
+}
+label{
+    font-family: all.$font1;
+    font-size: 2.4rem;
+    font-weight: all.$medium;
+}
+input, textarea{
+    font-family: all.$font1;
+    font-size: 2rem;
+    font-weight: all.$regular;
 }
 footer{
     font-family: all.$font1;

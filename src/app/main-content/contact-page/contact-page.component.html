@@ -18,57 +18,64 @@
                 <img src="./assets/design/mein-sticker.png" alt="personal logo">
                 <form (ngSubmit)="onSubmit(contactPage)" #contactPage="ngForm">
                     <!-- #region INPUT NAME -->
-                    <label for="name"><h3>{{'contact.question_name' | translate}}</h3></label>
-                    <input 
-                        [(ngModel)]="contactData.name"
-                        (ngModelChange)="saveInput()" 
-                        type="text"
-                        name="name"
-                        id="name" 
-                        [placeholder]="name.invalid && name.touched ? '': ('contact.placeholder_name'| translate)"
-                        required
-                        #name="ngModel">
-                    <span *ngIf="name.invalid && name.touched">
-                        <ng-container>
+                    <div class="input">
+                        <label for="name">{{'contact.question_name' | translate}}</label>
+                        <input 
+                            [(ngModel)]="contactData.name"
+                            (ngModelChange)="saveInput()" 
+                            type="text"
+                            name="name"
+                            id="name" 
+                            [placeholder]="(name.hasError('required') || name.hasError('invalidPattern')) && name.touched ? '': ('contact.placeholder_name'| translate)"
+                            required
+                            appPatternValidator="generalName"
+                            #name="ngModel">
+                        <span *ngIf="name.hasError('required') && name.touched" class="invalid-input">        
+                            {{'contact.required_name' | translate}}
+                        </span>
+                        <span *ngIf="name.hasError('invalidPattern') && name.touched" class="invalid-input">        
                             {{'contact.invalid_name' | translate}}
-                        </ng-container>
-                    </span>
+                        </span>
+                    </div>
                     <!-- #endregion -->
                     <!-- #region INPUT EMAIL -->
-                    <label for="email"><h3>{{'contact.question_email' | translate}}</h3></label>
-                    <input 
-                        [(ngModel)]="contactData.email"
-                        (ngModelChange)="saveInput()"
-                        type="text" 
-                        name="email" 
-                        id="email" 
-                        [placeholder]="email.invalid && email.touched ? '' : ('youremail@email.com')" 
-                        required 
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                        #email="ngModel">
-                    <span *ngIf="email.invalid && email.touched">
-                        <ng-container>
+                    <div class="input">
+                        <label for="email">{{'contact.question_email' | translate}}</label>
+                        <input 
+                            [(ngModel)]="contactData.email"
+                            (ngModelChange)="saveInput()"
+                            type="text" 
+                            name="email" 
+                            id="email" 
+                            [placeholder]= "email.touched ? '' : ('youremail@email.com')" 
+                            required 
+                            appPatternValidator="emailFormat"
+                            #email="ngModel">
+                        <span *ngIf="email.hasError('required') && email.touched" class="invalid-input">
+                            {{'contact.required_email' | translate}}
+                        </span>
+                        <span *ngIf="email.hasError('invalidPattern') && email.touched" class="invalid-input">
                             {{'contact.invalid_email' | translate}}
-                        </ng-container>
-                    </span>
+                        </span>
+                    </div>
                     <!-- #endregion -->
                     <!-- #region INPUT TEXT MESSAGE -->
-                    <label for="message"><h3>{{'contact.question_message' | translate}}</h3></label>
-                    <textarea 
-                        #message="ngModel" 
-                        minlength="4" 
-                        [(ngModel)]="contactData.message" 
-                        (ngModelChange)="saveInput()"
-                        name="message" 
-                        id="message" 
-                        [placeholder]="message.invalid && message.touched ? '': ('contact.placeholder_text'|translate)" 
-                        required>
-                    </textarea>
-                    <span *ngIf="message.invalid && message.touched">
-                        <ng-container>
-                            {{ 'contact.invalid_message' | translate }}
-                        </ng-container>
-                    </span>
+                    <div class="input msg">
+                        <label for="message">{{'contact.question_message' | translate}}</label>
+                        <textarea 
+                            #message="ngModel" 
+                            minlength="4" 
+                            [(ngModel)]="contactData.message" 
+                            (ngModelChange)="saveInput()"
+                            name="message" 
+                            id="message" 
+                            [placeholder]="message.invalid && message.touched ? '': ('contact.placeholder_text'|translate)" 
+                            required>
+                        </textarea>
+                        <span *ngIf="message.invalid && message.touched" class="invalid-input">
+                                {{ 'contact.invalid_message' | translate }}
+                        </span>
+                    </div>
                     <!-- #endregion -->
                     <!-- #region Privacy Policy and SEND button -->
                     <div class="privacy-policy">
