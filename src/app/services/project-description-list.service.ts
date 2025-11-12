@@ -15,18 +15,18 @@ export class ProjectDescriptionListService {
       altText: 'Join thumbnail', 
       desc: 'portfolio.join.desc',
       details: 'portfolio.join.details',
-      ihk: true,
+      ihk: false,
       duration: 'portfolio.join.duration',
       html: true,
       css: true,
-      js: true,
+      js: false,
       angular: true,
       ts: true,
       firebase: true,
       link_next: 'singleproject/El%20Pollo%20Loco',
       link_back: 'singleproject/Pokedéx',
-      link_github: '',
-      link_livetest: ''
+      link_github: 'https://github.com/primadita/join',
+      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/angular-projects/join/signIn'
     },
     {
       projname: 'El Pollo Loco',
@@ -45,7 +45,7 @@ export class ProjectDescriptionListService {
       link_next: 'singleproject/Pokedéx',
       link_back: 'singleproject/Join',
       link_github: 'https://github.com/primadita/el-pollo-loco.git',
-      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/el-pollo-loco/index.html'
+      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/elpolloloco/index.html'
     },
     {
       projname: 'Pokedéx',

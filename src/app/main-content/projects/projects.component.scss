@@ -5,40 +5,58 @@ section{
     background: all.$color2;
     color: all.$color1;
     height: auto;
-    min-height: 50dvh;
+    min-height: 100dvh;
     .content{
-        padding: 10rem 15rem 10rem 15rem;
-        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $rgap: 5rem, $cgap: 3rem);
+        padding: 10rem;
+        height: auto;
         flex-wrap: wrap;
+        @include all.d-flex($flexdir: row, $jc: space-around, $alit: center, $rgap: 5rem, $cgap: 3rem);
+        @media (max-width: 1364px) {
+            @include all.d-flex($flexdir: column, $rgap: 5rem);
+            flex-wrap: nowrap;
+            padding-top: 0;
+        }
         @media (max-width: 1230px) {
             @include all.paddingLeftRightOnly($pad: 6rem);
         }
         div{
-            width: 45%;
-            min-width: 40rem;
-            height: auto;
+            // width: 45%;
+            // min-width: 40rem;
+            // max-width: 56rem;
+            // height: auto;
+            // @include all.square($length: 56rem);
+            width: 56rem;
+            height: 53.6rem;
+            // min-height: 50dvh;
             @include all.d-flex($flexdir: column, $alit: flex-start,$jc: flex-start);
             app-single-project-intro{
                 width: 100%;
-                height: auto; 
+                // height: auto; 
             }
         }
         // #endregion
         @include all.notebook{
-            @include all.paddingLeftRightOnly($pad: 15rem);
+            @include all.paddingLeftRightOnly($pad: 10rem);
             div{
-                width: 100%;
-                height: auto;
+                // width: 100%;
+                // height: auto;
+                height: 60rem;
                 @include all.d-flex($flexdir:column, $alit:space-between, $jc: center);
             }
         }
         @include all.tablet{
             @include all.paddingLeftRightOnly($pad: 5rem);
+            div{
+                height: 65rem;
+            }
         }
         @include all.mobile{
-            @include all.paddingLeftRightOnly($pad: 3rem);
+            @include all.paddingLeftRightOnly($pad: 4rem);
             div{
-                min-width: 20rem;
+                width: 100%;
+                max-width: 43rem;
+                height: 100%;
+                max-height: 58rem;
             }
         }
     }

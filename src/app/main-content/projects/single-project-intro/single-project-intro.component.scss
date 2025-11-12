@@ -14,20 +14,26 @@
 }
 
 div{
-    width: 100%;
-    height: 50dvh;
+    // width: 100%;
+    // height: 50dvh;
     @include all.d-flex($alit:flex-start, $jc: center, $flexdir: column, $rgap: 2rem);
     .img-div{
         width: 100%;
-        height: auto;
+        height: 39.8rem;
+        // height: auto;
         overflow: hidden;
         transition: 650ms ease;
         border-radius: 2.5rem;
         @include all.d-flex();
+        @include all.notebook{
+            box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
+        }
+        
         .project-screenshot{
             width: 100%;
-            min-height: 28rem;
-            max-height: 35rem;
+            height: 39.8rem;
+            // min-height: 28rem;
+            // max-height: 35rem;
         }
         #ihk-sticker{
             position: absolute;
@@ -37,16 +43,15 @@ div{
         .project-details-button-white{
             // width: 18rem;
             // height: 5rem;
-            position: absolute;
+            // position: absolute;
             // @include all.button-like();
             display: none;
         }
         &:hover{
             box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
             .project-screenshot{
-                @include all.square($length: 120%);
+                transform: scale(1.2);
             }
-
             .project-details-button-white{
                 display: flex;
                 position: absolute;
@@ -66,7 +71,7 @@ div{
     }
     @include all.notebook{
         .img-div{
-            box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
+            // box-shadow: rgba(0, 0, 0, 0.4) 0px -18dvh  36px -1rem inset;
             >.project-details-button-white{
                 display: none;   
             }
@@ -80,12 +85,29 @@ div{
             @include all.d-flex();
             width: 18rem;
             right: -60%;
-            @media (max-width: 430px) {
-                right: -45%;
-            }
             &:hover{
                 @include all.push-button($color: all.$color1, $bgc: transparent);
                 left: calc(55% + 4rem);
+            }
+            @include all.mobile{
+                right: -45%;
+                &:hover{
+                    left: calc(38% + 4rem);
+                }
+            }
+            @media (max-width: 360px) {
+                right: -38%;
+                &:hover{
+                    left: calc(29% + 4rem);
+                }
+            }
+        }
+    }
+    @include all.mobile{
+        .img-div{
+            height: 30rem;
+            .project-screenshot{
+                height: 30rem;
             }
         }
     }
