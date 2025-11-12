@@ -20,26 +20,17 @@ section{
             @include all.paddingLeftRightOnly($pad: 6rem);
         }
         div{
-            // width: 45%;
-            // min-width: 40rem;
-            // max-width: 56rem;
-            // height: auto;
-            // @include all.square($length: 56rem);
             width: 56rem;
             height: 53.6rem;
-            // min-height: 50dvh;
             @include all.d-flex($flexdir: column, $alit: flex-start,$jc: flex-start);
             app-single-project-intro{
                 width: 100%;
-                // height: auto; 
             }
         }
         // #endregion
         @include all.notebook{
             @include all.paddingLeftRightOnly($pad: 10rem);
             div{
-                // width: 100%;
-                // height: auto;
                 height: 60rem;
                 @include all.d-flex($flexdir:column, $alit:space-between, $jc: center);
             }
