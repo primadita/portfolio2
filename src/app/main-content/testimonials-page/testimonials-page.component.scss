@@ -12,7 +12,7 @@ section{
             @include all.d-flex($flexdir: row);
             >.arrow{
                 >img{
-                    width: 10rem;
+                    width: 8rem;
                 }
             }
         }
@@ -26,13 +26,22 @@ section{
             #colleague1{
                 transform: rotate(-4deg);
                 @include all.adjustTopLeft($left: 10%);
+                &:hover{
+                    z-index: 7;
+                }
             }
             #colleague2{
                 @include all.adjustTopLeft($top: 5rem);
+                &:hover{
+                    z-index: 7;
+                }
             }
             #colleague3{
                 transform: rotate(4deg);
                 @include all.adjustTopLeft($left: -10%);
+                &:hover{
+                    z-index: 7;
+                }
             }
         }
     }
@@ -58,6 +67,11 @@ section{
                     transform: rotate(5deg);
                 }
             }
+        }
+    }
+    @media (max-width: 340px) {
+        h2{
+            font-size: 4.5rem;
         }
     }
 

@@ -26,8 +26,8 @@ export class TestimonialsPageComponent {
   /**
    * Testimonial object for "Colleague1", "Colleague2"and "Colleague3" resp., if found in the testimonial list.
    */
-  colleague1 = this.testimonialList.testimonial.find(testi => testi.name === "Colleague1");
-  colleague2 = this.testimonialList.testimonial.find(testi => testi.name === "Colleague2");
-  colleague3 = this.testimonialList.testimonial.find(testi => testi.name === "Colleague3");
+  colleague1 = this.testimonialList.testimonial.find(testi => testi.number === 1);
+  colleague2 = this.testimonialList.testimonial.find(testi => testi.number === 2);
+  colleague3 = this.testimonialList.testimonial.find(testi => testi.number === 3);
   // #endregion
 }

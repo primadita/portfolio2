@@ -8,6 +8,7 @@
     padding: 3rem;
     overflow: hidden;
     color: all.$color2;
+    border-radius: 2.5rem;
     @include all.d-flex($flexdir: column, $jc: space-between);
     >div{
         @include all.d-flex($flexdir: row, $jc: space-between);
@@ -27,6 +28,7 @@
         background-size: cover;
         filter:brightness(120%) contrast(80%);
         color: all.$color1;
+        // z-index: 30;
     }
     @media (max-width: 1200px) {
         width: 38rem;
