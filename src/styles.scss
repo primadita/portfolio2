@@ -45,6 +45,20 @@ header, section, footer{
 input{
     cursor: text;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--input-bg, rgba(0,0,0,0)) inset !important;
+  box-shadow: 0 0 0 1000px var(--input-bg, rgba(0,0,0,0)) inset !important;
+  -webkit-text-fill-color: white !important;     
+  caret-color: white !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
 button, a{
     cursor: pointer;
 }
