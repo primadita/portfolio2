@@ -12,6 +12,7 @@ export interface Project {
   angular: boolean;
   ts: boolean;
   firebase: boolean;
+  api: boolean;
   link_next: string;
   link_back: string;
   link_github: string;

@@ -6,7 +6,7 @@ section{
     @include all.adjustBgImg($pos:left, $height: auto);
     min-height: calc(100dvh - 10dvh - 15rem);
     .content{
-        padding: 5rem 10rem 5rem 10rem; 
+        padding: 5rem 10rem; 
         @include all.d-flex($flexdir:column, $alit: flex-start, $jc: space-between, $rgap: 8rem);
         .mobile{
             display: none;
@@ -29,6 +29,7 @@ section{
                 @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 2rem);
                 .project-title{
                     width: 100%;
+                    // padding-top: 5rem;
                     .line-div{
                         width: 100%;
                         img{
@@ -66,9 +67,6 @@ section{
                     @include all.d-flex($flexdir: row, $cgap: 3rem);
                     .button-like-white{
                         @include all.button-like();
-                        a{
-                            color: all.$color2;
-                        }
                         &:hover{
                             @include all.push-button();
                         }
@@ -109,6 +107,9 @@ section{
                 width: 100%;
                 .left-column{
                     width: 100%;
+                    .project-title{
+                        padding-top: 5rem;
+                    }
                     .required-skills{
                         width: 100%;
                         @include all.d-flex($flexdir: row, $jc: flex-start, $cgap: 2rem);
@@ -131,18 +132,24 @@ section{
                 }
             }
             .mobile{
-                @include all.d-flex($flexdir: row, $jc: space-between, $alit: center, $cgap:5rem);
+                @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
                 width: 100%;
                 div{
                     @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
                     a{
-    
-                        @include all.d-flex($flexdir: row, $alit: center, $cgap: 1rem);
+                        @include all.d-flex($flexdir: row, $alit: center, $cgap: 0.5rem);
                         h6{
                             color: all.$color2;
                         }
                         img{
                             height: 4rem;
+                        }
+                    }
+                }
+                #next-btn-mobile{
+                    a{
+                        h6{
+                            text-align: right;
                         }
                     }
                 }
@@ -154,13 +161,13 @@ section{
             background-size: cover;
             background-position: center;
             .content{
-                @include all.paddingLeftRightOnly($pad: 5rem);
+                padding: 0 5rem 5rem 5rem;
             }
             
         }    
         @include all.mobile {
             .content{
-                @include all.paddingLeftRightOnly($pad: 3rem);  
+                padding: 0 3rem 5rem 3rem; 
                 .main-div{
                     .left-column{
                         .required-skills{

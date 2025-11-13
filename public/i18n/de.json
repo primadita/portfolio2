@@ -46,8 +46,8 @@
         "duration": "Dauer: ",
         "join":{
             "desc": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu. ",
-            "details": "Das Projekt wurde als Gruppenaufgabe durchgeführt. Bei der Entwicklung einer Web-App mit HTML, CSS, JavaScript und Firebase lag ein starker Fokus auf der Zusammenarbeit im Team und dem Kennenlernen von GitHub für die Arbeit in einem Gruppenprojekt. Meine Aufgabe war es, ...",
-            "duration": "5 Wochen"
+            "details": "Das Projekt wurde als Gruppenaufgabe durchgeführt. Bei der Entwicklung einer Web-App mit HTML, CSS, JavaScript und Firebase lag ein starker Fokus auf der Zusammenarbeit im Team und dem Kennenlernen von GitHub für die Arbeit in einem Gruppenprojekt. Meine Aufgabe war es, die Kontaktdetails zu erstellen, die Seite, um Kontakte zu bearbeiten, das Board und die Registrierungsseite zu erstellen.",
+            "duration": "4 Wochen"
         },
         "elpolloloco":{
             "desc": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen.",

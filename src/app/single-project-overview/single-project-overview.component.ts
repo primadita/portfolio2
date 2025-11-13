@@ -75,6 +75,11 @@ export class SingleProjectOverviewComponent {
    * Service/tool reference for Firebase, if available.
    */
   firebase = this.proglanguagelist.progLanguageList.find(pl => pl.name === 'Firebase');
+
+  /**
+   * Service/tool reference for Firebase, if available.
+   */
+  api = this.proglanguagelist.progLanguageList.find(pl => pl.name === 'API');
   // #endregion
 
   // #region METHODS

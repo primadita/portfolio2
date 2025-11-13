@@ -46,8 +46,8 @@
         "duration": "Duration: ",
         "join":{
             "desc": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
-            "details": "The project was build as a group task. While building a web-app using HTML, CSS, JavaScript and Firebase, working together as a team and get familiar with GitHub to work in a group project was a strong focus on this project. My task was to ...",
-            "duration": "5 weeks"
+            "details": "The project was build as a group task. While building a web-app using HTML, CSS, JavaScript and Firebase, working together as a team and get familiar with GitHub to work in a group project was a strong focus on this project. My task was to create the contact details, edit contact, board and the sign up page.",
+            "duration": "4 weeks"
         },
         "elpolloloco":{
             "desc": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
