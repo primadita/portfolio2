@@ -162,5 +162,10 @@ export class ContactPageComponent {
       this.privacyChecked = JSON.parse(savedPrivacy);
     }
   }
+
+  closeFeedbackPage(){
+    this.hideFeedback = true;
+    this.hideColumns= false;
+  }
   // #endregion
 }

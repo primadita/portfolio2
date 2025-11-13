@@ -10,7 +10,7 @@
   column-gap: $cgap;
 }
 
-@mixin button-like($color: var.$color2, $pad: 1.2rem 2rem 1.2rem 2rem, $shadow: 0.5rem 0.5rem){
+@mixin button-like($color: var.$color2, $bg:transparent, $pad: 1.2rem 2rem 1.2rem 2rem, $shadow: 0.5rem 0.5rem, $cursor: pointer){
   border: 0.1rem solid $color;
   border-radius: 2.5rem;
   box-shadow: $shadow;
@@ -18,6 +18,8 @@
   font-family: 'Bricolage Grotesque';
   font-size: 2rem;
   padding: $pad;
+  background: $bg;
+  cursor: $cursor;
   a{
     color: $color;
   }

@@ -82,7 +82,7 @@
         "required_email": "Hoppla! Ihre Email ist erforderlich.",
         "invalid_email": "Bitte eine gültige Email eingeben",
         "invalid_message":"Was benötigen Sie für die Entwicklung?",
-        "privatepolicy": "Ich habe die <a href='imprint' (click)='saveInput()'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "privatepolicy": "Ich habe die <a href='imprint' (click)='saveInput()' rel='noopener noreferrer'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "send": "Senden"
     }, 
     "footer":{
@@ -113,7 +113,7 @@
         "back": "Zurück"
     },
     "feedback":{
-        "button": "Zurück zur Startseite",
+        "button": "Zurück",
         "positive_head": "Deine Nachricht wurde erfolgreich verschickt!",
         "positive_text": "Vielen Dank für deine Nachricht. Ich werde Ihnen schnellstmöglich eine Rückmeldung geben.",
         "error_head": "Fehler aufgetreten",

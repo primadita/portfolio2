@@ -9,24 +9,22 @@
 
 section{
     background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: auto;
     min-height: 40dvh;
     color: all.$color2;
     .content{
         width: 100%;
-        height: auto;
         max-width: 1920px;
         padding: 15rem;
         @include all.d-flex($flexdir: column);
         @media (max-width: 1250px) {
-            @include all.paddingLeftRightOnly($pad: 10rem);
-        }
-        @include all.tablet{
-            @include all.paddingLeftRightOnly($pad: 5rem);
+            padding: 15rem 5rem;
         }
         @include all.mobile{
-            @include all.paddingLeftRightOnly($pad: 3rem)
+            padding: 15rem 3rem;
         }
         .columns{
             @include all.d-flex($flexdir:row, $jc: space-between, $gap: 5rem);
@@ -43,7 +41,7 @@ section{
                     }
                 }
                 p{
-                    padding: 4rem 0 4rem 0;
+                    padding: 4rem 0;
                 }
                 div{
                     width: 100%;
@@ -61,7 +59,7 @@ section{
                 width: 40%;
                 @include all.d-flex($flexdir:column);
                 img{
-                    width: 15rem;
+                    width: 17rem;
                     transform: rotate(20deg);
                     z-index: 3;
                     @include all.adjustTopRight($pos: absolute);
@@ -71,7 +69,7 @@ section{
                     padding-top: 10rem;
                     width: 100%;
                     .input{
-                        padding: 1.5rem 0 1.5rem 0;
+                        padding: 1.5rem 0;
                         border-bottom: 1px solid all.$highlight1;
                         @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 2.5rem);
                         label{
@@ -83,7 +81,6 @@ section{
                             color: white;
                             width: 100%;
                             cursor: text;
-                            // z-index: 3;
                             &:focus{
                                 border: none;
                                 outline: none;
@@ -97,7 +94,6 @@ section{
                             font-size: 16px;
                             position: absolute;
                             bottom: 4rem;
-                            // z-index: 2;
                         }
                         &:hover{
                             border-bottom-color: all.$highlight3;
@@ -118,7 +114,7 @@ section{
                             @include all.square($length: 21px);
                         }
                         >label{
-                            font-size: 1.6rem;
+                            font-size: 16px;
                             font-weight: regular;
                         }
                         [type="checkbox"] {
@@ -146,21 +142,12 @@ section{
                         padding-top: 2rem;
                         >button{
                             padding: 0;
-                            @include all.button-like($color: gray);
+                            @include all.button-like($color: gray, $cursor: default);
                             border-bottom: none;
-                            font-size: 2rem;
-                            cursor: pointer;
-                            &.btn-disabled{
-                                cursor: not-allowed;
-                                background: transparent;
-                            }
                             &.btn-enabled{
                                 @include all.button-like($color: all.$color2);
-                                background-color: transparent;
-                                cursor: pointer;
                                 &:hover{
                                     @include all.push-button();
-                                    cursor: pointer;
                                 }
                             }
                         }
@@ -172,8 +159,7 @@ section{
             // #region RESPONSIVE
             @include all.notebook{
                 @include all.d-flex($flexdir: column, $jc: center);
-                @include all.paddingLeftRightOnly($pad: 5rem);
-                padding-top: 5rem;
+                padding: 5rem 5rem 0;
                 >img.mobile{
                     @include all.square($length: 17rem);
                     transform: rotate(20deg);
@@ -211,26 +197,21 @@ section{
                 }
             }
             @include all.tablet{
-                @include all.paddingLeftRightOnly($pad:0);
+                padding: 5rem 0 0;
             }
             // #endregion
         }
         // #region Feedback message
         .feedback{
-            width: 100%;
             @include all.d-flex($flexdir: column, $rgap: 5rem);
             .homepage-btn{
                 @include all.button-like();
-                cursor: pointer;
                 &:hover{
                     @include all.push-button();
                 }
             }
             @include all.mobile{
                 padding-top: 15rem;
-                h2{
-                    font-size: 5.6rem;
-                }
             }
         }
         // #endregion

@@ -110,11 +110,9 @@
                 <h2>{{ errorMessage[0] | translate }}</h2>
                 <p>{{ errorMessage[1] | translate }}</p>
             </div>
-            <div class="homepage-btn">
-                <a href="">
-                    {{ 'feedback.button' | translate }}
-                </a>
-            </div>
+            <button class="homepage-btn" (click)="closeFeedbackPage()">
+                {{ 'feedback.button' | translate }}
+            </button>
         </div>
         <!-- #endregion -->
     </div>

@@ -47,15 +47,28 @@ footer{
                     }
                 }
                 .button-like-noframe{
+                    cursor: pointer;
                     @include all.d-flex($flexdir: column);
                     @include all.button-like($color:all.$color2, $pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
                     color: all.$color2;
                     background: all.$highlight2;
-                    img{
+                    .rolling-object{
                         position: absolute;
                         top: -3rem;
                         left: 0;
                     }
+                    &:hover{
+                        
+                    }
+                    &:hover ~.rolling-object{
+                            opacity: 1;
+                            animation: wave-in 0.5s forwards;
+                            animation-iteration-count: 1;
+                        }
+                        &:not(:hover) ~.rolling-object{
+                            animation: wave-out 0.5s forwards;
+                            animation-iteration-count: 1;
+                        }
                 }
             }
             @media (max-width: 1250px) {
