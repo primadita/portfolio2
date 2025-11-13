@@ -38,13 +38,13 @@
   left: 0.5rem;
 }
 
-@mixin left-to-right-animation($dur:3s, $dir: alternate){
+@mixin left-to-right-animation($dur:3s, $dir: alternate, $count: infinite){
     width: 0;
     opacity: 0;
     overflow: hidden;
     animation: left-to-right;
     animation-duration: $dur;
-    animation-iteration-count: infinite;
+    animation-iteration-count: $count;
     animation-fill-mode: forwards;
     animation-direction: $dir;
 }

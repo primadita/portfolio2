@@ -6,7 +6,7 @@ footer{
     .content{
         @include all.d-flex($flexdir: column, $alit: flex-start, $jc: center, $rgap: 1rem);
         color: all.$color2;
-        padding: 1rem 15rem 1rem 15rem;
+        padding: 1rem 15rem;
         #logo-with-text{
             @include all.d-flex($flexdir: row, $jc: flex-start, $alit: center, $cgap: 2rem);
             cursor: pointer;
@@ -34,46 +34,94 @@ footer{
         #footer-links{
             width: 100%;
             @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
+            padding: 3rem 0 3rem 0;
             a{
+                cursor: pointer;
                 span{
                     color: all.$color2;
                 }
-                .underline{
+                .underline {
+                    opacity: 0;
                     position: absolute;
-                    bottom: -1.5rem;
+                    bottom:-1.5rem;
                     left: -1rem;
+                    animation: none;
                     img{
                         width: 12rem;
                     }
                 }
                 .button-like-noframe{
-                    cursor: pointer;
-                    @include all.d-flex($flexdir: column);
-                    @include all.button-like($color:all.$color2, $pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
-                    color: all.$color2;
-                    background: all.$highlight2;
+                    width: 10rem;
+                    @include all.d-flex();
                     .rolling-object{
                         position: absolute;
                         top: -3rem;
                         left: 0;
+                        opacity: 0;
                     }
-                    &:hover{
-                        
+                }
+                &:hover{
+                    .underline{
+                        opacity: 1;
+                        // animation: left-to-right 1s alternate ;
+                        // animation-iteration-count: 1;
+                        // @include all.left-to-right-animation($dur: 0.5s, $count: 1, $dir: alternate);
                     }
-                    &:hover ~.rolling-object{
+                    .button-like-noframe{
+                        @include all.button-like($color:all.$color2, $bg: all.$highlight2,$pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
+                        .rolling-object{
                             opacity: 1;
                             animation: wave-in 0.5s forwards;
-                            animation-iteration-count: 1;
                         }
-                        &:not(:hover) ~.rolling-object{
-                            animation: wave-out 0.5s forwards;
-                            animation-iteration-count: 1;
-                        }
+                    }
                 }
+                &:not(:hover){
+                    .underline{
+                        // opacity: 0;
+                        // animation: left-to-right 0.5s reverse ;
+                        // animation-iteration-count: 1;
+                        @include all.left-to-right-animation($dur: 0.5s, $count: 1, $dir: reverse);
+                    }
+                }
+
             }
-            @media (max-width: 1250px) {
-                padding-top: 2rem;
-            }
+            // a{
+            //     span{
+            //         color: all.$color2;
+            //     }
+            //     .underline{
+            //         position: absolute;
+            //         bottom: -1.5rem;
+            //         left: -1rem;
+            //         img{
+            //             width: 12rem;
+            //         }
+            //     }
+            //     .button-like-noframe{
+            //         cursor: pointer;
+            //         @include all.d-flex($flexdir: column);
+            //         @include all.button-like($color:all.$color2, $pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
+            //         color: all.$color2;
+            //         background: all.$highlight2;
+            //         .rolling-object{
+            //             position: absolute;
+            //             top: -3rem;
+            //             left: 0;
+            //         }
+            //         &:hover ~.rolling-object{
+            //             opacity: 1;
+            //             animation: wave-in 0.5s forwards;
+            //             animation-iteration-count: 1;
+            //         }
+            //         &:not(:hover) ~.rolling-object{
+            //             animation: wave-out 0.5s forwards;
+            //             animation-iteration-count: 1;
+            //         }
+            //     }
+            // }
+            // @media (max-width: 1250px) {
+            //     padding-top: 2rem;
+            // }
         } 
         #mobile-view{
             display: none;
