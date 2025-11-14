@@ -55,20 +55,21 @@ export class ContactPageComponent {
    * Flag used to simulate email sending (testing mode).
    * If `true`, no request to the backend is made.
    */
-  mailTest = true;
+  mailTest = false;
 
    /**
    * Configuration object for HTTP POST request.
    * Contains the endpoint, request body builder, and headers.
    */
   post = {
-    endPoint: 'https://www.felicia-primadita-tretter.com/sendMail.php',
+    endPoint: 'https://felicia-primadita-tretter.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers:{
         'Content-Type': 'text/plain', //üblich wäre application/json
-        responseType: 'text',
-      }
+        // responseType: 'text',
+      }, 
+      responseType: 'text' as const
     }
   };
   /**
@@ -104,10 +105,11 @@ export class ContactPageComponent {
     this.successMessage = ["",""];
     this.errorMessage = ["",""];
     if(ngForm.form.valid && ngForm.submitted && !this.mailTest){
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
       .subscribe({
         next: (response) => {
           // this.router.navigate(['/feedback']);
+          console.log("SERVER RESPONSE:", response);
           this.successMessage = ['feedback.positive_head','feedback.positive_text'];
           this.hideColumns = true;
           this.hideFeedback = false;
@@ -115,6 +117,8 @@ export class ContactPageComponent {
         },
         error:(error) => {
           this.errorMessage = ['feedback.negative_head','feedback.negative_text'];
+          this.hideColumns = true;
+          this.hideFeedback = false;
         },
         complete: () => console.info('send post complete'),
       })
