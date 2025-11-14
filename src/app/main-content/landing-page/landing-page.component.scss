@@ -151,21 +151,6 @@ section{
                             animation-iteration-count: 1;
                         }
                     }
-                    .align-left{
-                        .button-like-white{
-                            // .before{
-                            //     animation: switch-to-none 4s forwards;
-                            //     animation-iteration-count: 1;
-                            // }
-                            // .after{
-                            //     opacity: 0;
-                            //     // display: flex;
-                            //     animation: switch-to-flex 4s forwards;
-                            //     animation-iteration-count: 1;
-                            // }
-                        }
-                        
-                    }
                 }
             }
             // #endregion
@@ -174,7 +159,7 @@ section{
                 max-width: 50rem;
                 max-height: calc(100dvh - 10dvh);
                 @include all.d-flex($flexdir: column, $jc: flex-start);
-                padding: 5rem 4rem 5rem 4rem;
+                padding: 5rem 4rem;
                 .top-row{
                     @include all.d-flex($flexdir: column);
                     #image-and-name{
@@ -215,14 +200,13 @@ section{
             @include all.d-flex($flexdir: column, $alit: flex-start, $rgap: 1rem);
             a{
                 @include all.d-flex($alit: center, $jc: center);
-                @include all.button-like($color: white, $pad: 0.2rem, $shadow: 0);
-                cursor: pointer;
-
+                @include all.button-like($color: white, $pad: 0.2rem, $shadow: none);
                 img{
+                    cursor: pointer;
                     @include all.square($length: 4rem);
                 }
                 &:hover{
-                    background: #1aa8b5;
+                    background: all.$highlight2;
                 }
             }
             @include all.bigscreen{

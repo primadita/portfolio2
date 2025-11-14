@@ -19,11 +19,6 @@
     100%{text-transform: lowercase; color: #24dd80}
 }
 
-@keyframes updown{
-    0%{height: 0; opacity: 0}
-    100%{height: 4rem; opacity: 1}
-}
-
 @keyframes circleReveal {
     0%{transform: rotate(90deg)  scaleX(0); opacity: 0}
     100%{transform: rotate(0deg)  scaleX(1); opacity: 1}

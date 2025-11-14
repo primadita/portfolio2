@@ -36,13 +36,16 @@ header{
         app-navbar{
             width: 70%;
         }
-        #switch-language{
+        .switch-language{
             @include all.d-flex($flexdir: row, $alit: center, $jc: space-around);
+            // cursor: pointer;
             button{
+                // cursor: pointer;
                 height: 3.8rem;
                 @include all.d-flex($alit: center);
                 img{
                     height: 100%;
+                    cursor: pointer;
                 }
             }
         }

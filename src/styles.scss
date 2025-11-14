@@ -1,4 +1,8 @@
-@use './../public/assets/styles/all-styles.scss' as all;
+@use './../public/assets/styles/all-styles.scss' as var;
+// @forward './../public/assets/styles/all-styles.scss' as all-*;
+
+
+
 // #region GENERAL
 *{
     padding: 0;
@@ -15,10 +19,10 @@
 }
 html{
     font-size: 10px;
-    @include all.tablet{
+    @include var.tablet{
         font-size: 9px;
     }
-    @include all.mobile{
+    @include var.mobile{
         font-size: 8px;
     }
 }
@@ -34,13 +38,13 @@ header, section, footer{
     display: none;
 }
 ::placeholder {
-    color: all.$color2; /* Firefox */
+    color: var.$color2; /* Firefox */
 }
 ::-ms-input-placeholder { /* Edge 12 -18 */
-    color: all.$color2;
+    color: var.$color2;
 }
 :-webkit-any-link{
-    color: all.$highlight2;
+    color: var.$highlight2;
 }
 input{
     cursor: text;
@@ -74,79 +78,79 @@ button, a{
     src: url('./../public/assets/fonts/Kalam-Regular.ttf');
 }
 h1{
-    color: all.$color2;
-    font-family: all.$font1;
+    color: var.$color2;
+    font-family: var.$font1;
     font-size: 12.8rem;
-    font-weight: all.$bold;
-    @include all.notebook{
+    font-weight: var.$bold;
+    @include var.notebook{
         font-size: 11rem;
     }
-    @include all.tablet{
+    @include var.tablet{
         font-size: 10rem;
     }
-    @include all.mobile{
+    @include var.mobile{
         font-size: 5rem;
     }
 }
 h2{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 6.4rem;
-    font-weight: all.$bold;
-    @include all.tablet{
+    font-weight: var.$bold;
+    @include var.tablet{
         font-size: 6rem;
     }
-    @include all.mobile{
+    @include var.mobile{
         font-size: 5rem;
     }
 
 }
 h3{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 2rem;
-    font-weight: all.$medium;
+    font-weight: var.$medium;
 }
 h4{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 2.4rem;
-    font-weight: all.$bold;
+    font-weight: var.$bold;
 }
 h5{
-    font-family: all.$font2;
+    font-family: var.$font2;
     font-size: 2.4rem;
-    font-weight: all.$bold;
+    font-weight: var.$bold;
 }
 h6{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 1.8rem;
-    font-weight: all.$bold;
-    @include all.mobile{
+    font-weight: var.$bold;
+    @include var.mobile{
         font-size: 2rem;
     }
 }
 span, p{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 1.8rem;
-    font-weight: all.$regular;
-    @include all.tablet{
+    font-weight: var.$regular;
+    @include var.tablet{
         font-size: 2rem;
     }
-    @include all.mobile{
+    @include var.mobile{
         font-size: 2rem;
     }
 }
 label{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 2.4rem;
-    font-weight: all.$medium;
+    font-weight: var.$medium;
 }
 input, textarea{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 2rem;
-    font-weight: all.$regular;
+    font-weight: var.$regular;
 }
 footer{
-    font-family: all.$font1;
+    font-family: var.$font1;
     font-size: 1.8rem;
-    font-weight: all.$medium;
+    font-weight: var.$medium;
 }
 // #endregion

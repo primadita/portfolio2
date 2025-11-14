@@ -142,7 +142,8 @@ section{
                         padding-top: 2rem;
                         >button{
                             padding: 0;
-                            @include all.button-like($color: gray, $cursor: default);
+                            @include all.button-like($color: gray);
+                            cursor:default;
                             border-bottom: none;
                             &.btn-enabled{
                                 @include all.button-like($color: all.$color2);
@@ -188,9 +189,9 @@ section{
                             width: 100%;
                             @include all.d-flex($flexdir: row, $alit: center, $jc: space-between);
                             .arrow.mobile{
-                                rotate: -20deg;
-                                bottom: 4rem;
-                                left: 16rem;
+                                transform: rotate(-20deg);
+                                bottom: 3rem;
+                                left: 15rem;
                             }                            
                         }
                     }
