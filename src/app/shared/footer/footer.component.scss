@@ -33,8 +33,9 @@ footer{
         }
         #footer-links{
             width: 100%;
+            height: 94px;
             @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
-            padding: 3rem 0 3rem 0;
+            padding: 3rem 0;
             a{
                 cursor: pointer;
                 span{
@@ -46,13 +47,17 @@ footer{
                     bottom:-1.5rem;
                     left: -1rem;
                     animation: none;
+                    overflow: hidden;
                     img{
                         width: 12rem;
                     }
                 }
                 .button-like-noframe{
                     width: 10rem;
+                    height: 2.5rem;
                     @include all.d-flex();
+                    // @include all.button-like($color:all.$color2, $bg: all.$highlight2,$pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
+                    opacity: 1;
                     .rolling-object{
                         position: absolute;
                         top: -3rem;
@@ -63,7 +68,8 @@ footer{
                 &:hover{
                     .underline{
                         opacity: 1;
-                        // animation: left-to-right 1s alternate ;
+                        overflow: hidden;;
+                        // animation: left-to-right 1ms forwards ;
                         // animation-iteration-count: 1;
                         // @include all.left-to-right-animation($dur: 0.5s, $count: 1, $dir: alternate);
                     }

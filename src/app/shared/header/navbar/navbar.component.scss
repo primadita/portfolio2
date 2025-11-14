@@ -4,48 +4,74 @@
 .navbar{
     width: 100%;
     @include all.d-flex($jc: space-around, $alit: center, $flexdir: row);
-    a{
+    a{  
         @include all.d-flex($alit: center);
+        h6{
+            color: all.$color2;
+            text-align: center;
+            // position: fixed;
+            z-index: 2;
+            top: 2rem;
+            width: 12rem;
+        }
         div{
-            position: absolute;
-            opacity: 0;
-            @include all.d-flex($jc:space-around, $alit: center);
+            opacity: 1;
+            @include all.d-flex($jc:flex-start, $alit:flex-end);
             img{
                 width: 12rem;
                 height: 4rem;
             }
         }
         .circle{
-            height: 0;
+            height: 4rem;
             width: 12rem;
             top: -1rem;
+            transform: scaleY(0);
         }
         .underline{
-            width: 0;
+            width: 12rem;
+            height: 4rem;
+            top: -1rem;
+            z-index: 3;
+            opacity: 0;
         }
-        h6{
-            color: all.$color2;
-            text-align: center;
-        }
+        
         &:hover .circle{
-            animation: updown;
-            animation-duration: 1s;
-            transition: 0.5s;
-            animation-fill-mode: forwards;
-            opacity: 1;
+            transform-origin: center;
+            animation: circleReveal 1s forwards ease-out;
+            animation-iteration-count: 1;
+        }
+        &:not(:hover) .circle{
+            transform-origin: center;
+            animation: reverse-circleReveal 1s alternate;
         }
         &:hover .underline{
-            animation: left-to-right;
-            transition: 1s;
+            animation-name: left-to-right;
             animation-duration: 1s;
+            animation-direction: alternate;
             animation-fill-mode: forwards;
-            opacity: 1;
+        }
+        &:not(:hover) .underline{
+            animation-name: left-to-right-reverse;
+            animation-duration: 0.8s;
+            animation-direction: alternate;
         }
     }
     // #endregion
     // #region Mobile-view
     @include all.mobile{
         @include all.d-flex($flexdir: column, $jc: center, $rgap:3rem);
+        a{
+            .underline, .circle{
+                animation: none;
+                &:hover{
+                    animation: none;
+                }
+                &:not(:hover){
+                    animation: none;
+                }
+            }
+        }
     }
     // #endregion
 }

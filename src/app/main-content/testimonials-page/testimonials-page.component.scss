@@ -9,8 +9,19 @@ section{
         @include all.d-flex($flexdir:column, $jc: flex-start, $alit: flex-end);
         padding: 10rem 15rem 10rem 15rem;
         .h3{
-            @include all.d-flex($flexdir: row);
+
+            justify-content: center;
             >.arrow{
+                width: 8rem;
+                top: 3rem;
+                left: -9rem;
+                height: auto;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0;
+                transform-origin: right;
+                animation: right-to-left 3s infinite alternate;
+                animation-fill-mode: both;
                 >img{
                     width: 8rem;
                 }

@@ -188,9 +188,9 @@ section{
                             width: 100%;
                             @include all.d-flex($flexdir: row, $alit: center, $jc: space-between);
                             .arrow.mobile{
-                                transform: rotate(-20deg);
-                                bottom: 3rem;
-                                left: 15rem;
+                                rotate: -20deg;
+                                bottom: 4rem;
+                                left: 16rem;
                             }                            
                         }
                     }

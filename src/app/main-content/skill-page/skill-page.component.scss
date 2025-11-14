@@ -16,6 +16,8 @@ section{
                 width: auto;
                 >div{
                     @include all.adjustTopRight($pos: absolute);
+                    transform-origin: right;
+                    animation: upperright-to-bottomleft 6s alternate infinite;
                     height: 8rem;
                     >img{
                         width: 100%;
