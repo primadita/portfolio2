@@ -34,9 +34,6 @@ header, section, footer{
 .d-none{
     display: none;
 }
-[id] {
-  scroll-margin-top: 12rem;
-}
 ::placeholder {
     color: var.$color2; /* Firefox */
 }
