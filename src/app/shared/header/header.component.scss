@@ -16,7 +16,11 @@ header{
         display: none;
     }
     .content{
-        @include all.d-flex($flexdir: row, $jc: space-around, $alit: center);
+        padding: 0 15rem;
+        @include all.notebook{
+            padding: 0 5rem;
+        }
+        @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
         .logo{
             .after{
                 display: none;
@@ -65,7 +69,7 @@ header{
             .standard-mobile-view{
                 width: 100%;
                 @include all.d-flex($flexdir: row, $jc: space-between, $alit: center);
-                padding: 0 4rem 0 4rem;
+                padding: 0 5rem;
                 #burger-btn{
                     img{
                         width: 5rem;
