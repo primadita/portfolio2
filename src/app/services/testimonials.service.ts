@@ -18,16 +18,16 @@ export class TestimonialsService {
     },
     {
       number: 2,
-      name: "Colleague2",
+      name: "Henry W.",
       testi: 'testimonials.testi2',
       position: "Frontend Developer",
-      linkedin: 'http://linkedin.com/'
+      linkedin: 'https://www.linkedin.com/in/henry-wolf-261baa383/'
     },
     {
       number: 3,
-      name: "Colleague3",
+      name: "Max Muster",
       testi: 'testimonials.testi3',
-      position: "Frontend Developer",
+      position: "-",
       linkedin: 'http://linkedin.com/'
     }
   ]
