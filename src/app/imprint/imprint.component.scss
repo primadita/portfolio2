@@ -39,6 +39,9 @@
         h4{
             color: all.$highlight2; 
         }
+        p{
+            text-align: justify;
+        }
         @include all.tablet{
             @include all.paddingLeftRightOnly($pad: 5rem);
         }

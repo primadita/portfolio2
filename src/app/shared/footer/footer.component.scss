@@ -3,6 +3,9 @@
 footer{
     background: url('./../../../../public/assets/design/05_contact/06_Contact.png');
     @include all.adjustBgImg($height: 19rem);
+    @include all.tablet{
+        height: 17rem;
+    }
     .content{
         @include all.d-flex($flexdir: column, $alit: flex-start, $jc: center, $rgap: 1rem);
         color: all.$color2;
