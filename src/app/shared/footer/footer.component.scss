@@ -50,28 +50,28 @@ footer{
                     overflow: hidden;
                     img{
                         width: 12rem;
+                        cursor: pointer;
                     }
                 }
                 .button-like-noframe{
                     width: 10rem;
                     height: 2.5rem;
-                    @include all.d-flex();
-                    // @include all.button-like($color:all.$color2, $bg: all.$highlight2,$pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
                     opacity: 1;
+                    @include all.d-flex();
                     .rolling-object{
                         position: absolute;
                         top: -3rem;
                         left: 0;
                         opacity: 0;
                     }
+                    span{
+                        cursor: pointer;
+                    }
                 }
                 &:hover{
                     .underline{
                         opacity: 1;
                         overflow: hidden;;
-                        // animation: left-to-right 1ms forwards ;
-                        // animation-iteration-count: 1;
-                        // @include all.left-to-right-animation($dur: 0.5s, $count: 1, $dir: alternate);
                     }
                     .button-like-noframe{
                         @include all.button-like($color:all.$color2, $bg: all.$highlight2,$pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
@@ -83,51 +83,11 @@ footer{
                 }
                 &:not(:hover){
                     .underline{
-                        // opacity: 0;
-                        // animation: left-to-right 0.5s reverse ;
-                        // animation-iteration-count: 1;
                         @include all.left-to-right-animation($dur: 0.5s, $count: 1, $dir: reverse);
                     }
                 }
 
             }
-            // a{
-            //     span{
-            //         color: all.$color2;
-            //     }
-            //     .underline{
-            //         position: absolute;
-            //         bottom: -1.5rem;
-            //         left: -1rem;
-            //         img{
-            //             width: 12rem;
-            //         }
-            //     }
-            //     .button-like-noframe{
-            //         cursor: pointer;
-            //         @include all.d-flex($flexdir: column);
-            //         @include all.button-like($color:all.$color2, $pad: 0.5rem 1.5rem 0.5rem 1.5rem, $shadow: 0 0);
-            //         color: all.$color2;
-            //         background: all.$highlight2;
-            //         .rolling-object{
-            //             position: absolute;
-            //             top: -3rem;
-            //             left: 0;
-            //         }
-            //         &:hover ~.rolling-object{
-            //             opacity: 1;
-            //             animation: wave-in 0.5s forwards;
-            //             animation-iteration-count: 1;
-            //         }
-            //         &:not(:hover) ~.rolling-object{
-            //             animation: wave-out 0.5s forwards;
-            //             animation-iteration-count: 1;
-            //         }
-            //     }
-            // }
-            // @media (max-width: 1250px) {
-            //     padding-top: 2rem;
-            // }
         } 
         #mobile-view{
             display: none;
@@ -183,6 +143,7 @@ footer{
                             left: -1rem;
                             img{
                                 width: 12rem;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -194,6 +155,7 @@ footer{
                 }
                 #github-lnk, #linkedin-lnk, #mail-lnk{
                     .button-like-noframe{
+                        cursor: pointer;
                         .rolling-object{
                             top: -3.5rem;
                         }
