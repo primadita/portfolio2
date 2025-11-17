@@ -1,7 +1,4 @@
 @use './../public/assets/styles/all-styles.scss' as var;
-// @forward './../public/assets/styles/all-styles.scss' as all-*;
-
-
 
 // #region GENERAL
 *{
@@ -36,6 +33,9 @@ header, section, footer{
 }
 .d-none{
     display: none;
+}
+[id] {
+  scroll-margin-top: 12rem;
 }
 ::placeholder {
     color: var.$color2; /* Firefox */
