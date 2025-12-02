@@ -27,7 +27,7 @@ export class ProjectDescriptionListService {
       link_next: 'singleproject/El%20Pollo%20Loco',
       link_back: 'singleproject/Pokedéx',
       link_github: 'https://github.com/primadita/join',
-      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/angular-projects/join/signIn'
+      link_livetest: 'https://join.felicia-primadita-tretter.com'
     },
     {
       projname: 'El Pollo Loco',
@@ -47,7 +47,7 @@ export class ProjectDescriptionListService {
       link_next: 'singleproject/Pokedéx',
       link_back: 'singleproject/Join',
       link_github: 'https://github.com/primadita/el-pollo-loco.git',
-      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/elpolloloco/index.html'
+      link_livetest: 'https://elpolloloco.felicia-primadita-tretter.com'
     },
     {
       projname: 'Pokedéx',
@@ -67,7 +67,7 @@ export class ProjectDescriptionListService {
       link_next: 'singleproject/Join',
       link_back: 'singleproject/El%20Pollo%20Loco',
       link_github: 'https://github.com/primadita/pokedex.git',
-      link_livetest: 'https://felicia-primadita-tretter.developerakademie.net/pokedex/index.html'
+      link_livetest: 'https://pokedex.felicia-primadita-tretter.com'
     }
   ]
 }
