@@ -14,21 +14,24 @@ export class TestimonialsService {
       name: "Nils A.-S.",
       testi: 'testimonials.testi1',
       position: "Frontend Developer",
-      linkedin: 'https://www.linkedin.com/in/nils-alberding-schulz-abb4a0389/'
+      linkedin: 'https://www.linkedin.com/in/nils-alberding-schulz-abb4a0389/',
+      logo: true,
     },
     {
       number: 2,
       name: "Henry W.",
       testi: 'testimonials.testi2',
       position: "Frontend Developer",
-      linkedin: 'https://www.linkedin.com/in/henry-wolf-261baa383/'
+      linkedin: 'https://www.linkedin.com/in/henry-wolf-261baa383/',
+      logo: true,
     },
     {
       number: 3,
-      name: "Max Muster",
+      name: "Maria C.",
       testi: 'testimonials.testi3',
-      position: "-",
-      linkedin: 'http://linkedin.com/'
+      position: "Mechanical Engineer",
+      linkedin: '',
+      logo: false,
     }
   ]
 }

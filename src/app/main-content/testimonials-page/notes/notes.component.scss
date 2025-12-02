@@ -9,11 +9,14 @@
     overflow: hidden;
     color: all.$color2;
     border-radius: 2.5rem;
-    @include all.d-flex($flexdir: column, $jc: space-between);
+    @include all.d-flex($flexdir: column, $jc: space-between, $alit: flex-start);
     >div{
-        @include all.d-flex($flexdir: row, $jc: space-between);
-        >div{
+        @include all.d-flex($flexdir: row);
+        .with-logo-width{
             @include all.d-flex($flexdir: column, $alit: flex-start);
+        }
+        .full-width{
+            width: 100%;
         }
         >span{
             width: 17rem;
@@ -51,6 +54,13 @@
         &:hover{
             background: url('./../../../../../public/assets/design/04_testimonials/ColorOption3/Line.png'), url('./../../../../../public/assets/design/04_testimonials/ColorOption3/b-portrait.png');
             background-size: cover;
+        }
+        >div{
+            >span{
+                a{
+                    justify-content: flex-start;
+                }
+            }
         }
     }
 }

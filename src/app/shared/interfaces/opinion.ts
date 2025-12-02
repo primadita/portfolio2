@@ -4,4 +4,5 @@ export interface Opinion {
     position: string;
     testi: string;
     linkedin: string;
+    logo: boolean;
 }

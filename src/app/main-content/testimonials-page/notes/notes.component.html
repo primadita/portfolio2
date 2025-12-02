@@ -1,11 +1,11 @@
 <div class="single-note">
     <p>{{singletesti.testi | translate}}</p>
     <div>
-        <div>
+        <div [ngClass]="singletesti.logo === true ? 'with-logo-width' : 'full-width'">
             <h6>{{singletesti.name}}</h6>
             <span>{{singletesti.position}}</span>
         </div>
-        <span><a href="{{singletesti.linkedin}}" target="_blank" rel="noopener noreferrer">
+        <span *ngIf="singletesti.logo === true"><a href="{{singletesti.linkedin}}" target="_blank" rel="noopener noreferrer">
             <img src="./assets/icons/icon_LinkedIn.png" alt="link to LinkedIn profile">
             {{'testimonials.profile'|translate}}
         </a></span>
